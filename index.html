@@ -219,10 +219,10 @@
 <hr>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>这几天在做一个Web投票系统，就在快做完的时候我心想，要不给管理员加个“添加头像”功能吧？反正以后也会有这种需求的，而且这功能也是随手就能写出来。然而……</p>
 <hr>
-<h3 id="Bug现身"><a href="#Bug现身" class="headerlink" title="Bug现身"></a>Bug现身</h3><img src="/.com//effect1.png" alt="上传文件" style="zoom:80%;">
+<h3 id="Bug现身"><a href="#Bug现身" class="headerlink" title="Bug现身"></a>Bug现身</h3><img src="/2020/03/20/%E5%A4%8D%E5%88%BBBug-net%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0%E7%95%8C%E9%9D%A2/effect1.png" alt="上传文件" style="zoom:80%;">
 
 <p>如上图所示，这是我先前做的上传excel文件功能，选择文件并上传后并未发生异常现象，只有点击“保存”按钮后才会刷新界面，当时我并未在意…</p>
-<img src="/.com//effect2.png" alt="上传图片" style="zoom:80%;">
+<img src="/2020/03/20/%E5%A4%8D%E5%88%BBBug-net%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0%E7%95%8C%E9%9D%A2/effect2.png" alt="上传图片" style="zoom:80%;">
 
 <p>这张图则是我后来做的上传头像功能，然而令我诧异的是：只要我上传图片，虽然能成功上传到指定路径，但返回Json数据给js后界面就会自动刷新…</p>
 <p>跟以往的Bug不同的是，这次的并没有任何异常抛出，连控制台输出也是干干净净，让我无从下手…</p>
@@ -280,7 +280,7 @@
 <li><p>Bug之源</p>
 <p>就在我毫无进展跑去打篮球的时候，我灵光一闪：会不会就是因为项目更新而导致界面自动刷新？</p>
 <p>于是我回家测试，确实是如此。这时我才想起，原来我在学习.net Web开发时给VS安装了一插件…</p>
-<p><img src="/.com//%E5%A4%8D%E5%88%BBBug-net%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0%E7%95%8C%E9%9D%A2%5Cplug.png" alt="插件"></p>
+<p><img src="/2020/03/20/%E5%A4%8D%E5%88%BBBug-net%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0%E7%95%8C%E9%9D%A2/%E5%A4%8D%E5%88%BBBug-net%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0%E7%95%8C%E9%9D%A2%5Cplug.png" alt="插件"></p>
 <p>禁用该插件后，界面果真不再自动刷新…</p>
 <p>原来问题出在这里，这种醍醐灌顶丝毫不亚于我看到悬疑小说结局时的感觉。正如我平时测试HTML/CSS/JS三件套时一样，会边运行项目边修改以便方便观察结果…</p>
 </li>
