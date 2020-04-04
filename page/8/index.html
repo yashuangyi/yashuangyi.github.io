@@ -23,14 +23,14 @@
   <meta name="description" content="Be RESTful">
 <meta property="og:type" content="website">
 <meta property="og:title" content="亚双义一真の博客">
-<meta property="og:url" content="http://yoursite.com/page/4/index.html">
+<meta property="og:url" content="http://yoursite.com/page/8/index.html">
 <meta property="og:site_name" content="亚双义一真の博客">
 <meta property="og:description" content="Be RESTful">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="yashuangyi">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/page/4/">
+<link rel="canonical" href="http://yoursite.com/page/8/">
 
 
 <script id="page-configurations">
@@ -165,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/25/Docker%E5%AE%89%E8%A3%85%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -179,7 +179,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/25/Docker%E5%AE%89%E8%A3%85%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Docker安装及基本命令</a>
+            <a href="/2020/03/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Git常用命令</a>
         </h1>
 
         <div class="post-meta">
@@ -188,10 +188,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-03-25 15:29:00 / 修改时间：15:46:52" itemprop="dateCreated datePublished" datetime="2020-03-25T15:29:00+08:00">2020-03-25</time>
+              <time title="创建时间：2020-03-19 12:50:00" itemprop="dateCreated datePublished" datetime="2020-03-19T12:50:00+08:00">2020-03-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-20 20:54:47" itemprop="dateModified" datetime="2020-03-20T20:54:47+08:00">2020-03-20</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -213,137 +219,223 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>作者：亚双义、一真</p>
+          <h2 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a>Git常用命令</h2><p>作者：亚双义、一真</p>
 <p>邮箱：<a href="mailto:chenzhiyuan1999@gmail.com">chenzhiyuan1999@gmail.com</a></p>
-<p>时间：2020-3-23</p>
+<p>时间：2020-2-19</p>
+<p>参考：<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>
 <hr>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>距离上次使用docker已经有一年多了，只不过之前的使用大多都是照葫芦画瓢，并没掌握其原理。正好最近学校大数据课程要求我们搭建hadoop环境（一个Master、两个Slave节点），为了方便配置环境我决定使用docker来搭建。由于之前买的书还在学校宿舍= =我便根据网上教程自行整理一遍好了~</p>
-<p>注：以下演示环境为Win10系统，其它系统用户请参考教程：<a href="https://www.runoob.com/docker/windows-docker-install.html" target="_blank" rel="noopener">https://www.runoob.com/docker/windows-docker-install.html</a></p>
+<h3 id="Git的基本命令"><a href="#Git的基本命令" class="headerlink" title="Git的基本命令"></a>Git的基本命令</h3><ol>
+<li><p>安装Git后的配置（自报家门）</p>
+<ul>
+<li><code>git config --global user.name &quot;Your Name&quot;</code></li>
+<li><code>git config --global user.email &quot;email@example.com&quot;</code></li>
+</ul>
+</li>
+<li><p>创建版本库</p>
+<ul>
+<li><code>git init</code></li>
+</ul>
+</li>
+<li><p>把文件添加到版本库</p>
+<ul>
+<li><code>git add &lt;file&gt;</code>  （把文件添加到仓库）</li>
+<li><code>git commit -m &quot;本次提交说明&quot;</code>  (把文件提交到仓库)</li>
+</ul>
+</li>
+<li><p>查看仓库当前状态</p>
+<ul>
+<li><code>git status</code>  (查看工作区，是否有文件被修改)</li>
+<li><code>git diff</code>  (查看修改内容)</li>
+</ul>
+</li>
+<li><p>查看提交日志</p>
+<ul>
+<li><code>git log --pretty=oneline</code></li>
+</ul>
+</li>
+<li><p>回退到某一个版本</p>
+<ul>
+<li><code>git reset --hard HEAD^</code>  (HEAD^表示上一个版本，HEAD~100表示上100个版本，也可以用commit id)</li>
+<li><code>git revert HEAD</code>  撤销更改并分享给别人</li>
+</ul>
+</li>
+<li><p>查看命令记录</p>
+<ul>
+<li><code>git reflog</code></li>
+</ul>
+</li>
+<li><p>撤销工作区的修改</p>
+<ul>
+<li><code>git checkout -- &lt;file&gt;</code></li>
+<li><code>git reset HEAD &lt;file&gt;</code>  （HEAD表示最新的版本）</li>
+</ul>
+</li>
+<li><p>删除文件</p>
+<ul>
+<li><p><code>rm &lt;file&gt;</code>  （删除本地工作区的文件）</p>
+</li>
+<li><p><code>git rm &lt;file&gt;</code>  （从版本库删除该文件）并且执行<code>git commit -m &quot;本次记录的说明&quot;</code></p>
+</li>
+<li><p><code>git checkout --&lt;file&gt;</code>  （当误删时，恢复文件）</p>
 <hr>
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>曾经的我也会有这个疑问：Docker是用来干嘛的？不是已经有虚拟机了吗？</p>
-<p>Docker可以说是一个终端命令行的虚拟机，或者说是一个虚拟环境，亦或者说它是容器，但又不只是个容器，它包含3个重要概念：</p>
-<ol>
-<li><p>镜像（Image）</p>
-<p>镜像是静态的、可被用户互相分享的文件。譬如装系统或虚拟机，都是需要iso镜像才能进行安装，docker中的镜像也是如此，是静态的，用户只能pull别人的镜像或push自己的镜像</p>
 </li>
-<li><p>容器（Container）</p>
-<p>容器可以理解为镜像的动态状态，用户可对其进行操作，但关机后将失去修改内容，因此若要保存修改则需要将当前容器封装成一个新的镜像</p>
-</li>
-<li><p>仓库（Repository）</p>
-<p>类比Git的代码仓库，用户可pull别人push到公共仓库的镜像到本地，亦可push自己做好环境的镜像上去</p>
+</ul>
 </li>
 </ol>
-<p>说了这么多，他能做什么呢？以下是我查到的数据：</p>
+<h3 id="远程仓库的使用"><a href="#远程仓库的使用" class="headerlink" title="远程仓库的使用"></a>远程仓库的使用</h3><ol>
+<li><p>创建SSH Key</p>
 <ul>
-<li>65%用户使用docker进行敏捷开发</li>
-<li>48%用户使用docker控制应用环境</li>
-<li>41%用户使用docker实现应用的可移植性</li>
-<li>58%用户将docker用于生产</li>
-<li>90%用户计划使用docker搭建开发环境</li>
-<li>80%用户计划围绕docker实现devops</li>
-<li>90%用户使用docker进行应用开发</li>
+<li>在用户主目录下找到.ssh目录，在此目录下查看是否有<code>id_rsa</code>以及<code>id_rsa.pub</code>这俩文件，若有则跳过下一步：</li>
+<li><code>ssh-keygen -t -rsa -C &quot;youremail@example.com&quot;</code>  （创建SSH Key）</li>
+<li><code>id_rsa</code>是私钥，不可泄露；<code>id_rsa.pub</code>是公钥，将其内容复制粘贴到GitHub里的SSH Keys页面中</li>
 </ul>
+</li>
+<li><p>本地库关联远程仓库</p>
+<ul>
+<li><code>git remote add origin git@github.com:用户名/仓库名.git</code></li>
+</ul>
+</li>
+<li><p>把本地库所有内容推送到远程库</p>
+<ul>
+<li><code>git push -u origin &lt;当前分支名（默认master）&gt;</code>  （之后的推送可省略<code>-u</code>命令）</li>
+</ul>
+</li>
+<li><p>克隆远程库到本地库</p>
+<ul>
+<li><code>git clone git@github.com:用户名/仓库名.git</code>  （SSH协议）</li>
+</ul>
+</li>
+<li><p>查看远程库信息</p>
+<ul>
+<li><p><code>git remote</code></p>
+</li>
+<li><p><code>git remote -v</code>  查看详细信息</p>
 <hr>
-<h3 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h3><ol>
-<li><p>检查电脑是否支持虚拟化</p>
-<p>打开任务管理器，点开“性能”一栏，查看CPU信息中是否已启用虚拟化</p>
 </li>
-<li><p>安装版本</p>
-<p>需要特别注意的是：<strong>Docker支持Win10，但仅支持Win10专业版</strong>（一年前踩过此坑，印象深刻…）。以我的Win10家庭中文版为例，须安装DockerToolBox（下载链接：<a href="http://mirrors.aliyun.com/docker-toolbox/windows/）" target="_blank" rel="noopener">http://mirrors.aliyun.com/docker-toolbox/windows/）</a></p>
-</li>
-<li><p>注册Docker账号</p>
-<p>链接：<a href="https://hub.docker.com/signup" target="_blank" rel="noopener">https://hub.docker.com/signup</a></p>
-<p>注册后便可像github般上传项目到仓库中</p>
-</li>
-<li><p>注册DaoCloud</p>
-<p>大多数时候直接从docker官方往本地pull镜像会十分缓慢，因此可通过国内docker服务提供商免费获取加速pull镜像服务，我这里用的是DaoCloud（链接：<a href="https://www.daocloud.io/）" target="_blank" rel="noopener">https://www.daocloud.io/）</a></p>
-<p>注册完毕后在其首页按教程获取加速服务</p>
-</li>
-<li><p>注意Git路径</p>
-<p>需要注意的是，若Git的安装路径不是默认的C盘的话，打开docker将会提示找不到“bash.exe”，这时需修改快捷方式的路径，参考：<a href="https://blog.csdn.net/pingfan2014/article/details/81145813" target="_blank" rel="noopener">https://blog.csdn.net/pingfan2014/article/details/81145813</a></p>
-</li>
-<li><p>启动docker</p>
-<p>若启动docker时提示“No default Boot2Docker ISO found…”，请参考：<a href="https://blog.csdn.net/dhaiuda/article/details/81975550，亲测有效" target="_blank" rel="noopener">https://blog.csdn.net/dhaiuda/article/details/81975550，亲测有效</a></p>
-</li>
-<li><p>使用SecureCRT登录</p>
-<p>default虚拟机的默认用户名为<code>docker</code>，密码为<code>tcuser</code>，ip为docker主界面所显示</p>
-</li>
-<li><p>更改虚拟磁盘存储位置</p>
-<p>虚拟机的默认存储位置是C盘，为了避免后期C盘爆红（我亲自体验过一次，因而买了新固态重装了电脑…）最好将存储位置改为其它盘</p>
-</li>
-<li><p>如果使用的是<code>boot2docker</code>这一发行版，首先执行<code>docker-machine ssh default</code>进入容器中，然后执行<code>sudo -i</code>进入root用户，这样才能执行<code>sudo</code>命令</p>
-</li>
-<li><p>Hadoop集群搭建教程：<a href="https://kiwenlau.com/2016/06/12/160612-hadoop-cluster-docker-update/" target="_blank" rel="noopener">https://kiwenlau.com/2016/06/12/160612-hadoop-cluster-docker-update/</a></p>
-<p>这位大佬写的很好，只不过我目前也仅局限于照着使用，有机会得研究一下他是怎么实现的…</p>
+</ul>
 </li>
 </ol>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><ol>
+<li><p>创建并切换分支</p>
+<ul>
+<li><code>git checkout -b &lt;分支名&gt;</code>  相当于<code>git branch &lt;分支名&gt;</code> 和  <code>git checkout &lt;分支名&gt;</code>两条命令</li>
+</ul>
+</li>
+<li><p>查看当前分支</p>
+<ul>
+<li><code>git branch</code></li>
+</ul>
+</li>
+<li><p>合并分支</p>
+<ul>
+<li><code>git merge &lt;待合并分支名&gt;</code>  合并指定分支到当前分支（可能会用<code>Fast forward</code>模式）</li>
+<li><code>git merge --no-ff &lt;待合并分支名&gt;</code>  禁用<code>Fast forward</code>的合并</li>
+</ul>
+</li>
+<li><p>删除分支</p>
+<ul>
+<li><code>git branch -d &lt;分支名&gt;</code></li>
+<li><code>git branch -D &lt;分支名&gt;</code>  强制删除（当该分支未被合并时）</li>
+</ul>
+</li>
+<li><p>切换分支</p>
+<ul>
+<li><code>git switch -c &lt;分支名&gt;</code>  创建并切换到该分支</li>
+<li><code>git switch &lt;分支名&gt;</code>  直接切换到已有的分支</li>
+</ul>
+</li>
+<li><p>强制修改分支位置</p>
+<ul>
+<li><code>git branch -f &lt;分支名&gt; &lt;提交名（例如HEAD^、HEAD~3）&gt;</code>  将指定分支强制指向指定提交</li>
+</ul>
+</li>
+<li><p>查看分支合并图</p>
+<ul>
+<li><code>git log --gragh</code>  </li>
+</ul>
+</li>
+<li><p>保存工作区</p>
+<ul>
+<li><code>git stash</code></li>
+</ul>
+</li>
+<li><p>查看保存的工作区</p>
+<ul>
+<li><code>git stash list</code></li>
+</ul>
+</li>
+<li><p>恢复工作区</p>
+<ul>
+<li><code>git stash apply</code>  恢复后不删除stash内容，要用<code>git stash drop</code>删除</li>
+<li><code>git stash pop</code>  恢复的同时删除stash内容</li>
+</ul>
+</li>
+<li><p>复制一个特定的提交到当前分支</p>
+<ul>
+<li><code>git cherry-pick &lt;提交编号&gt;</code></li>
+</ul>
+</li>
+<li><p>分支的管理规则</p>
+<ul>
+<li><code>master</code>分支是主分支，要时刻与远程库同步</li>
+<li><code>dev</code>分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步</li>
+<li><code>bug</code>分支只用于在本地修复bug，没必要推到远程</li>
+<li><code>feature</code>分支用于开发新功能</li>
+</ul>
+</li>
+<li><p>抓取最新提交</p>
+<ul>
+<li><code>git pull</code>  把最新的提交抓下来，以便在本地库合并然后解决冲突</li>
+<li><code>git fetch</code>  把最新的提交抓下来，不进行合并</li>
+</ul>
+</li>
+<li><p><code>rebase</code>操作</p>
+<ul>
+<li><code>git rebase</code>  将分叉的提交变成直线</li>
+</ul>
+</li>
+<li><p>HEAD</p>
+<ul>
+<li><p><code>HEAD</code>  是一个对当前检出记录的符合引用——也就是指向正在其基础上进行工作的提交记录（通常指向分支名）  </p>
 <hr>
-<h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><ol>
-<li><p>查看docker版本信息</p>
-<ul>
-<li><code>docker version</code>  或<code>docker -v</code></li>
+</li>
 </ul>
 </li>
-<li><p>获取镜像</p>
-<ul>
-<li><code>docker pull 镜像名</code>，例如：<code>docker pull ubuntu:latest</code></li>
-</ul>
-</li>
-<li><p>搜索镜像</p>
-<ul>
-<li><code>docker search 镜像名</code>，例如：<code>docker search ubuntu</code></li>
-</ul>
-</li>
-<li><p>查看本地镜像仓库</p>
-<ul>
-<li><code>docker images</code></li>
-<li>可见字段信息如下：<ol>
-<li>REPOSITORY：来自哪个仓库</li>
-<li>TAG：镜像的标记</li>
-<li>IMAGE ID：镜像ID号，唯一</li>
-<li>CREATED：创建时间</li>
-<li>SIZE：镜像大小</li>
 </ol>
-</li>
-</ul>
-</li>
-<li><p>启动新镜像</p>
+<h3 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h3><ol>
+<li><p>创建标签</p>
 <ul>
-<li><code>docker run -it 仓库名 命令解析器</code>，例如：<code>docker run -it chug/ubuntu14.04x64 /bin/bash</code></li>
-<li>说明：<ol>
-<li><code>-it</code>表示运行在交互模式，是<code>-i -t</code>的缩写，<code>-i</code>表示打开并保持stdout，<code>-t</code>表示分配一个终端。即启动bash，和容器有命令行的交互</li>
-<li>当终端字头变成例如<code>root@aa97ba3292ce:/#</code>时，说明镜像已创建一个容器实例，接下来便可对该实例进行操作</li>
-</ol>
-</li>
+<li><code>git tag &lt;标签名&gt;</code>  默认绑定HEAD</li>
 </ul>
 </li>
-<li><p>查看当前正在运行的容器</p>
+<li><p>查看所有标签</p>
 <ul>
-<li><code>docker ps</code></li>
+<li><code>git tag</code></li>
 </ul>
 </li>
-<li><p>操作镜像</p>
+<li><p>对某次提交打标签</p>
 <ul>
-<li><code>docker start 容器ID号</code>：启动容器</li>
-<li><code>docker stop 容器ID号</code>：停止容器</li>
-<li><code>docker restart 容器ID号</code>：重启容器</li>
-<li><code>docker attach 容器ID号</code>：进入一个后台启动的容器</li>
-<li><code>docker commit -m &quot;说明信息&quot; -a &quot;用户信息&quot; 容器ID号 用户名/仓库名:tag信息</code>，例如：<code>docker commit -m &quot;ubuntu with vim&quot; -a &quot;sgy&quot; aa97ba3292ce sgy/ubuntu:vim</code>：保存容器的更改</li>
-<li><code>exit</code>：退出容器</li>
+<li><code>git tag &lt;标签名&gt; &lt;提交编号&gt;</code></li>
+<li><code>git tag -a &lt;标签名&gt; -m &lt;提交编号&gt;</code>  <code>-a</code>指定标签名，<code>-m</code>指定说明文字</li>
 </ul>
 </li>
-<li><p>删除容器或镜像</p>
+<li><p>查看标签信息</p>
 <ul>
-<li><code>docker rm 容器ID号</code>：删除容器</li>
-<li><code>docker rmi 镜像ID号</code>：删除镜像</li>
-<li>注意：删除镜像前必须先删除以此镜像为基础的容器</li>
+<li><code>git show &lt;标签名&gt;</code></li>
 </ul>
 </li>
-<li><p>docker命令图</p>
-<img src="/2020/03/25/Docker%E5%AE%89%E8%A3%85%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/Docker命令.png">
-
-
-
+<li><p>删除标签</p>
+<ul>
+<li><code>git tag -d &lt;标签名&gt;</code></li>
+</ul>
+</li>
+<li><p>推送标签到远程</p>
+<ul>
+<li><p><code>git push origin &lt;标签名&gt;</code>  推送某个标签</p>
+</li>
+<li><p><code>git push origin --tags</code>  一次性推送全部尚未推送的标签</p>
+</li>
+</ul>
 </li>
 </ol>
 
@@ -365,7 +457,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span>
   </nav>
 
 
