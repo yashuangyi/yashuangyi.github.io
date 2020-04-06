@@ -124,17 +124,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">8</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">8</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">9</span></a>
 
   </li>
   </ul>
@@ -165,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/25/Docker%E5%AE%89%E8%A3%85%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/28/%E6%93%8D%E4%BD%9C%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -179,7 +179,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/25/Docker%E5%AE%89%E8%A3%85%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Docker安装及基本命令</a>
+            <a href="/2020/03/28/%E6%93%8D%E4%BD%9C%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">操作系统学习笔记</a>
         </h1>
 
         <div class="post-meta">
@@ -188,10 +188,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-03-25 15:29:00 / 修改时间：15:46:52" itemprop="dateCreated datePublished" datetime="2020-03-25T15:29:00+08:00">2020-03-25</time>
+              <time title="创建时间：2020-03-28 01:40:00" itemprop="dateCreated datePublished" datetime="2020-03-28T01:40:00+08:00">2020-03-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-01 23:43:10" itemprop="dateModified" datetime="2020-04-01T23:43:10+08:00">2020-04-01</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -213,137 +219,423 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>作者：亚双义、一真</p>
+          <h2 id="操作系统学习笔记"><a href="#操作系统学习笔记" class="headerlink" title="操作系统学习笔记"></a>操作系统学习笔记</h2><p>作者：亚双义、一真</p>
 <p>邮箱：<a href="mailto:chenzhiyuan1999@gmail.com">chenzhiyuan1999@gmail.com</a></p>
-<p>时间：2020-3-23</p>
+<p>时间：2020-3-27</p>
 <hr>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>距离上次使用docker已经有一年多了，只不过之前的使用大多都是照葫芦画瓢，并没掌握其原理。正好最近学校大数据课程要求我们搭建hadoop环境（一个Master、两个Slave节点），为了方便配置环境我决定使用docker来搭建。由于之前买的书还在学校宿舍= =我便根据网上教程自行整理一遍好了~</p>
-<p>注：以下演示环境为Win10系统，其它系统用户请参考教程：<a href="https://www.runoob.com/docker/windows-docker-install.html" target="_blank" rel="noopener">https://www.runoob.com/docker/windows-docker-install.html</a></p>
+<h3 id="计算机系统概述"><a href="#计算机系统概述" class="headerlink" title="计算机系统概述"></a>计算机系统概述</h3><ol>
+<li><p>计算机硬件组成：处理器、内存、输入输出设备、系统总线；</p>
+<p>计算机的五大组成部件是控制器、运算器、存储器、输入设备、输出设备</p>
+</li>
+<li><p>计算机部件内部结构</p>
+<ul>
+<li>PC——程序计数器</li>
+<li>IR——指令寄存器</li>
+<li>MAR——存储器地址寄存器：确定下次读写的内存单元地址</li>
+<li>MBR——存储器缓冲寄存器：存放要写入内存或从内存读取的数据</li>
+<li>I/O AR——输入输出地址寄存器：确定某个I/O设备</li>
+<li>I/O BR——输入输出缓冲寄存器：CPU与I/O设备间输入输出的数据</li>
+</ul>
+</li>
+<li><p>指令的执行</p>
+<ul>
+<li>基本指令周期：取指，执行</li>
+<li>四类指令：<ol>
+<li>处理器-存储器：在寄存器和内存单元间传送数据</li>
+<li>处理器-I/O：处理器和I/O设备间传送数据</li>
+<li>数据处理：算术/逻辑运算</li>
+<li>控制转移：设置PC值，改变执行顺序</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>中断</p>
+<ul>
+<li>概念：由于发送某些事件，暂停当前程序在CPU上的运行，转而执行响应事件的中断处理程序。待处理完成后，再返回断点继续执行或调度其它程序执行</li>
+<li>分类<ol>
+<li>程序中断</li>
+<li>时钟中断</li>
+<li>I/O中断</li>
+<li>硬件失效中断</li>
+</ol>
+</li>
+<li>中断提高CPU利用率<ol>
+<li>无中断时，CPU和I/O设备串行工作</li>
+<li>有中断时，CPU和I/O设备并行工作</li>
+</ol>
+</li>
+<li>中断和指令周期：CPU在执行完一条指令之后、执行下一条指令之前，检测并处理中断</li>
+<li>中断处理——硬件连接：CPU和中断控制器之间用总线上的中断请求线连接。设备发出中断后，CPU响应中断</li>
+<li>中断处理——软件实现：每个中断有一个中断向量号（中断处理程序的内存入口地址），是该中断在中断向量表中的编号</li>
+<li>多个中断——两个处理方法<ol>
+<li>顺序处理：当处理一个中断时，禁止中断。多个中断被顺序处理</li>
+<li>中断嵌套：允许高优先级的中断请求打断低级中断的处理</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>存储器</p>
+<ul>
+<li>平均存取时间：<code>（访问一次Cache时间+访问一次内存时间）*（1-Cache命中率）+访问一次Cache时间*Cache命中率</code></li>
+<li>两级存储器（Cache-内存）有效的原因：程序的局部性原理<ol>
+<li>时间局部性：在一段小的时间间隔内，被访问过的某指令或数据，可能很快会被再次访问</li>
+<li>空间局部性：在一段小的时间间隔内，程序访问的地址空间往往集中在某个区域（簇）</li>
+</ol>
+</li>
+<li>直接内存存取DMA：在DMA控制器的控制下，通过窃取总线周期，在内存和设备间（不经过CPU）传送整块数据</li>
+</ul>
+</li>
+</ol>
 <hr>
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>曾经的我也会有这个疑问：Docker是用来干嘛的？不是已经有虚拟机了吗？</p>
-<p>Docker可以说是一个终端命令行的虚拟机，或者说是一个虚拟环境，亦或者说它是容器，但又不只是个容器，它包含3个重要概念：</p>
+<h3 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h3><ol>
+<li>操作系统：控制用户程序执行，充当用户程序和计算机硬件之间的接口</li>
+<li>特征：并行性、共享性、虚拟性和不确定性</li>
+<li>OS主要功能：进程管理、内存管理、文件管理、设备管理</li>
+<li>OS目标<ul>
+<li>方便：使计算机易于使用，界面友好</li>
+<li>有效：提高计算机系统的资源利用率</li>
+<li>扩展能力：可扩展、兼容、移植新的功能</li>
+</ul>
+</li>
+<li>OS主要性能指标：吞吐率、资源利用率</li>
+<li>分时OS：把CPU时间分割成时间片，每个用户依次轮流使用时间片（满足用户交互和及时响应的要求），强交互性但响应不太及时，能同时执行多个程序（关键问题：及时接收，及时处理）</li>
+<li>批处理OS：提高资源利用率、大吞吐率和作业流程的自动化，能同时执行多个程序</li>
+<li>实时OS：时间响应很及时但仅有简单地交互能力，能同时执行多个程序</li>
+</ol>
+<hr>
+<h3 id="进程描述和控制"><a href="#进程描述和控制" class="headerlink" title="进程描述和控制"></a>进程描述和控制</h3><ol>
+<li>进程：程序在一个数据集上的一次执行过程</li>
+<li>进程与程序的联系与区别<ul>
+<li>程序是静态的；进程是动态的，且一个进程运行时可以创建其它进程</li>
+<li>一个程序可对应一个进程，也可对应多个进程</li>
+</ul>
+</li>
+<li>进程的组成：程序代码、数据集和栈、进程控制块PCB（是进程存在的唯一标识）</li>
+<li>上下文：进程运行时CPU的寄存器数据集合（现场）</li>
+<li>分派器调度时发生上下文切换：保存旧进程上下文到它的PCB，从新进程的PCB恢复它的上下文到寄存器</li>
+<li>进程提高了资源利用率和吞吐率，但增加了系统的时间和空间开销</li>
+<li>进程的创建和终止<ul>
+<li>创建：OS为该进程建立PCB，分配内存空间</li>
+<li>终止：回收内存，释放资源，销毁PCB</li>
+</ul>
+</li>
+<li>进程的五种状态<ul>
+<li>新建：分配内存后将被设为就绪态</li>
+<li>就绪：进程已得到除CPU外的其它所需资源</li>
+<li>运行：进程的指令正被执行</li>
+<li>阻塞：进程正等待资源或某事件发生</li>
+<li>退出：进程正常或异常结束。回收资源，善后</li>
+<li>五状态模型：处于同一状态的进程PCB组成一个进程队列</li>
+</ul>
+</li>
+<li>进程控制块PCB：进程属性的集合<ul>
+<li>OS进程表中包含所有进程的PCB</li>
+<li>PCB的索引（PID）唯一地标识该进程</li>
+</ul>
+</li>
+<li>CPU执行模式<ul>
+<li>用户态：只能执行非特权指令</li>
+<li>系统态（内核态）：可以执行所有指令，使用所有资源以及改变CPU状态</li>
+<li>何时CPU从用户态到系统态？<ol>
+<li>执行系统调用（即内核代码）时</li>
+<li>发生中断或异常时，执行中断处理程序</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h3><ol>
+<li>进程与线程<ul>
+<li>进程：分配资源的单位，不频繁地进行切换</li>
+<li>线程：被调度执行的单位，不拥有资源，可频繁调度切换，轻装运行</li>
+<li>进程的两个特性：分配资源，被调度执行</li>
+</ul>
+</li>
+<li>线程<code>!=</code>子进程：多个线程共享进程空间，通信快；子进程空间各自独立，慢</li>
+<li>多线程的优点<ul>
+<li>创建/终止一个线程比创建/终止进程的时间少</li>
+<li>上下文切换开销小</li>
+<li>资源共享：进程的资源供其所有线程共享；线程间共享内存，通信方便</li>
+<li>并发程度高，可利用多处理器结构</li>
+</ul>
+</li>
+<li>线程的三种状态<ul>
+<li>运行态</li>
+<li>就绪态</li>
+<li>阻塞态</li>
+</ul>
+</li>
+<li>线程分为两类：用户级线程ULT（由用户空间中的线程库完成，OS内核不知道其存在；若发生阻塞则会阻塞所属进程；不能利用多CPU结构；内核为进程分配CPU，进程调度其某个ULT运行），内核级线程KLT（可利用多CPU结构；调度时要切换到系统态，开销大；类似进程）</li>
+</ol>
+<hr>
+<h3 id="并发性：互斥和同步"><a href="#并发性：互斥和同步" class="headerlink" title="并发性：互斥和同步"></a>并发性：互斥和同步</h3><ol>
+<li><p>概念</p>
+<ul>
+<li>并行：多个事件在同一时刻发生</li>
+<li>并发：多个事件在同一时间间隔发生</li>
+<li>原子操作：一个函数或动作序列不可分割，要么作为一个整体执行（不可中断），要么都不执行</li>
+<li>临界资源：一次仅允许一个进程独占使用的不可剥夺资源</li>
+<li>互斥：当一个进程正在临界区中访问临界资源时，其它进程不能进入临界区</li>
+<li>同步：合作的并发进程需要按先后次序执行</li>
+<li>死锁：多个进程全部阻塞，形成等待资源的循环链</li>
+<li>饥饿：一个进程长期得不到资源</li>
+</ul>
+</li>
+<li><p>考虑互斥和同步的原因：由于多个进程并发甚至并行执行，对资源的共享和竞争，使得并发进程之间相互制约</p>
+</li>
+<li><p>互斥的要求</p>
+<ul>
+<li>强制互斥</li>
+<li>有限等待</li>
+<li>有空让进</li>
+<li>让权等待</li>
+</ul>
+</li>
+<li><p>信号量</p>
+<ul>
+<li><p>概念：不要求忙等的同步互斥工具</p>
+</li>
+<li><p>一个信号量表示一种资源</p>
+</li>
+<li><p>当资源不可用时，进程将阻塞，直到另一进程释放资源时才被唤醒</p>
+</li>
+<li><p>信号量s只能被下面两个原语访问</p>
 <ol>
-<li><p>镜像（Image）</p>
-<p>镜像是静态的、可被用户互相分享的文件。譬如装系统或虚拟机，都是需要iso镜像才能进行安装，docker中的镜像也是如此，是静态的，用户只能pull别人的镜像或push自己的镜像</p>
+<li><code>semWait(s)</code>：本进程请求分配一个资源，多个该原语次序不能颠倒</li>
+<li><code>semSignal(s)</code>：本进程释放一个资源，多个该原语次序可任意</li>
+<li>上述操作必须成对出现</li>
+</ol>
 </li>
-<li><p>容器（Container）</p>
-<p>容器可以理解为镜像的动态状态，用户可对其进行操作，但关机后将失去修改内容，因此若要保存修改则需要将当前容器封装成一个新的镜像</p>
+<li><p>为每种资源设置一个信号量s，可用于n个进程的同步互斥；信号量的值表示可用资源个数</p>
 </li>
-<li><p>仓库（Repository）</p>
-<p>类比Git的代码仓库，用户可pull别人push到公共仓库的镜像到本地，亦可push自己做好环境的镜像上去</p>
+<li><p>用于互斥时，s初值为1，取值为<code>1~-(n-1)</code></p>
+<ol>
+<li>s=1时：有1个临界资源可用，一个进程可进入临界区</li>
+<li>s=0时：临界资源已分配，一个进程已进入临界区</li>
+<li>s&lt;0时：临界区已被占用，|s|个阻塞进程正等待进入</li>
+</ol>
+</li>
+<li><p>用于同步时，s初值将&gt;=0</p>
+<ol>
+<li>s&gt;=0时：可用资源个数</li>
+<li>s&lt;0时：该资源的等待队列长度</li>
+</ol>
+</li>
+<li><p>代码定义</p>
+<ol>
+<li><p>信号量的定义</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">semaphore</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> count;       <span class="comment">//信号量的值，即可用资源个数</span></span><br><span class="line">	queueType <span class="built_in">queue</span>; <span class="comment">//因该信号量而阻塞的进程队列</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>申请分配资源s</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">semWait(semaphore s)</span><br><span class="line">&#123;</span><br><span class="line">	s.count--;</span><br><span class="line">	<span class="keyword">if</span>(s.count&lt;<span class="number">0</span>)&#123;</span><br><span class="line">		将当前进程放入s.<span class="built_in">queue</span>;</span><br><span class="line">		阻塞当前进程;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>释放资源s</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">semSignal(semaphore s)</span><br><span class="line">&#123;</span><br><span class="line">	s.count++;</span><br><span class="line">	<span class="keyword">if</span>(s.count&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">		从s.<span class="built_in">queue</span>中移除进程P;</span><br><span class="line">		将进程P插入到就绪队列;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>说了这么多，他能做什么呢？以下是我查到的数据：</p>
-<ul>
-<li>65%用户使用docker进行敏捷开发</li>
-<li>48%用户使用docker控制应用环境</li>
-<li>41%用户使用docker实现应用的可移植性</li>
-<li>58%用户将docker用于生产</li>
-<li>90%用户计划使用docker搭建开发环境</li>
-<li>80%用户计划围绕docker实现devops</li>
-<li>90%用户使用docker进行应用开发</li>
+</li>
+<li><p>实现互斥：每个进程在进入临界区前，执行<code>semWait(s)</code>;退出临界区后，执行<code>semSignal(s)</code></p>
+</li>
 </ul>
+</li>
+<li><p>生产者/消费者问题</p>
+<ul>
+<li>一组生产者进程产生数据，放到缓冲区</li>
+<li>一组消费者进程从缓冲区中取出数据使用<ol>
+<li>有限缓冲：假设缓冲池大小固定，包含k个缓冲区。生产者和消费者共用一个循环缓冲池</li>
+<li>无限缓冲：缓冲区数量无限制</li>
+</ol>
+</li>
+<li>有限缓冲的设置<ol>
+<li>缓冲池一次只能让一个进程访问（互斥）：设一信号量s，初值为1</li>
+<li>生产者需要空缓冲来发送数据（同步）：设一信号量empty，初值为sizeofbuffer</li>
+<li>消费者需要满缓冲来获取数据（同步）：设一信号量full，初值为0</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>管程</p>
+<p>管程将共享对象以及能对它进行的所有操作集中在一个模块中，管程本身结构保证各操作的互斥执行</p>
+</li>
+</ol>
 <hr>
-<h3 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h3><ol>
-<li><p>检查电脑是否支持虚拟化</p>
-<p>打开任务管理器，点开“性能”一栏，查看CPU信息中是否已启用虚拟化</p>
+<h3 id="并发：死锁和饥饿"><a href="#并发：死锁和饥饿" class="headerlink" title="并发：死锁和饥饿"></a>并发：死锁和饥饿</h3><ol>
+<li>原理：当一组进程中的每个进程都在等待某个事件，而只有在这组进程中的其它阻塞进程才能触发该事件，则这组进程发生死锁</li>
+<li>原因：进程推进顺序不当、竞争资源</li>
+<li>若死锁，则资源分配图中必有环路</li>
+<li>死锁的四个必要条件（必须同时成立）<ul>
+<li>互斥</li>
+<li>占有且等待</li>
+<li>不可抢占</li>
+<li>循环等待</li>
+</ul>
 </li>
-<li><p>安装版本</p>
-<p>需要特别注意的是：<strong>Docker支持Win10，但仅支持Win10专业版</strong>（一年前踩过此坑，印象深刻…）。以我的Win10家庭中文版为例，须安装DockerToolBox（下载链接：<a href="http://mirrors.aliyun.com/docker-toolbox/windows/）" target="_blank" rel="noopener">http://mirrors.aliyun.com/docker-toolbox/windows/）</a></p>
+<li>死锁的三种处理方法<ul>
+<li>死锁预防：破坏四个必要条件之一</li>
+<li>死锁避免：不破坏必要条件，允许进程动态申请资源，但检查资源分配状态，以避免可能导致的死锁</li>
+<li>死锁检测和恢复：检查系统是否已死锁、哪些进程和资源涉及死锁，并撤销死锁进程</li>
+<li>忽略死锁：假设死锁不会发生</li>
+</ul>
 </li>
-<li><p>注册Docker账号</p>
-<p>链接：<a href="https://hub.docker.com/signup" target="_blank" rel="noopener">https://hub.docker.com/signup</a></p>
-<p>注册后便可像github般上传项目到仓库中</p>
-</li>
-<li><p>注册DaoCloud</p>
-<p>大多数时候直接从docker官方往本地pull镜像会十分缓慢，因此可通过国内docker服务提供商免费获取加速pull镜像服务，我这里用的是DaoCloud（链接：<a href="https://www.daocloud.io/）" target="_blank" rel="noopener">https://www.daocloud.io/）</a></p>
-<p>注册完毕后在其首页按教程获取加速服务</p>
-</li>
-<li><p>注意Git路径</p>
-<p>需要注意的是，若Git的安装路径不是默认的C盘的话，打开docker将会提示找不到“bash.exe”，这时需修改快捷方式的路径，参考：<a href="https://blog.csdn.net/pingfan2014/article/details/81145813" target="_blank" rel="noopener">https://blog.csdn.net/pingfan2014/article/details/81145813</a></p>
-</li>
-<li><p>启动docker</p>
-<p>若启动docker时提示“No default Boot2Docker ISO found…”，请参考：<a href="https://blog.csdn.net/dhaiuda/article/details/81975550，亲测有效" target="_blank" rel="noopener">https://blog.csdn.net/dhaiuda/article/details/81975550，亲测有效</a></p>
-</li>
-<li><p>使用SecureCRT登录</p>
-<p>default虚拟机的默认用户名为<code>docker</code>，密码为<code>tcuser</code>，ip为docker主界面所显示</p>
-</li>
-<li><p>更改虚拟磁盘存储位置</p>
-<p>虚拟机的默认存储位置是C盘，为了避免后期C盘爆红（我亲自体验过一次，因而买了新固态重装了电脑…）最好将存储位置改为其它盘</p>
-</li>
-<li><p>如果使用的是<code>boot2docker</code>这一发行版，首先执行<code>docker-machine ssh default</code>进入容器中，然后执行<code>sudo -i</code>进入root用户，这样才能执行<code>sudo</code>命令</p>
-</li>
-<li><p>Hadoop集群搭建教程：<a href="https://kiwenlau.com/2016/06/12/160612-hadoop-cluster-docker-update/" target="_blank" rel="noopener">https://kiwenlau.com/2016/06/12/160612-hadoop-cluster-docker-update/</a></p>
-<p>这位大佬写的很好，只不过我目前也仅局限于照着使用，有机会得研究一下他是怎么实现的…</p>
+<li>进程启动拒绝<ul>
+<li>资源总量R：<code>R[j]=k</code>表示系统中第j类资源有k个</li>
+<li>可用资源V：<code>V[j]=k</code>表示未被分配的第j类资源现有k个</li>
+<li>最大需求矩阵C：<code>C[i,j]=k</code>表示进程i需要第j类资源最多为k个</li>
+<li>已分配矩阵A：<code>A[i,j]=k</code>表示进程i已分得第j类资源k个</li>
+</ul>
 </li>
 </ol>
 <hr>
-<h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><ol>
-<li><p>查看docker版本信息</p>
-<ul>
-<li><code>docker version</code>  或<code>docker -v</code></li>
+<h3 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h3><ol>
+<li>内存管理术语<ul>
+<li>页框（帧）：一个固定长度的内存块</li>
+<li>页：一个固定长度的数据块（程序代码或数据），平时存储在二级存储器，常用尺寸：4KB</li>
+<li>段：一个变长的数据块，平时存储在二级存储器</li>
 </ul>
 </li>
-<li><p>获取镜像</p>
-<ul>
-<li><code>docker pull 镜像名</code>，例如：<code>docker pull ubuntu:latest</code></li>
+<li>重定位：进程执行过程中，需要将要访问的程序地址转换为实际的内存物理地址<ul>
+<li>逻辑地址：程序中引用的地址，从0顺序编址</li>
+<li>物理地址：数据在内存中的单元地址</li>
 </ul>
 </li>
-<li><p>搜索镜像</p>
-<ul>
-<li><code>docker search 镜像名</code>，例如：<code>docker search ubuntu</code></li>
-</ul>
-</li>
-<li><p>查看本地镜像仓库</p>
-<ul>
-<li><code>docker images</code></li>
-<li>可见字段信息如下：<ol>
-<li>REPOSITORY：来自哪个仓库</li>
-<li>TAG：镜像的标记</li>
-<li>IMAGE ID：镜像ID号，唯一</li>
-<li>CREATED：创建时间</li>
-<li>SIZE：镜像大小</li>
+<li>内存管理技术<ul>
+<li>分区（连续分配，为一个用户程序分配一个连续的内存空间）<ol>
+<li>固定分区：易产生区内内碎片，内存利用率低</li>
+<li>动态分区：易产生区间外碎片<ul>
+<li>可通过压缩解决外碎片</li>
+<li>分配策略<ol>
+<li>首次适配（First Fit）：空闲区按起始地址递增顺序排列（从链首开始查找）：低地址端遗留许多碎片，高地址端有大空闲区——最常用，内存分配最快，内存回收最佳</li>
+<li>下次适配（Next Fit）：空闲区按起始地址递增顺序排列（从上次扫描结束处继续查找）：平均查找时间缩短，空间利用比FF均衡</li>
+<li>最佳适配（Best Fit）：空闲区按分区大小递增顺序排列：链首部碎片多，查找费时，回收合并时复杂——查找最合适空闲区时最快，但碎片最多，压缩最频繁，性能最差</li>
+<li>最差适配（Worst Fit）：空闲区按分区大小递减顺序排列：小碎片较少，但最大的空闲区也不会很大</li>
 </ol>
 </li>
 </ul>
 </li>
-<li><p>启动新镜像</p>
-<ul>
-<li><code>docker run -it 仓库名 命令解析器</code>，例如：<code>docker run -it chug/ubuntu14.04x64 /bin/bash</code></li>
-<li>说明：<ol>
-<li><code>-it</code>表示运行在交互模式，是<code>-i -t</code>的缩写，<code>-i</code>表示打开并保持stdout，<code>-t</code>表示分配一个终端。即启动bash，和容器有命令行的交互</li>
-<li>当终端字头变成例如<code>root@aa97ba3292ce:/#</code>时，说明镜像已创建一个容器实例，接下来便可对该实例进行操作</li>
+<li>可通过压缩解决外碎片</li>
+</ol>
+</li>
+<li>分页<ol>
+<li>内存划分为大小相等的物理块（页框，帧）</li>
+<li>帧大小L，通常为4KB</li>
+<li><code>页号=int（地址/帧大小）</code>，<code>页内偏移=地址mod帧大小</code>。例如：32bit的逻辑地址A可表示为：页号p（20b），页内偏移d(12b)</li>
+<li>页表：记录进程中的每个页存放在哪一个内存帧，位于内存；每个进程都有一个页表</li>
+<li><code>物理地址=帧号*帧长+页内偏移量</code></li>
+</ol>
+</li>
+<li>分段<ol>
+<li>32bit逻辑地址：&lt;段号s，段内偏移量d&gt;</li>
+<li>段表：每个进程一个段表</li>
+<li><code>物理地址=段起址+段内偏移量</code></li>
 </ol>
 </li>
 </ul>
 </li>
-<li><p>查看当前正在运行的容器</p>
-<ul>
-<li><code>docker ps</code></li>
+<li>伙伴系统<ul>
+<li>Unix、Linux采用伙伴系统分配内存页框（帧）</li>
+<li>伙伴：两个相邻的帧块。每块大小必须相同</li>
 </ul>
 </li>
-<li><p>操作镜像</p>
-<ul>
-<li><code>docker start 容器ID号</code>：启动容器</li>
-<li><code>docker stop 容器ID号</code>：停止容器</li>
-<li><code>docker restart 容器ID号</code>：重启容器</li>
-<li><code>docker attach 容器ID号</code>：进入一个后台启动的容器</li>
-<li><code>docker commit -m &quot;说明信息&quot; -a &quot;用户信息&quot; 容器ID号 用户名/仓库名:tag信息</code>，例如：<code>docker commit -m &quot;ubuntu with vim&quot; -a &quot;sgy&quot; aa97ba3292ce sgy/ubuntu:vim</code>：保存容器的更改</li>
-<li><code>exit</code>：退出容器</li>
+</ol>
+<hr>
+<h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><ol>
+<li>虚拟内存允许进程执行时只将部分程序放入内存，因此程序可以比物理内存大</li>
+<li>术语<ul>
+<li>虚拟内存：用辅助存储器（一般指磁盘）作为内存的补充</li>
+<li>虚拟地址：即逻辑地址</li>
+<li>虚拟地址空间：分配给某进程（程序）的虚拟地址范围</li>
+<li>实地址：即物理地址</li>
 </ul>
 </li>
-<li><p>删除容器或镜像</p>
-<ul>
-<li><code>docker rm 容器ID号</code>：删除容器</li>
-<li><code>docker rmi 镜像ID号</code>：删除镜像</li>
-<li>注意：删除镜像前必须先删除以此镜像为基础的容器</li>
+<li>进程对代码和数据的引用和访问有集簇倾向，所以虚拟内存方案可行</li>
+<li>虚拟页式管理中的页表：<code>帧号-P驻留位-引用字段-M修改位-磁盘地址</code></li>
+<li>倒排页表为内存的每一页框设置一个页表项</li>
+<li>快表TLB：将页表中进程运行最常用的部分放入TLB，TLB集成在CPU内部的MMU里面<ul>
+<li>若要访问的页号位于TLB，则从TLB中取出帧号</li>
+<li>否则，从内存中的页表取出帧号，且添加进TLB</li>
+<li>当TLB满时，淘汰旧表项，再写入新表项</li>
 </ul>
 </li>
-<li><p>docker命令图</p>
-<img src="/2020/03/25/Docker%E5%AE%89%E8%A3%85%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/Docker命令.png">
-
-
-
+<li>段页式：用户程序划分为段，段再划分为大小相等的页</li>
+<li>总结——各存储管理方法<ul>
+<li>固定分区：支持多道程序设计，算法简单，但内碎片多</li>
+<li>动态分区：无内碎片，但用于外碎片的压缩处理时间长</li>
+<li>简单页式：克服了碎片多和压缩处理时间长的缺点，但不支持虚拟内存</li>
+<li>虚存页式：支持虚拟存储，离散分配内存，无外碎片，但不能以自然的方式提供内存的共享和存取保护机制</li>
+<li>虚存段式：易于共享保护，内存碎片多，支持虚拟内存</li>
+<li>虚存段页式：易于共享保护，内存碎片少，支持虚拟内存</li>
+</ul>
+</li>
+<li>置换策略<ul>
+<li>最佳置换算法OPT：淘汰永不再使用或下次访问距当前时间最长的页面</li>
+<li>最近最少使用算法LRU：淘汰在最近一段时间内最久未使用的一页</li>
+<li>FIFO算法：淘汰驻留内存时间最久的一页</li>
+<li>简单时钟算法Clock</li>
+</ul>
+</li>
+<li><code>缺页率=不成功访问次数/总访问次数</code></li>
+<li>当系统并发度过高时，缺页频繁，用于调页的时间比进程实际运行的时间还多，CPU利用率急剧下降，此时发生了抖动</li>
+</ol>
+<hr>
+<h3 id="单处理器调度"><a href="#单处理器调度" class="headerlink" title="单处理器调度"></a>单处理器调度</h3><ol>
+<li>处理器调度类型<ul>
+<li>长程调度：新作业提交时，决定是否将其送入内存，成为一个进程。也称作业调度</li>
+<li>短程调度：决定将CPU分配给哪个就绪进程</li>
+<li>中程调度：决定把哪些进程在内存与磁盘间交换</li>
+</ul>
+</li>
+<li>选择调度策略<ul>
+<li>先来先服务FCFS</li>
+<li>轮转RR：各进程按提交顺序排成就绪队列，然后依次占用处理器，运行某一时间片，时间片完则排入就绪队列尾</li>
+<li>最短进程优先SPN：调度CPU执行时间预期最短的进程，直至运行完或阻塞时，再重新调度</li>
+<li>最短剩余时间SRT：新进程到达时，若新进程的预计运行时间比当前进程的剩余运行时间更短，则抢占当前进程</li>
+<li>最高响应比优先算法：综合了FCFS和SPN算法</li>
+<li>反馈（多级反馈队列）</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="IO管理和磁盘调度"><a href="#IO管理和磁盘调度" class="headerlink" title="IO管理和磁盘调度"></a>IO管理和磁盘调度</h3><ol>
+<li>直接内存存取DMA：在内存和设备间直接进行块传送：I/O效率高</li>
+<li>缓冲：缓和CPU和I/O设备间速度不匹配矛盾，提高并行性</li>
+<li>磁盘调度<ul>
+<li>扇区是最小寻址单位和存取单位（但不是分配单位）</li>
+<li>磁盘访问时间<ol>
+<li><code>寻道时间=启动磁盘时间+横跨n条磁道时间</code>：对磁盘访问时间影响最大</li>
+<li><code>旋转延迟时间=将待访问扇区转到磁头下的时间</code></li>
+<li><code>传输时间=读写字节数/（旋转速度*每磁道字节数）</code></li>
+</ol>
+</li>
+<li>磁盘调度策略<ol>
+<li>先进先出FIFO：按请求的接收顺序服务</li>
+<li>先进后出LIFO：先处理最新提出的请求</li>
+<li>最短服务时间优先算法SSTF：优先选择距当前磁头位置最近的访问请求进行服务</li>
+<li>SCAN扫描算法：选择位于磁头移动方向前方且距磁头位置最近的访问请求进行服务。 当前方没有访问请求时，立即改变磁头移动方向 (LOOK)；或继续扫描到磁盘边界后再转向(SCAN)</li>
+<li>C-SCAN循环扫描算法：磁头从磁盘一端移到另一端，随着移动而不断处理请求。当磁头移到另一端 时，马上返回磁盘起始，返回时不处理请求</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>RAID——独立磁盘冗余阵列<ul>
+<li>RAID用多个小容量磁盘代替单个大容量磁盘</li>
+<li>RAID 0：无冗余的并行访问</li>
+<li>RAID 1：可并行访问的镜像磁盘（复制每个磁盘）</li>
+<li>RAID 2：位汉明校验</li>
+<li>RAID 3：位交错奇偶校验</li>
+<li>RAID 4：块奇偶校验</li>
+<li>RAID 5：块分布奇偶校验</li>
+<li>RAID 6：P+Q双重冗余</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h3><ol>
+<li>文件分配<ul>
+<li>连续分配</li>
+<li>链接分配</li>
+<li>索引分配</li>
+</ul>
 </li>
 </ol>
 
@@ -365,7 +657,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -434,20 +726,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
