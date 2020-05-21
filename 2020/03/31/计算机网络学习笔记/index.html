@@ -17,27 +17,27 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yashuangyi.github.io","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="计算机网络学习笔记作者：亚双义、一真 邮箱：chenzhiyuan1999@gmail.com 时间：2020-3-27  概述 互联网两大重要基本特点：连通性、共享  网络的概念  互联网Internet：世界上最大的、覆盖全球的计算机网络 计算机网络：由若干结点和连接这些结点的链路组成 互连网internet：网络的网络，通过路由器互连   互联网服务提供者ISP  互联网的组成  边缘部分：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机网络学习笔记">
-<meta property="og:url" content="http://yoursite.com/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:url" content="https://yashuangyi.github.io/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="亚双义一真の博客">
 <meta property="og:description" content="计算机网络学习笔记作者：亚双义、一真 邮箱：chenzhiyuan1999@gmail.com 时间：2020-3-27  概述 互联网两大重要基本特点：连通性、共享  网络的概念  互联网Internet：世界上最大的、覆盖全球的计算机网络 计算机网络：由若干结点和连接这些结点的链路组成 互连网internet：网络的网络，通过路由器互连   互联网服务提供者ISP  互联网的组成  边缘部分：">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Study/%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%90%84%E7%B1%BBIP%E5%9C%B0%E5%9D%80%E7%9A%84%E7%BD%91%E7%BB%9C%E5%8F%B7%E5%AD%97%E6%AE%B5%E5%92%8C%E4%B8%BB%E6%9C%BA%E5%8F%B7%E5%AD%97%E6%AE%B5.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Study/%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/IP%E5%9C%B0%E5%9D%80%E7%9A%84%E6%8C%87%E6%B4%BE%E8%8C%83%E5%9B%B4.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Study/%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%B8%80%E8%88%AC%E4%B8%8D%E4%BD%BF%E7%94%A8%E7%9A%84%E7%89%B9%E6%AE%8A%E7%9A%84IP%E5%9C%B0%E5%9D%80.png">
+<meta property="og:image" content="https://yashuangyi.github.io/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%90%84%E7%B1%BBIP%E5%9C%B0%E5%9D%80%E7%9A%84%E7%BD%91%E7%BB%9C%E5%8F%B7%E5%AD%97%E6%AE%B5%E5%92%8C%E4%B8%BB%E6%9C%BA%E5%8F%B7%E5%AD%97%E6%AE%B5.png">
+<meta property="og:image" content="https://yashuangyi.github.io/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/IP%E5%9C%B0%E5%9D%80%E7%9A%84%E6%8C%87%E6%B4%BE%E8%8C%83%E5%9B%B4.png">
+<meta property="og:image" content="https://yashuangyi.github.io/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%B8%80%E8%88%AC%E4%B8%8D%E4%BD%BF%E7%94%A8%E7%9A%84%E7%89%B9%E6%AE%8A%E7%9A%84IP%E5%9C%B0%E5%9D%80.png">
 <meta property="article:published_time" content="2020-03-31T11:25:00.000Z">
-<meta property="article:modified_time" content="2020-04-16T10:33:40.436Z">
+<meta property="article:modified_time" content="2020-05-21T11:33:02.195Z">
 <meta property="article:author" content="yashuangyi">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Study/%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%90%84%E7%B1%BBIP%E5%9C%B0%E5%9D%80%E7%9A%84%E7%BD%91%E7%BB%9C%E5%8F%B7%E5%AD%97%E6%AE%B5%E5%92%8C%E4%B8%BB%E6%9C%BA%E5%8F%B7%E5%AD%97%E6%AE%B5.png">
+<meta name="twitter:image" content="https://yashuangyi.github.io/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%90%84%E7%B1%BBIP%E5%9C%B0%E5%9D%80%E7%9A%84%E7%BD%91%E7%BB%9C%E5%8F%B7%E5%AD%97%E6%AE%B5%E5%92%8C%E4%B8%BB%E6%9C%BA%E5%8F%B7%E5%AD%97%E6%AE%B5.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="https://yashuangyi.github.io/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 
 <script id="page-configurations">
@@ -172,7 +172,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -202,7 +202,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-16 18:33:40" itemprop="dateModified" datetime="2020-04-16T18:33:40+08:00">2020-04-16</time>
+                <time title="修改时间：2020-05-21 19:33:02" itemprop="dateModified" datetime="2020-05-21T19:33:02+08:00">2020-05-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -248,6 +248,8 @@
 </ul>
 </li>
 <li><p>端系统之间的两种通信方式：客户-服务器方式（C/S方式）、对等方式（P2P方式）</p>
+</li>
+<li><p>P2P：是一种网络新技术，依赖zd网络中参与者的计算能力和带宽，而不是把依赖都聚集在较少的几台服务器上；也是下载术语，意思是在你自己下载的同时，自己的电脑还要继续做主机上传，这种下载方式，人越多速度越快但缺点是对硬盘损伤比较大（在写的同时还要读），还有对内存占用较多，影响整机速度</p>
 </li>
 <li><p>互联网核心部分：路由器</p>
 <p>实现分组交换，转发数据包</p>
@@ -548,15 +550,15 @@
 <li><p>由网络号和主机号组成：<code>IP地址::= { &lt;网络号&gt;, &lt;主机号&gt;}</code></p>
 </li>
 <li><p>各类IP地址的网络号字段和主机号字段</p>
-<img src="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Study/笔记/计算机网络/计算机网络学习笔记/各类IP地址的网络号字段和主机号字段.png">
+<img src="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/各类IP地址的网络号字段和主机号字段.png">
 </li>
 <li><p>点分十进制计法</p>
 </li>
 <li><p>IP地址的指派范围</p>
-<img src="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Study/笔记/计算机网络/计算机网络学习笔记/IP地址的指派范围.png">
+<img src="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/IP地址的指派范围.png">
 </li>
 <li><p>一般不使用的特殊的IP地址</p>
-<img src="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Study/笔记/计算机网络/计算机网络学习笔记/一般不使用的特殊的IP地址.png">
+<img src="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/一般不使用的特殊的IP地址.png">
 </li>
 <li><p>同一局域网的IP地址网络号必须一样</p>
 </li>
@@ -682,7 +684,7 @@
 <li>TCP的连接释放<ul>
 <li>TCP释放连接的过程叫做挥手</li>
 <li>挥手需要在客户和服务器之间交换四个TCP报文段</li>
-<li><strong>过程</strong></li>
+<li><strong>过程</strong>（<a href="https://www.nowcoder.com/ta/review-network/review?tpId=33&amp;tqId=21194&amp;query=&amp;asc=true&amp;order=&amp;page=6）" target="_blank" rel="noopener">https://www.nowcoder.com/ta/review-network/review?tpId=33&amp;tqId=21194&amp;query=&amp;asc=true&amp;order=&amp;page=6）</a></li>
 </ul>
 </li>
 </ol>
