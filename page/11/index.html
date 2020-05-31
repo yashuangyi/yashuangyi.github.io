@@ -124,7 +124,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">13</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">14</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -134,7 +134,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">14</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">15</span></a>
 
   </li>
   </ul>
@@ -165,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/03/23/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/03/25/Docker%E5%AE%89%E8%A3%85%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -179,7 +179,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/23/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">JavaScript入门笔记</a>
+            <a href="/2020/03/25/Docker%E5%AE%89%E8%A3%85%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Docker安装及基本命令</a>
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-23 01:41:00 / 修改时间：01:53:38" itemprop="dateCreated datePublished" datetime="2020-03-23T01:41:00+08:00">2020-03-23</time>
+              <time title="创建时间：2020-03-25 15:29:00 / 修改时间：15:46:52" itemprop="dateCreated datePublished" datetime="2020-03-25T15:29:00+08:00">2020-03-25</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,116 +213,138 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><p>作者：亚双义、一真</p>
+          <h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>作者：亚双义、一真</p>
 <p>邮箱：<a href="mailto:chenzhiyuan1999@gmail.com">chenzhiyuan1999@gmail.com</a></p>
-<p>时间：2020-2-20</p>
-<p>参考：<a href="https://www.liaoxuefeng.com/wiki/1022910821149312" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/1022910821149312</a></p>
+<p>时间：2020-3-23</p>
 <hr>
-<h3 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h3><ol>
-<li><p>一般将JS代码放到一个单独的<code>.js</code>文件，然后在HTML的<code>&lt;head&gt;</code>中通过<code>&lt;script src=&quot;...&quot;&gt;&lt;/script&gt;</code>引入这个文件</p>
-</li>
-<li><p><code>NaN</code>表示<code>Not a Number</code>，当无法计算结果时用<code>NaN</code>表示</p>
-</li>
-<li><p>唯一能判断<code>NaN</code>的方法是通过<code>isNaN()</code>函数</p>
-</li>
-<li><p>JS的对象是一组由键——值组成的无序组合</p>
-</li>
-<li><p>启用strict模式的方法：在JS代码的第一行写上<code>&#39;use strict&#39;</code></p>
-</li>
-<li><p>模版字符串（例如<code>${name}</code>,<code>${age}</code>）可替代<code>+</code>来连接字符串</p>
-</li>
-<li><p><code>Array</code>通过<code>indexOf()</code>来搜索一个指定元素的位置</p>
-</li>
-<li><p>往<code>Array</code>头部添加元素使用<code>unshift()</code>方法，<code>shift()</code>方法则把第一个元素删掉</p>
-</li>
-<li><p>JS对象的键必须是字符串</p>
-</li>
-<li><p><code>Map</code>是一组键值对的结构，具有极快的查找速度</p>
-</li>
-<li><p><code>Set</code>和<code>Map</code>类似，也是一组key的集合，但不存储value</p>
-</li>
-<li><p><code>Array,Map,Set</code>都属于<code>iterable</code>类型，可通过<code>for...of</code>遍历</p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>距离上次使用docker已经有一年多了，只不过之前的使用大多都是照葫芦画瓢，并没掌握其原理。正好最近学校大数据课程要求我们搭建hadoop环境（一个Master、两个Slave节点），为了方便配置环境我决定使用docker来搭建。由于之前买的书还在学校宿舍= =我便根据网上教程自行整理一遍好了~</p>
+<p>注：以下演示环境为Win10系统，其它系统用户请参考教程：<a href="https://www.runoob.com/docker/windows-docker-install.html" target="_blank" rel="noopener">https://www.runoob.com/docker/windows-docker-install.html</a></p>
 <hr>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>曾经的我也会有这个疑问：Docker是用来干嘛的？不是已经有虚拟机了吗？</p>
+<p>Docker可以说是一个终端命令行的虚拟机，或者说是一个虚拟环境，亦或者说它是容器，但又不只是个容器，它包含3个重要概念：</p>
+<ol>
+<li><p>镜像（Image）</p>
+<p>镜像是静态的、可被用户互相分享的文件。譬如装系统或虚拟机，都是需要iso镜像才能进行安装，docker中的镜像也是如此，是静态的，用户只能pull别人的镜像或push自己的镜像</p>
+</li>
+<li><p>容器（Container）</p>
+<p>容器可以理解为镜像的动态状态，用户可对其进行操作，但关机后将失去修改内容，因此若要保存修改则需要将当前容器封装成一个新的镜像</p>
+</li>
+<li><p>仓库（Repository）</p>
+<p>类比Git的代码仓库，用户可pull别人push到公共仓库的镜像到本地，亦可push自己做好环境的镜像上去</p>
 </li>
 </ol>
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ol>
-<li><p>不在任何函数内定义的变量就具有全局作用域。JS默认有一个全局对象<code>window</code></p>
-</li>
-<li><p>减少冲突的一个方法是把自己的所有变量和函数全部绑定到一个全局变量中</p>
-</li>
-<li><p><code>let</code>可以替代<code>var</code>声明一个块级作用域的变量</p>
-</li>
-<li><p><code>const</code>定义常量</p>
-</li>
-<li><p>高阶函数：可以接收另一个函数作为参数，也可把函数作为结果值返回</p>
-</li>
-<li><p><code>Array</code>的<code>map()</code>方法以及<code>reduce()</code>方法</p>
-</li>
-<li><p>sort()方法也是高阶函数，可以接收一个比较函数来实现自定义的排序</p>
-</li>
-<li><p><code>every()</code>方法可以判断数组的所有元素是否满足测试条件</p>
-</li>
-<li><p><code>find()</code>方法用于查找符合条件的第一个元素</p>
-</li>
-<li><p>闭包：可以借助闭包封装一个私有变量</p>
-<hr>
-</li>
-</ol>
-<h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ol>
-<li><p><code>window</code>对象不但充当全局作用域，而且表示浏览器窗口</p>
-</li>
-<li><p><code>navigator</code>对象表示浏览器的信息</p>
-</li>
-<li><p><code>screen</code>对象表示屏幕的信息</p>
-</li>
-<li><p><code>location</code>对象表示当前页面的URL信息</p>
-</li>
-<li><p><code>document</code>对象表示当前页面。由于HTML在浏览器中以DOM形式表示为树形结构，<code>document</code>对象就是整个DOM树的根节点</p>
-</li>
-<li><p><code>document.cookie</code>可以读取到当前页面的Cookie</p>
-</li>
-<li><p>获取DOM节点的方法：</p>
+<p>说了这么多，他能做什么呢？以下是我查到的数据：</p>
 <ul>
-<li><code>document.getElementById()</code></li>
-<li><code>document.getElementsByTagName()</code></li>
-<li>CSS选择器<code>document.getElementsByClassName()</code></li>
+<li>65%用户使用docker进行敏捷开发</li>
+<li>48%用户使用docker控制应用环境</li>
+<li>41%用户使用docker实现应用的可移植性</li>
+<li>58%用户将docker用于生产</li>
+<li>90%用户计划使用docker搭建开发环境</li>
+<li>80%用户计划围绕docker实现devops</li>
+<li>90%用户使用docker进行应用开发</li>
 </ul>
-</li>
-<li><p>对于表单<code>text,password,hidden,select</code>可以调用<code>value</code>来获得其值；而对于单选框<code>radio</code>以及复选框<code>checkbox</code>要用<code>checked</code>来判断</p>
 <hr>
+<h3 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h3><ol>
+<li><p>检查电脑是否支持虚拟化</p>
+<p>打开任务管理器，点开“性能”一栏，查看CPU信息中是否已启用虚拟化</p>
+</li>
+<li><p>安装版本</p>
+<p>需要特别注意的是：<strong>Docker支持Win10，但仅支持Win10专业版</strong>（一年前踩过此坑，印象深刻…）。以我的Win10家庭中文版为例，须安装DockerToolBox（下载链接：<a href="http://mirrors.aliyun.com/docker-toolbox/windows/）" target="_blank" rel="noopener">http://mirrors.aliyun.com/docker-toolbox/windows/）</a></p>
+</li>
+<li><p>注册Docker账号</p>
+<p>链接：<a href="https://hub.docker.com/signup" target="_blank" rel="noopener">https://hub.docker.com/signup</a></p>
+<p>注册后便可像github般上传项目到仓库中</p>
+</li>
+<li><p>注册DaoCloud</p>
+<p>大多数时候直接从docker官方往本地pull镜像会十分缓慢，因此可通过国内docker服务提供商免费获取加速pull镜像服务，我这里用的是DaoCloud（链接：<a href="https://www.daocloud.io/）" target="_blank" rel="noopener">https://www.daocloud.io/）</a></p>
+<p>注册完毕后在其首页按教程获取加速服务</p>
+</li>
+<li><p>注意Git路径</p>
+<p>需要注意的是，若Git的安装路径不是默认的C盘的话，打开docker将会提示找不到“bash.exe”，这时需修改快捷方式的路径，参考：<a href="https://blog.csdn.net/pingfan2014/article/details/81145813" target="_blank" rel="noopener">https://blog.csdn.net/pingfan2014/article/details/81145813</a></p>
+</li>
+<li><p>启动docker</p>
+<p>若启动docker时提示“No default Boot2Docker ISO found…”，请参考：<a href="https://blog.csdn.net/dhaiuda/article/details/81975550，亲测有效" target="_blank" rel="noopener">https://blog.csdn.net/dhaiuda/article/details/81975550，亲测有效</a></p>
+</li>
+<li><p>使用SecureCRT登录</p>
+<p>default虚拟机的默认用户名为<code>docker</code>，密码为<code>tcuser</code>，ip为docker主界面所显示</p>
+</li>
+<li><p>更改虚拟磁盘存储位置</p>
+<p>虚拟机的默认存储位置是C盘，为了避免后期C盘爆红（我亲自体验过一次，因而买了新固态重装了电脑…）最好将存储位置改为其它盘</p>
+</li>
+<li><p>如果使用的是<code>boot2docker</code>这一发行版，首先执行<code>docker-machine ssh default</code>进入容器中，然后执行<code>sudo -i</code>进入root用户，这样才能执行<code>sudo</code>命令</p>
+</li>
+<li><p>Hadoop集群搭建教程：<a href="https://kiwenlau.com/2016/06/12/160612-hadoop-cluster-docker-update/" target="_blank" rel="noopener">https://kiwenlau.com/2016/06/12/160612-hadoop-cluster-docker-update/</a></p>
+<p>这位大佬写的很好，只不过我目前也仅局限于照着使用，有机会得研究一下他是怎么实现的…</p>
 </li>
 </ol>
-<h3 id="快速简洁的框架——jQuery"><a href="#快速简洁的框架——jQuery" class="headerlink" title="快速简洁的框架——jQuery"></a>快速简洁的框架——jQuery</h3><ol>
-<li>选择器是jQuery的核心<ul>
-<li>按id查询：<code>$(&#39;#id&#39;)</code></li>
-<li>按tag查询：<code>$(&#39;tag&#39;)</code></li>
-<li>按class查询：<code>$(&#39;.class&#39;)</code></li>
-<li>按属性查询：<code>$(&#39;[name=email]&#39;)</code></li>
+<hr>
+<h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><ol>
+<li><p>查看docker版本信息</p>
+<ul>
+<li><code>docker version</code>  或<code>docker -v</code></li>
 </ul>
 </li>
-<li>层次选择器</li>
-<li>子选择器</li>
-<li>表单相关<ul>
-<li><code>:input</code>  选择文本框</li>
-<li><code>:file</code>  选择文件</li>
-<li><code>:checkbox</code>  选择复选框</li>
-<li><code>:radio</code> 选择单选框</li>
-<li><code>:focus</code> 选择当前输入焦点的元素</li>
-<li><code>:checked</code>  选择当前勾上的单选框和复选框</li>
-<li><code>:enabled</code>  选择能正常输入的</li>
-<li><code>:disabled</code>  选择不能输入的</li>
+<li><p>获取镜像</p>
+<ul>
+<li><code>docker pull 镜像名</code>，例如：<code>docker pull ubuntu:latest</code></li>
 </ul>
 </li>
-<li>jQuery对象的<code>text()</code>和<code>html()</code>方法分别获取节点的文本和原始HTML文本</li>
-<li>ajax<ul>
-<li>get:<code>$.get(&#39;url&#39;,{obj});</code></li>
-<li>post:<code>$.post(&#39;url&#39;,{obj});</code></li>
-<li><code>getJson()</code>方法快速通过GET获取一个JSON对象</li>
+<li><p>搜索镜像</p>
+<ul>
+<li><code>docker search 镜像名</code>，例如：<code>docker search ubuntu</code></li>
 </ul>
 </li>
-<li>JS支持try…catch…finally语句</li>
-<li><code>catch(e)</code>可以通过捕获的变量<code>e</code>来访问对象</li>
-<li><code>val()</code>方法获取值</li>
+<li><p>查看本地镜像仓库</p>
+<ul>
+<li><code>docker images</code></li>
+<li>可见字段信息如下：<ol>
+<li>REPOSITORY：来自哪个仓库</li>
+<li>TAG：镜像的标记</li>
+<li>IMAGE ID：镜像ID号，唯一</li>
+<li>CREATED：创建时间</li>
+<li>SIZE：镜像大小</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>启动新镜像</p>
+<ul>
+<li><code>docker run -it 仓库名 命令解析器</code>，例如：<code>docker run -it chug/ubuntu14.04x64 /bin/bash</code></li>
+<li>说明：<ol>
+<li><code>-it</code>表示运行在交互模式，是<code>-i -t</code>的缩写，<code>-i</code>表示打开并保持stdout，<code>-t</code>表示分配一个终端。即启动bash，和容器有命令行的交互</li>
+<li>当终端字头变成例如<code>root@aa97ba3292ce:/#</code>时，说明镜像已创建一个容器实例，接下来便可对该实例进行操作</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>查看当前正在运行的容器</p>
+<ul>
+<li><code>docker ps</code></li>
+</ul>
+</li>
+<li><p>操作镜像</p>
+<ul>
+<li><code>docker start 容器ID号</code>：启动容器</li>
+<li><code>docker stop 容器ID号</code>：停止容器</li>
+<li><code>docker restart 容器ID号</code>：重启容器</li>
+<li><code>docker attach 容器ID号</code>：进入一个后台启动的容器</li>
+<li><code>docker commit -m &quot;说明信息&quot; -a &quot;用户信息&quot; 容器ID号 用户名/仓库名:tag信息</code>，例如：<code>docker commit -m &quot;ubuntu with vim&quot; -a &quot;sgy&quot; aa97ba3292ce sgy/ubuntu:vim</code>：保存容器的更改</li>
+<li><code>exit</code>：退出容器</li>
+</ul>
+</li>
+<li><p>删除容器或镜像</p>
+<ul>
+<li><code>docker rm 容器ID号</code>：删除容器</li>
+<li><code>docker rmi 镜像ID号</code>：删除镜像</li>
+<li>注意：删除镜像前必须先删除以此镜像为基础的容器</li>
+</ul>
+</li>
+<li><p>docker命令图</p>
+<img src="/2020/03/25/Docker%E5%AE%89%E8%A3%85%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/Docker命令.png">
+
+
+
+</li>
 </ol>
 
       
@@ -343,7 +365,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -412,7 +434,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -425,7 +447,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
