@@ -124,17 +124,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">14</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">13</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">5</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">16</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">14</span></a>
 
   </li>
   </ul>
@@ -165,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/03/23/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/03/20/%E5%A4%8D%E5%88%BBBug-net%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0%E7%95%8C%E9%9D%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -179,7 +179,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/23/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">JavaScript入门笔记</a>
+            <a href="/2020/03/20/%E5%A4%8D%E5%88%BBBug-net%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0%E7%95%8C%E9%9D%A2/" class="post-title-link" itemprop="url">[复刻Bug] .net上传图片时的自动刷新界面</a>
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-23 01:41:00 / 修改时间：01:53:38" itemprop="dateCreated datePublished" datetime="2020-03-23T01:41:00+08:00">2020-03-23</time>
+              <time title="创建时间：2020-03-20 20:37:00 / 修改时间：22:25:50" itemprop="dateCreated datePublished" datetime="2020-03-20T20:37:00+08:00">2020-03-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -198,7 +198,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AC%94%E8%AE%B0%E6%9D%82%E7%83%A9/" itemprop="url" rel="index"><span itemprop="name">笔记杂烩</span></a>
+                  <a href="/categories/%E7%BC%96%E7%A8%8B%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">编程之路</span></a>
                 </span>
             </span>
 
@@ -213,116 +213,84 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><p>作者：亚双义、一真</p>
+          <h2 id="复刻Bug-net上传图片时的自动刷新"><a href="#复刻Bug-net上传图片时的自动刷新" class="headerlink" title="[复刻Bug] .net上传图片时的自动刷新"></a>[复刻Bug] .net上传图片时的自动刷新</h2><p>作者：亚双义、一真</p>
 <p>邮箱：<a href="mailto:chenzhiyuan1999@gmail.com">chenzhiyuan1999@gmail.com</a></p>
-<p>时间：2020-2-20</p>
-<p>参考：<a href="https://www.liaoxuefeng.com/wiki/1022910821149312" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/1022910821149312</a></p>
+<p>时间：2020-3-20</p>
 <hr>
-<h3 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h3><ol>
-<li><p>一般将JS代码放到一个单独的<code>.js</code>文件，然后在HTML的<code>&lt;head&gt;</code>中通过<code>&lt;script src=&quot;...&quot;&gt;&lt;/script&gt;</code>引入这个文件</p>
-</li>
-<li><p><code>NaN</code>表示<code>Not a Number</code>，当无法计算结果时用<code>NaN</code>表示</p>
-</li>
-<li><p>唯一能判断<code>NaN</code>的方法是通过<code>isNaN()</code>函数</p>
-</li>
-<li><p>JS的对象是一组由键——值组成的无序组合</p>
-</li>
-<li><p>启用strict模式的方法：在JS代码的第一行写上<code>&#39;use strict&#39;</code></p>
-</li>
-<li><p>模版字符串（例如<code>${name}</code>,<code>${age}</code>）可替代<code>+</code>来连接字符串</p>
-</li>
-<li><p><code>Array</code>通过<code>indexOf()</code>来搜索一个指定元素的位置</p>
-</li>
-<li><p>往<code>Array</code>头部添加元素使用<code>unshift()</code>方法，<code>shift()</code>方法则把第一个元素删掉</p>
-</li>
-<li><p>JS对象的键必须是字符串</p>
-</li>
-<li><p><code>Map</code>是一组键值对的结构，具有极快的查找速度</p>
-</li>
-<li><p><code>Set</code>和<code>Map</code>类似，也是一组key的集合，但不存储value</p>
-</li>
-<li><p><code>Array,Map,Set</code>都属于<code>iterable</code>类型，可通过<code>for...of</code>遍历</p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>这几天在做一个Web投票系统，就在快做完的时候我心想，要不给管理员加个“添加头像”功能吧？反正以后也会有这种需求的，而且这功能也是随手就能写出来。然而……</p>
 <hr>
+<h3 id="Bug现身"><a href="#Bug现身" class="headerlink" title="Bug现身"></a>Bug现身</h3><img src="/2020/03/20/%E5%A4%8D%E5%88%BBBug-net%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0%E7%95%8C%E9%9D%A2/effect1.png" alt="上传文件" style="zoom:80%;">
+
+<p>如上图所示，这是我先前做的上传excel文件功能，选择文件并上传后并未发生异常现象，只有点击“保存”按钮后才会刷新界面，当时我并未在意…</p>
+<img src="/2020/03/20/%E5%A4%8D%E5%88%BBBug-net%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0%E7%95%8C%E9%9D%A2/effect2.png" alt="上传图片" style="zoom:80%;">
+
+<p>这张图则是我后来做的上传头像功能，然而令我诧异的是：只要我上传图片，虽然能成功上传到指定路径，但返回Json数据给js后界面就会自动刷新…</p>
+<p>跟以往的Bug不同的是，这次的并没有任何异常抛出，连控制台输出也是干干净净，让我无从下手…</p>
+<hr>
+<h3 id="Debug之路"><a href="#Debug之路" class="headerlink" title="Debug之路"></a>Debug之路</h3><ol>
+<li><p>第一反应是检查js代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//上传图片功能</span></span><br><span class="line">	upload.render(&#123;</span><br><span class="line">		elem:<span class="string">'#btn_selectPic'</span>,</span><br><span class="line">		url:<span class="string">'/Admin/UploadPic'</span>,</span><br><span class="line">		auto:<span class="literal">false</span> ,<span class="comment">//不自动上传</span></span><br><span class="line">		accept:<span class="string">'images'</span>,</span><br><span class="line">		acceptMime:<span class="string">'image/*'</span>,</span><br><span class="line">		bindAction:<span class="string">'#btn_uploadPic'</span>, <span class="comment">//触发上传的按钮</span></span><br><span class="line">		before:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			layer.load();</span><br><span class="line">		&#125;,</span><br><span class="line">		done:<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">			layer.closeAll(<span class="string">'loading'</span>);</span><br><span class="line">			$(<span class="string">'#btn_selectPic'</span>).html(<span class="string">"&lt;i class=''layui-icon layui-icon-upload-drag'&gt;&lt;/i&gt;重新选择"</span>);</span><br><span class="line">			<span class="keyword">if</span>(res.code === <span class="number">200</span>)&#123;</span><br><span class="line">				layer.msg(res.msg);</span><br><span class="line">				$(<span class="string">'#adminPic'</span>).html(<span class="string">"&lt;i class='layui-icon layui-icon-file'&gt;&lt;/i&gt; &lt;a href='"</span> + res.photoPath + <span class="string">"'&gt;"</span> + res.photoName + <span class="string">"&lt;a/&gt;"</span>);</span><br><span class="line">				$(<span class="string">'#picPath'</span>).val(res.photoPath);</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				layer.msg(res.msg);</span><br><span class="line">				$(<span class="string">'#adminPic'</span>).html(<span class="string">""</span>);</span><br><span class="line">				$(<span class="string">'#picPath'</span>).val(<span class="string">""</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>然而无论我如何修改，该刷新现象还是会存在…</p>
 </li>
 </ol>
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ol>
-<li><p>不在任何函数内定义的变量就具有全局作用域。JS默认有一个全局对象<code>window</code></p>
-</li>
-<li><p>减少冲突的一个方法是把自己的所有变量和函数全部绑定到一个全局变量中</p>
-</li>
-<li><p><code>let</code>可以替代<code>var</code>声明一个块级作用域的变量</p>
-</li>
-<li><p><code>const</code>定义常量</p>
-</li>
-<li><p>高阶函数：可以接收另一个函数作为参数，也可把函数作为结果值返回</p>
-</li>
-<li><p><code>Array</code>的<code>map()</code>方法以及<code>reduce()</code>方法</p>
-</li>
-<li><p>sort()方法也是高阶函数，可以接收一个比较函数来实现自定义的排序</p>
-</li>
-<li><p><code>every()</code>方法可以判断数组的所有元素是否满足测试条件</p>
-</li>
-<li><p><code>find()</code>方法用于查找符合条件的第一个元素</p>
-</li>
-<li><p>闭包：可以借助闭包封装一个私有变量</p>
-<hr>
+<ol start="2">
+<li><p>检查上传图片的接口代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; 上传图片.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;returns&gt;Json.&lt;&#x2F;returns&gt;</span><br><span class="line">public ActionResult UploadPic()</span><br><span class="line">&#123;</span><br><span class="line">    string photoPath &#x3D; string.Empty;</span><br><span class="line">    string photoName &#x3D; string.Empty;</span><br><span class="line">    string msg &#x3D; string.Empty;</span><br><span class="line">    HttpPostedFileWrapper file &#x3D; (HttpPostedFileWrapper)Request.Files[0];</span><br><span class="line">    photoName &#x3D; file.FileName;</span><br><span class="line">    if (string.IsNullOrEmpty(photoName))</span><br><span class="line">    &#123;</span><br><span class="line">        msg &#x3D; &quot;无效文件，请重新上传！&quot;;</span><br><span class="line">        return Json(new &#123; photoPath, msg, code &#x3D; 400, photoName &#x3D; string.Empty &#125;, JsonRequestBehavior.AllowGet);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F; 获得当前时间的string类型</span><br><span class="line">        string name &#x3D; DateTime.Now.ToString(&quot;yyyy-MM-dd-HH-mm-ss&quot;);</span><br><span class="line">        string path &#x3D; &quot;&#x2F;Source&#x2F;headPhoto&#x2F;&quot;;</span><br><span class="line">        string uploadPath &#x3D; Server.MapPath(&quot;~&#x2F;&quot; + path);</span><br><span class="line">        string ext &#x3D; Path.GetExtension(photoName);</span><br><span class="line">        string savePath &#x3D; uploadPath + name + ext;</span><br><span class="line">        file.SaveAs(savePath);</span><br><span class="line">        photoPath &#x3D; path + name + ext;</span><br><span class="line">        msg &#x3D; &quot;上传成功！&quot;;</span><br><span class="line">        return Json(new &#123; photoPath, msg, code &#x3D; 200, photoName &#125;, JsonRequestBehavior.AllowGet);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>令我百思不得其解的是，一模一样的代码，上传文件那儿就正常，上传图片反倒不行了，于是…</p>
 </li>
 </ol>
-<h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><ol>
-<li><p><code>window</code>对象不但充当全局作用域，而且表示浏览器窗口</p>
-</li>
-<li><p><code>navigator</code>对象表示浏览器的信息</p>
-</li>
-<li><p><code>screen</code>对象表示屏幕的信息</p>
-</li>
-<li><p><code>location</code>对象表示当前页面的URL信息</p>
-</li>
-<li><p><code>document</code>对象表示当前页面。由于HTML在浏览器中以DOM形式表示为树形结构，<code>document</code>对象就是整个DOM树的根节点</p>
-</li>
-<li><p><code>document.cookie</code>可以读取到当前页面的Cookie</p>
-</li>
-<li><p>获取DOM节点的方法：</p>
-<ul>
-<li><code>document.getElementById()</code></li>
-<li><code>document.getElementsByTagName()</code></li>
-<li>CSS选择器<code>document.getElementsByClassName()</code></li>
-</ul>
-</li>
-<li><p>对于表单<code>text,password,hidden,select</code>可以调用<code>value</code>来获得其值；而对于单选框<code>radio</code>以及复选框<code>checkbox</code>要用<code>checked</code>来判断</p>
-<hr>
+<ol start="3">
+<li><p>在上传Excel的功能中上传图片进行测试</p>
+<p>玄学出现了，在此处上传图片也会立即刷新界面…</p>
 </li>
 </ol>
-<h3 id="快速简洁的框架——jQuery"><a href="#快速简洁的框架——jQuery" class="headerlink" title="快速简洁的框架——jQuery"></a>快速简洁的框架——jQuery</h3><ol>
-<li>选择器是jQuery的核心<ul>
-<li>按id查询：<code>$(&#39;#id&#39;)</code></li>
-<li>按tag查询：<code>$(&#39;tag&#39;)</code></li>
-<li>按class查询：<code>$(&#39;.class&#39;)</code></li>
-<li>按属性查询：<code>$(&#39;[name=email]&#39;)</code></li>
-</ul>
+<ol start="4">
+<li><p>百度 &amp;&amp; 咨询</p>
+<p>无从下手的我决定寻求帮助，然而度娘以及各大.net 讨论群并不能很好地解释这一现象的产生…</p>
 </li>
-<li>层次选择器</li>
-<li>子选择器</li>
-<li>表单相关<ul>
-<li><code>:input</code>  选择文本框</li>
-<li><code>:file</code>  选择文件</li>
-<li><code>:checkbox</code>  选择复选框</li>
-<li><code>:radio</code> 选择单选框</li>
-<li><code>:focus</code> 选择当前输入焦点的元素</li>
-<li><code>:checked</code>  选择当前勾上的单选框和复选框</li>
-<li><code>:enabled</code>  选择能正常输入的</li>
-<li><code>:disabled</code>  选择不能输入的</li>
-</ul>
+</ol>
+<ol start="5">
+<li><p>迷茫 &amp;&amp; 质疑</p>
+<p>这时的我其实可以选择放弃这个可有可无的功能，但实在是心有不甘，一心想把问题根源找出来。于是我开始质疑一切：Layui的upload组件是不是存在bug？上传接口是否不支持上传图片？然而经过一系列测试后，我证实了并不是这些原因…</p>
 </li>
-<li>jQuery对象的<code>text()</code>和<code>html()</code>方法分别获取节点的文本和原始HTML文本</li>
-<li>ajax<ul>
-<li>get:<code>$.get(&#39;url&#39;,{obj});</code></li>
-<li>post:<code>$.post(&#39;url&#39;,{obj});</code></li>
-<li><code>getJson()</code>方法快速通过GET获取一个JSON对象</li>
-</ul>
+</ol>
+<ol start="6">
+<li><p>突破</p>
+<p>无从下手的我决定用“注释大法”，每次注释一部分的相关代码，然后观察结果是否会不一样。令我兴奋的是：在注释掉上传图片的接口部分代码后，界面不再自动刷新了！步步逼近后发现，正是这句代码的问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file.SaveAs(savePath);</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
-<li>JS支持try…catch…finally语句</li>
-<li><code>catch(e)</code>可以通过捕获的变量<code>e</code>来访问对象</li>
-<li><code>val()</code>方法获取值</li>
+</ol>
+<ol start="7">
+<li><p>寻求根源</p>
+<p>这时的我有两个思路：一是换一个上传图片的方法，二是找出问题的根本。在不甘的驱使之下，我决定寻求根源，即使这会“浪费”我更多时间…</p>
+<p>我查找了该方法的源码，研究了一番后并未发现不妥，甚至把源码copy进接口中进行修改，但仍是无用…</p>
+</li>
+</ol>
+<ol start="8">
+<li><p>更改路径</p>
+<p>围绕着这一短短语句，我尝试了许多种方法，最后尝试更改参数，将其设为固定路径再测试。经测试发现：如果路径是在项目中便会导致界面刷新，否则就不会。发现这一结果的我既是兴奋又是诧异，为什么会出现这一结果呢？</p>
+</li>
+</ol>
+<ol start="9">
+<li><p>Bug之源</p>
+<p>就在我毫无进展跑去打篮球的时候，我灵光一闪：会不会就是因为项目更新而导致界面自动刷新？</p>
+<p>于是我回家测试，确实是如此。这时我才想起，原来我在学习.net Web开发时给VS安装了一插件…</p>
+<img src="/2020/03/20/%E5%A4%8D%E5%88%BBBug-net%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0%E7%95%8C%E9%9D%A2/plug.png" alt="插件" style="zoom:150%;">
+
+<p>禁用该插件后，界面果真不再自动刷新…</p>
+<p>原来问题出在这里，这种醍醐灌顶丝毫不亚于我看到悬疑小说结局时的感觉。正如我平时测试HTML/CSS/JS三件套时一样，会边运行项目边修改以便方便观察结果…</p>
+</li>
+</ol>
+<ol start="10">
+<li><p>总结</p>
+<p>这次的Bug看起来是贻笑大方、微不足道，但对我来说却是有着重大意义。之前经常听别人讨论学什么语言好、学什么技术好之类的，直到学校一位老师单独给了我一些教诲后我才发现，思维才是最重要的。即使未来这些语言再怎么更替，只要自己的思维仍保持在前线，那么学习新技术将会是游刃有余，语言、技术就好比工具，思维才是掌控一切的根本。除此之外，这次测试也让我领悟到debug的一些技巧…</p>
+<p>复刻这次Bug的目的，大概就是想记录下这难得的过程吧，毕竟好久没有这种依靠自己力量醍醐灌顶的感觉了，相信在多年后再回过头来看这篇博客，我也会泯然一笑吧~</p>
+</li>
 </ol>
 
       
@@ -343,7 +311,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -412,20 +380,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
