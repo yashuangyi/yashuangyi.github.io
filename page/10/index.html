@@ -134,7 +134,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">16</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">17</span></a>
 
   </li>
   </ul>
@@ -165,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/04/04/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -179,7 +179,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">计算机网络学习笔记</a>
+            <a href="/2020/04/04/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">MySQL学习笔记</a>
         </h1>
 
         <div class="post-meta">
@@ -188,16 +188,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-03-31 19:25:00" itemprop="dateCreated datePublished" datetime="2020-03-31T19:25:00+08:00">2020-03-31</time>
+              <time title="创建时间：2020-04-04 21:54:00 / 修改时间：21:56:10" itemprop="dateCreated datePublished" datetime="2020-04-04T21:54:00+08:00">2020-04-04</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-21 19:33:02" itemprop="dateModified" datetime="2020-05-21T19:33:02+08:00">2020-05-21</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -219,506 +213,728 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="计算机网络学习笔记"><a href="#计算机网络学习笔记" class="headerlink" title="计算机网络学习笔记"></a>计算机网络学习笔记</h2><p>作者：亚双义、一真</p>
+          <h2 id="MySQL学习笔记"><a href="#MySQL学习笔记" class="headerlink" title="MySQL学习笔记"></a>MySQL学习笔记</h2><p>作者：亚双义、一真</p>
 <p>邮箱：<a href="mailto:chenzhiyuan1999@gmail.com">chenzhiyuan1999@gmail.com</a></p>
-<p>时间：2020-3-27</p>
+<p>时间：2020-3-30</p>
 <hr>
-<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ol>
-<li><p>互联网两大重要基本特点：连通性、共享</p>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><ol>
+<li><p>数据库是按照数据结构来组织、存储和管理数据的仓库</p>
 </li>
-<li><p>网络的概念</p>
+<li><p>关系型数据库RDB：建立在关系模型基础上的数据库，借助于集合代数等数学概念和方法来处理数据库中的数据</p>
+</li>
+<li><p>关系型（表格）数据库管理系统RDBMS的特点</p>
 <ul>
-<li>互联网Internet：世界上最大的、覆盖全球的计算机网络</li>
-<li>计算机网络：由若干结点和连接这些结点的链路组成</li>
-<li>互连网internet：网络的网络，通过路由器互连</li>
+<li>数据以表格的形式出现</li>
+<li>每行为各种记录名称</li>
+<li>每列为记录名称所对应的数据域</li>
+<li>许多的行和列组成一张表单</li>
+<li>若干的表单组成database</li>
 </ul>
 </li>
-<li><p>互联网服务提供者ISP</p>
-</li>
-<li><p>互联网的组成</p>
+<li><p>RDBMS相关术语</p>
 <ul>
-<li>边缘部分：由所有连接在互联网上的主机组成</li>
-<li>核心部分：由大量网络和连接这些网络的路由器组成，为边缘部分提供服务</li>
+<li>数据库：数据库是一些关联表的集合</li>
+<li>数据表：表是数据的矩阵</li>
+<li>行：一行（=元祖，或记录）是一组相关的数据</li>
+<li>列：一列（数据元素）包含了相同类型的数据</li>
+<li>冗余：存储两倍数据，冗余降低了性能，但提高了数据的安全性</li>
+<li>主键：主键是唯一的，一个数据表只能包含一个主键，可以使用主键来查询数据</li>
+<li>外键：外键用于关联两个表</li>
+<li>复合键：复合键（组合键）将多个列作为一个索引键，一般用于复合索引</li>
+<li>索引：使用索引可快速访问数据库表中的特定信息，索引是对数据库表中一列或多列的值进行排序的一种结构</li>
+<li>参照完整性：参照的完整性要求关系中不允许引用不存在的实体，与实体完整性是关系模型必须满足的完整性约束条件，目的是保证数据的一致性</li>
+<li>实体完整性：每个数据表都必须有主键，且主键字段属性必须是独一且非空值</li>
 </ul>
 </li>
-<li><p>端系统之间的两种通信方式：客户-服务器方式（C/S方式）、对等方式（P2P方式）</p>
-</li>
-<li><p>P2P：是一种网络新技术，依赖zd网络中参与者的计算能力和带宽，而不是把依赖都聚集在较少的几台服务器上；也是下载术语，意思是在你自己下载的同时，自己的电脑还要继续做主机上传，这种下载方式，人越多速度越快但缺点是对硬盘损伤比较大（在写的同时还要读），还有对内存占用较多，影响整机速度</p>
-</li>
-<li><p>互联网核心部分：路由器</p>
-<p>实现分组交换，转发数据包</p>
-</li>
-<li><p>电路交换、报文交换、分组交换</p>
-</li>
-<li><p>按网络作用范围分类</p>
+<li><p>Table相关术语</p>
 <ul>
-<li>广域网WAN</li>
-<li>局域网LAN</li>
-<li>城域网MAN</li>
-<li>个人区域网PAN</li>
-</ul>
-</li>
-<li><p>计算机网络的性能指标</p>
-<ul>
-<li>速率（数据率）</li>
-<li>带宽（最高数据率）</li>
-<li>吞吐率：单位时间内通过某网络的数据量，受带宽或额定速率的限制</li>
-<li>时延：发送时延+传播时延+处理时延+排队时延<ol>
-<li>发送时延：<code>数据帧长度/发送速率</code></li>
-<li>传播时延：<code>信道长度/信号在信道上的传播速率</code></li>
-<li>处理时延</li>
-<li>排队时延</li>
-</ol>
-</li>
-<li>时延带宽积：<code>传播时延*带宽</code></li>
-<li>往返时间RTT</li>
-<li>利用率：分为信道利用率（并非越高越好，当很高时时延也会增加）和网络利用率</li>
-</ul>
-</li>
-<li><p>时延与网络利用率关系：<code>网络当前时延=网络空闲时的时延/（1-网络利用率）</code></p>
-</li>
-<li><p>两种国际标准</p>
-<ul>
-<li>OSI/RM开放系统互连基本参考模型（法律上的国际标准）</li>
-<li>TCP/IP（事实上的国际标准）</li>
-</ul>
-</li>
-<li><p>网络协议三要素：语法+语义+同步（交换规则）</p>
-</li>
-<li><p>TCP/IP五层协议：在协议的控制下，两个对等实体间的通信使得本层能够向上一层提供服务（协议是水平的）；而要实现本层协议，还需要使用下层所提供的服务（服务是垂直的）</p>
-</li>
-</ol>
-<hr>
-<h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><ol>
-<li>基本概念<ul>
-<li>物理层考虑的是怎样才能在连接各种计算机的传输媒体上传输数据比特流，而不是指具体的传输媒体</li>
-<li>用于物理层的协议也称为物理层规程</li>
-<li>物理层作用时尽可能屏蔽掉不同传输媒体和通信手段的差异</li>
-</ul>
-</li>
-<li>主要任务：确定与传输媒体的接口的一些特性<ul>
-<li>机械特性</li>
-<li>电气特性</li>
-<li>功能特性</li>
-<li>过程特性</li>
-</ul>
-</li>
-<li>数据通信系统包括：源系统，传输系统，目的系统</li>
-<li>常用术语<ul>
-<li>数据：运送消息的实体</li>
-<li>信号：数据的电气的或电磁的表现</li>
-<li>模拟信号：代表消息的参数的取值是连续的</li>
-<li>数字信号：代表消息的参数的取值是离散的</li>
-<li>码元：在使用时间域的波形表示数字信号时，代表不同离散数值的基本波形</li>
-<li>信道：表示向某一个方向传送信息的媒体</li>
-<li>单工信道</li>
-<li>半双工信道</li>
-<li>全双工信道</li>
-<li>基带信号：来自信源的信号（包含较多低频成分，因此要进行调制）</li>
-<li>调制<ol>
-<li>基带调制：仅进行波形变换，变换后仍是基带信号。该过程称为编码<ul>
-<li>不归零制</li>
-<li>归零制</li>
-<li>曼彻斯特编码</li>
-<li>差分曼彻斯特编码</li>
-</ul>
-</li>
-<li>带通调制：使用载波进行调制，把基带信号转换为模拟信号（带通信号）<ul>
-<li>调幅</li>
-<li>调频</li>
-<li>调相</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>信道的极限容量受以下两个因素限制<ul>
-<li>信道能够通过的频率范围<ol>
-<li>奈氏准则：在任何信道中，码元传输的速率是有上限的，否则就会出现码间串扰（失真）的问题</li>
-</ol>
-</li>
-<li>信噪比<ol>
-<li>信噪比即信号平均功率与噪声平均功率之比，单位为分贝（dB）</li>
-<li>香农公式：得出<code>信道极限信息传输速率=信道带宽*log2(1+信道平均功率/信道噪声功率)</code>：<code>C=Wlog2(1+S/N)</code></li>
-<li>因此可用编码的方法让每一个码元携带更多比特的信息量</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>传输媒体<ul>
-<li>导引型传输媒体：固体媒体传播<ol>
-<li>双绞线（其中屏蔽双绞线STP带金属屏蔽层）</li>
-<li>同轴电缆</li>
-<li>光缆（多模光纤，单模光纤）</li>
-</ol>
-</li>
-<li>非导引型传输媒体：无线传输<ol>
-<li>短波通信</li>
-<li>微波通信（地面微波接力通信，卫星通信）</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>信道复用技术（复用：允许用户使用一个共享信道进行通信，降低成本，提高利用率）<ul>
-<li>频分复用FDM：所有用户在同样时间占用不同带宽（频率带宽）资源</li>
-<li>时分复用TDM：所有用户在不同时间占用相同带宽（频率带宽）资源</li>
-<li>统计时分复用STDM</li>
-<li>波分复用WDM：光的频分复用</li>
-<li>码分复用CDM：码片序列（若发送比特1则发送自己的m bit码片序列，若发送比特2则发送该码片序列的二进制反码）</li>
-</ul>
-</li>
-<li>宽带接入技术<ul>
-<li>用户要连接到互联网，必须先连接到某个ISP</li>
-<li>非对称数字用户线ADSL：用数字技术对现有的模拟电话用户线进行改造，使它能够承载宽带业务（低端频谱留给传统电话用，把原来没用的高端频谱留给用户上网使用）：ADSL在用户线的两端各安装一个ADSL调制解调器</li>
-<li>离散多音调DMT技术：采用频分复用（属于ADSL）</li>
-<li>光纤同轴混合网（HFC网）</li>
-<li>FTTx技术</li>
+<li>表头：每一列的名称</li>
+<li>列：具有相同数据类型的数据的集合</li>
+<li>行：每一行用来描述某条记录的具体信息</li>
+<li>值：行的具体信息，每个值必须与该列的数据类型相同</li>
+<li>键：键的值在当前列中具有唯一性</li>
 </ul>
 </li>
 </ol>
 <hr>
-<h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><ol>
-<li>数据链路层信道<ul>
-<li>点对点信道</li>
-<li>广播信道</li>
-</ul>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ol>
+<li><p>数值类型</p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">大小</th>
+<th align="center">范围（有符号）</th>
+<th align="center">范围（无符号）</th>
+<th align="center">用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">TINYINT</td>
+<td align="center">1 字节</td>
+<td align="center">(-128，127)</td>
+<td align="center">(0，255)</td>
+<td align="center">小整数值</td>
+</tr>
+<tr>
+<td align="center">SMALLINT</td>
+<td align="center">2 字节</td>
+<td align="center">(-32 768，32 767)</td>
+<td align="center">(0，65 535)</td>
+<td align="center">大整数值</td>
+</tr>
+<tr>
+<td align="center">MEDIUMINT</td>
+<td align="center">3 字节</td>
+<td align="center">(-8 388 608，8 388 607)</td>
+<td align="center">(0，16 777 215)</td>
+<td align="center">大整数值</td>
+</tr>
+<tr>
+<td align="center">INT或INTEGER</td>
+<td align="center">4 字节</td>
+<td align="center">(-2 147 483 648，2 147 483 647)</td>
+<td align="center">(0，4 294 967 295)</td>
+<td align="center">大整数值</td>
+</tr>
+<tr>
+<td align="center">BIGINT</td>
+<td align="center">8 字节</td>
+<td align="center">(-9,223,372,036,854,775,808，9 223 372 036 854 775 807)</td>
+<td align="center">(0，18 446 744 073 709 551 615)</td>
+<td align="center">极大整数值</td>
+</tr>
+<tr>
+<td align="center">FLOAT</td>
+<td align="center">4 字节</td>
+<td align="center">(-3.402 823 466 E+38，-1.175 494 351 E-38)，0，(1.175 494 351 E-38，3.402 823 466 351 E+38)</td>
+<td align="center">0，(1.175 494 351 E-38，3.402 823 466 E+38)</td>
+<td align="center">单精度 浮点数值</td>
+</tr>
+<tr>
+<td align="center">DOUBLE</td>
+<td align="center">8 字节</td>
+<td align="center">(-1.797 693 134 862 315 7 E+308，-2.225 073 858 507 201 4 E-308)，0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)</td>
+<td align="center">0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)</td>
+<td align="center">双精度 浮点数值</td>
+</tr>
+<tr>
+<td align="center">DECIMAL</td>
+<td align="center">对DECIMAL(M,D) ，如果M&gt;D，为M+2否则为D+2</td>
+<td align="center">依赖于M和D的值</td>
+<td align="center">依赖于M和D的值</td>
+<td align="center">小数值</td>
+</tr>
+</tbody></table>
 </li>
-<li>数据链路：把实现通信协议的硬件和软件加到链路（一条无源的点到点的物理线路段，中间没有任何其他交换结点）上，构成数据链路</li>
-<li>数据链路层三个基本问题<ul>
-<li>封装成帧：在一段数据前后分别添加首部和尾部，确定帧的界限</li>
-<li>透明传输：若数据中某个字节的二进制代码恰好和<code>SOH</code>或<code>EOT</code>一样，数据链路层就会错误地“找到帧的边界”<ol>
-<li>解决方法：字节填充或字符填充，即在<code>SOU</code>或<code>EOT</code>前面插入转义字符<code>ESC</code></li>
-</ol>
+<li><p>日期和时间类型</p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">大小 (字节)</th>
+<th align="center">范围</th>
+<th align="center">格式</th>
+<th align="center">用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">DATE</td>
+<td align="center">3</td>
+<td align="center">1000-01-01/9999-12-31</td>
+<td align="center">YYYY-MM-DD</td>
+<td align="center">日期值</td>
+</tr>
+<tr>
+<td align="center">TIME</td>
+<td align="center">3</td>
+<td align="center">‘-838:59:59’/‘838:59:59’</td>
+<td align="center">HH:MM:SS</td>
+<td align="center">时间值或持续时间</td>
+</tr>
+<tr>
+<td align="center">YEAR</td>
+<td align="center">1</td>
+<td align="center">1901/2155</td>
+<td align="center">YYYY</td>
+<td align="center">年份值</td>
+</tr>
+<tr>
+<td align="center">DATETIME</td>
+<td align="center">8</td>
+<td align="center">1000-01-01 00:00:00/9999-12-31 23:59:59</td>
+<td align="center">YYYY-MM-DD HH:MM:SS</td>
+<td align="center">混合日期和时间值</td>
+</tr>
+<tr>
+<td align="center">TIMESTAMP</td>
+<td align="center">4</td>
+<td align="center">1970-01-01 00:00:00/2038结束时间是第 <strong>2147483647</strong> 秒，北京时间 <strong>2038-1-19 11:14:07</strong>，格林尼治时间 2038年1月19日 凌晨 03:14:07</td>
+<td align="center">YYYYMMDD HHMMSS</td>
+<td align="center">混合日期和时间值，时间戳</td>
+</tr>
+</tbody></table>
 </li>
-<li>差错检测：在传输过程中可能会产生比特差错：1可能会变成0，而0也可能变成1<ol>
-<li>误码率：一段时间内传输错误的比特占所传输比特总数的比率（跟信噪比有很大关系）</li>
-<li>循环冗余检验CRC</li>
-<li>帧检验序列FCS（在数据后面加上的冗余码）</li>
-</ol>
+<li><p>字符串类型</p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">大小</th>
+<th align="center">用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">CHAR</td>
+<td align="center">0-255字节</td>
+<td align="center">定长字符串</td>
+</tr>
+<tr>
+<td align="center">VARCHAR</td>
+<td align="center">0-65535 字节</td>
+<td align="center">变长字符串</td>
+</tr>
+<tr>
+<td align="center">TINYBLOB</td>
+<td align="center">0-255字节</td>
+<td align="center">不超过 255 个字符的二进制字符串</td>
+</tr>
+<tr>
+<td align="center">TINYTEXT</td>
+<td align="center">0-255字节</td>
+<td align="center">短文本字符串</td>
+</tr>
+<tr>
+<td align="center">BLOB</td>
+<td align="center">0-65 535字节</td>
+<td align="center">二进制形式的长文本数据</td>
+</tr>
+<tr>
+<td align="center">TEXT</td>
+<td align="center">0-65 535字节</td>
+<td align="center">长文本数据</td>
+</tr>
+<tr>
+<td align="center">MEDIUMBLOB</td>
+<td align="center">0-16 777 215字节</td>
+<td align="center">二进制形式的中等长度文本数据</td>
+</tr>
+<tr>
+<td align="center">MEDIUMTEXT</td>
+<td align="center">0-16 777 215字节</td>
+<td align="center">中等长度文本数据</td>
+</tr>
+<tr>
+<td align="center">LONGBLOB</td>
+<td align="center">0-4 294 967 295字节</td>
+<td align="center">二进制形式的极大文本数据</td>
+</tr>
+<tr>
+<td align="center">LONGTEXT</td>
+<td align="center">0-4 294 967 295字节</td>
+<td align="center">极大文本数据</td>
+</tr>
+</tbody></table>
 </li>
-</ul>
-</li>
-<li>点对点协议PPP<ul>
-<li>满足的需求<ol>
-<li>简单</li>
-<li>封装成帧</li>
-<li>透明性</li>
-<li>多种网络层协议</li>
-<li>多种类型链路</li>
-<li>差错检测</li>
-</ol>
-</li>
-<li>PPP面向字节，所有的PPP帧长度都是整数字节</li>
-</ul>
-</li>
-<li>局域网的数据链路层<ul>
-<li>局域网特点<ol>
-<li>网络为一个单位所拥有</li>
-<li>地理范围和站点数目均有限</li>
-</ol>
-</li>
-<li>局域网拓扑结构<ol>
-<li>星形网</li>
-<li>总线网</li>
-<li>环形网</li>
-</ol>
-</li>
-<li>媒体共享技术<ol>
-<li>静态划分信道<ul>
-<li>频分复用</li>
-<li>时分复用</li>
-<li>波分复用</li>
-<li>码分复用</li>
-</ul>
-</li>
-<li>动态媒体接入控制<ul>
-<li>随机接入</li>
-<li>受控接入</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>以太网两个标准<ol>
-<li>DIX Ethernet V2是世界上第一个局域网产品的规约</li>
-<li>IEEE 802.3是第一个IEEE的以太网标准</li>
-</ol>
-</li>
-<li>数据链路层的两个子层<ol>
-<li>逻辑链路控制LLC</li>
-<li>媒体接入控制MAC</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>CSMA/CD协议：用于半双工通信<ul>
-<li>两种重要措施<ol>
-<li>采用较为灵活的无连接的工作方式</li>
-<li>以太网发送的数据都使用曼彻斯特</li>
-</ol>
-</li>
-<li>含义：载波监听多点接入/碰撞检测<ol>
-<li>多点接入：许多计算机以多点接入的方式连接在一根总线上</li>
-<li>载波监听：每一个站在发送数据前要先检测总线上是否有其他计算机发送数据</li>
-<li>碰撞检测：计算机边发送数据边检测信道上的电压大小</li>
-</ol>
-</li>
-<li>检测到碰撞后，立即停止发送，然后等待一段随机时间后再次发送</li>
-<li>争用期以太网的两倍端到端时延<code>2t</code>，经过争用期还没检测到碰撞，则这次发送肯定不会发生碰撞</li>
-<li>二进制指数类型退避算法</li>
-<li>争用期长度：10Mbit/s以太网为51.2us；对于10Mbit/s以太网，在争用期内可发送512bit，即64字节</li>
-<li>最短有效帧长：64字节；凡长度小于64字节的帧都是由于冲突而异常中止的无效帧</li>
-<li>帧间最小间隔：9.6us，相当于96bit的发送时间，即一个站在检测到总线空闲后，还要等待9.6us才能再次发送数据（为了使刚刚收到数据帧的站的接收缓存来得及清理，做好接收下一帧的准备）</li>
-<li>流程<ol>
-<li>准备发送：先检测信道</li>
-<li>检测信道</li>
-<li>检查碰撞</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>集线器工作在物理层，使用集线器的以太网在逻辑上仍是总线网，各工作站使用CSMA/CD协议，并共享逻辑上的总线</li>
-<li>以太网的信道利用率<ul>
-<li>发生碰撞时，信道利用率不能达到100%</li>
-<li><code>帧发送时间=帧长/数据发送速率</code></li>
-<li><code>成功发送一个帧所占用信道时间=帧发送时间+单程端到端t</code></li>
-<li><code>参数a=端到端时延/帧发送时间</code>，要尽可能小才会提高信道利用率；因此帧长不能太短，以太网连线长度要限制 </li>
-<li><code>理想情况下的极限信道利用率Smax=1/(1+参数a)</code></li>
-</ul>
-</li>
-<li>MAC层的硬件地址：MAC地址，是每一个站的标识符，48位（高位24位是组织唯一标识符，地位24位是扩展唯一标识符）</li>
-<li>MAC帧格式：以太网V2格式</li>
-<li>交换机：工作在数据链路层，根据MAC帧的目的地址对收到的帧进行转发和过滤<ul>
-<li>实质上是一个多接口的网桥</li>
-<li>全双工方式</li>
-<li>具有并行性</li>
-<li>即插即用设备，内部的帧交换表是通过自学习算法自动地逐渐建立起来</li>
-<li>交换机使用了生成树协议STP</li>
-<li>交换机是一个广播域，交换机的端口区分冲突域</li>
-</ul>
-</li>
-<li>从总线以太网到星形以太网</li>
-<li>虚拟局域网VLAN</li>
-<li>速率达到或超过100Mbit/s的以太网称为高速以太网：可在全双工方式下工作而无冲突发生</li>
 </ol>
 <hr>
-<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><ol>
-<li><p>网络层提供的两种服务</p>
+<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><ol>
+<li><p>创建数据库：<code>create DATABASE &lt;库名&gt;;</code></p>
+</li>
+<li><p>删除数据库：<code>drop database &lt;库名&gt;;</code></p>
+</li>
+<li><p>选择数据库：<code>use &lt;库名&gt;;</code></p>
+</li>
+<li><p>创建数据表：<code>CREATE TABLE table_name(column_name column_type);</code></p>
+<p>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE IF NOT EXISTS &#96;nowcoder_tbl&#96;(</span><br><span class="line">  &#96;nowcoder_id&#96; INT UNSIGNED AUTO_INCREMENT,</span><br><span class="line">  &#96;nowcoder_title&#96; VARCHAR(&#96;&#96;100&#96;&#96;) NOT NULL,</span><br><span class="line">  &#96;nowcoder_author&#96; VARCHAR(&#96;&#96;40&#96;&#96;) NOT NULL,</span><br><span class="line">  &#96;submission_date&#96; DATE,</span><br><span class="line">  PRIMARY KEY ( &#96;nowcoder_id&#96; )</span><br><span class="line">)ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</span><br></pre></td></tr></table></figure>
+
+<p>解析：</p>
 <ul>
-<li>让网络负责可靠交付：面向连接，通信之前先建立虚电路（逻辑链接）</li>
-<li>网络提供数据报服务：网络层向上只提供简单灵活的、无连接的、尽最大努力交付的数据报服务</li>
+<li>如果不想字段为 <strong>NULL</strong> 可以设置字段的属性为 <strong>NOT NULL</strong>， 在操作数据库时如果输入该字段的数据为<strong>NULL</strong> ，就会报错。</li>
+<li>AUTO_INCREMENT定义列为自增的属性，一般用于主键，数值会自动加1。</li>
+<li>PRIMARY KEY关键字用于定义列为主键。 可以使用多列来定义主键，列间以逗号分隔。</li>
+<li>ENGINE 设置存储引擎，CHARSET 设置编码。</li>
 </ul>
 </li>
-<li><p>网际协议IP</p>
+<li><p>删除数据表：<code>DROP TABLE table_name;</code></p>
+</li>
+<li><p>插入数据：(注意：如果数据是字符型，必须使用单引号或者双引号，如：”value”。)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO table_name ( field1, field2,...fieldN )</span><br><span class="line">            VALUES</span><br><span class="line">            ( value1, value2,...valueN );</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name,column_name</span><br><span class="line">FROM table_name</span><br><span class="line">[WHERE Clause]</span><br><span class="line">[LIMIT N][ OFFSET M]</span><br></pre></td></tr></table></figure>
+
+<p>解析：</p>
 <ul>
-<li><p>配套使用的三个协议</p>
+<li>查询语句中可以使用一个或者多个表，表之间使用逗号(,)分割，并使用WHERE语句来设定查询条件。</li>
+<li>SELECT 命令可以读取一条或者多条记录。</li>
+<li>可以使用星号（*）来代替其他字段，SELECT语句会返回表的所有字段数据</li>
+<li>可以使用 WHERE 语句来包含任何条件。</li>
+<li>可以使用 LIMIT 属性来设定返回的记录数。</li>
+<li>可以通过OFFSET指定SELECT语句开始查询的数据偏移量。默认情况下偏移量为0。</li>
+</ul>
+</li>
+<li><p>WHERE子句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT field1, field2,...fieldN FROM table_name1, table_name2...</span><br><span class="line">[WHERE condition1 [AND [OR]] condition2.....</span><br></pre></td></tr></table></figure>
+
+<p>解析：</p>
+<ul>
+<li>查询语句中可以使用一个或者多个表，表之间使用逗号<strong>,</strong> 分割，并使用WHERE语句来设定查询条件。</li>
+<li>可以在 WHERE 子句中指定任何条件。</li>
+<li>可以使用 AND 或者 OR 指定一个或多个条件。</li>
+<li>WHERE 子句也可以运用于 SQL 的 DELETE 或者 UPDATE 命令。</li>
+<li>WHERE 子句类似于程序语言中的 if 条件，根据 MySQL 表中的字段值来读取指定的数据。</li>
+</ul>
+</li>
+<li><p>UPDATE更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UPDATE table_name SET field1&#x3D;&#96;&#96;new&#96;&#96;-value1, field2&#x3D;&#96;&#96;new&#96;&#96;-value2</span><br><span class="line">[WHERE Clause]</span><br></pre></td></tr></table></figure>
+
+<p>解析：</p>
+<ul>
+<li>你可以同时更新一个或多个字段。</li>
+<li>你可以在 WHERE 子句中指定任何条件。</li>
+<li>你可以在一个单独表中同时更新数据。</li>
+</ul>
+</li>
+<li><p>DELETE语句：<code>DELETE FROM table_name [WHERE Clause]</code></p>
+<p>解析：</p>
+<ul>
+<li>如果没有指定 WHERE 子句，MySQL 表中的所有记录将被删除。</li>
+<li>可以在 WHERE 子句中指定任何条件</li>
+<li>可以在单个表中一次性删除记录。</li>
+</ul>
+</li>
+<li><p>LIKE子句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT field1, field2,...fieldN</span><br><span class="line">FROM table_name</span><br><span class="line">WHERE field1 LIKE condition1 [AND [OR]] filed2 &#x3D; &#96;&#96;&#39;somevalue&#39;</span><br></pre></td></tr></table></figure>
+
+<p>解析：</p>
+<ul>
+<li>SQL LIKE 子句中使用百分号 <strong>%</strong>字符来表示任意字符，类似于UNIX或正则表达式中的星号 *****。</li>
+<li>可以在 WHERE 子句中指定任何条件。</li>
+<li>可以在 WHERE 子句中使用LIKE子句。</li>
+<li>可以使用LIKE子句代替等号 <strong>=</strong>。</li>
+<li>LIKE 通常与 <strong>%</strong> 一同使用，类似于一个元字符的搜索。</li>
+<li>可以使用 AND 或者 OR 指定一个或多个条件。</li>
+<li>可以在 DELETE 或 UPDATE 命令中使用 WHERE…LIKE 子句来指定条件。</li>
+</ul>
+</li>
+<li><p>UNION操作符：用于连接两个以上的 SELECT 语句的结果组合到一个结果集合中。多个 SELECT 语句会删除重复的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT expression1, expression2, ... expression_n</span><br><span class="line">FROM tables</span><br><span class="line">[WHERE conditions]</span><br><span class="line">UNION [ALL | DISTINCT]</span><br><span class="line">SELECT expression1, expression2, ... expression_n</span><br><span class="line">FROM tables</span><br><span class="line">[WHERE conditions];</span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<ul>
+<li><strong>expression1, expression2, … expression_n</strong>: 要检索的列。</li>
+<li><strong>tables:</strong> 要检索的数据表。</li>
+<li><strong>WHERE conditions:</strong> 可选， 检索条件。</li>
+<li><strong>DISTINCT:</strong> 可选，删除结果集中重复的数据。默认情况下 UNION 操作符已经删除了重复数据，所以 DISTINCT 修饰符对结果没啥影响。</li>
+<li><strong>ALL:</strong> 可选，返回所有结果集，包含重复数据。</li>
+</ul>
+</li>
+<li><p>排序：<strong>ORDER BY</strong> 子句来设定按哪个字段哪种方式来进行排序，再返回搜索结果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT field1, field2,...fieldN FROM table_name1, table_name2...</span><br><span class="line">ORDER BY field1 [ASC [DESC][默认 ASC]], [field2...] [ASC [DESC][默认 ASC]]</span><br></pre></td></tr></table></figure>
+
+<p>解析：</p>
+<ul>
+<li>可以使用任何字段来作为排序的条件，从而返回排序后的查询结果。</li>
+<li>可以设定多个字段来排序。</li>
+<li>可以使用 ASC 或 DESC 关键字来设置查询结果是按升序或降序排列。 默认情况下，它是按升序（ASC）排列。</li>
+<li>可以添加 WHERE…LIKE 子句来设置条件。</li>
+</ul>
+</li>
+<li><p>GROUP BY子句：根据一个或多个列对结果集进行分组</p>
+<p>注：在分组的列上我们可以使用 COUNT, SUM, AVG等函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name, function(column_name)</span><br><span class="line">FROM table_name</span><br><span class="line">WHERE column_name operator value</span><br><span class="line">GROUP BY column_name;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>连接使用：可以在 SELECT, UPDATE 和 DELETE 语句中使用 Mysql 的 JOIN 来联合多表查询</p>
+<ul>
+<li><strong>INNER JOIN（内连接,或等值连接）</strong>：获取两个表中字段匹配关系的记录。</li>
+<li><strong>LEFT JOIN（左连接）：</strong>获取左表所有记录，即使右表没有对应匹配的记录。</li>
+<li><strong>RIGHT JOIN（右连接）：</strong> 与 LEFT JOIN 相反，用于获取右表所有记录，即使左表没有对应匹配的记录。</li>
+</ul>
+</li>
+<li><p>NULL值处理：当提供的查询条件字段为 NULL 时，命令可能无法正常工作</p>
+<ul>
+<li><strong>IS NOT NULL:</strong> 当列的值不为 NULL, 运算符返回 true。</li>
+<li><strong>&lt;=&gt;:</strong> 比较操作符（不同于=运算符），当比较的的两个值为 NULL 时返回 true。</li>
+<li><strong>IS NULL:</strong> 当列的值是 NULL,此运算符返回 true。</li>
+<li><strong>不能使用 = NULL 或 != NULL 在列中查找 NULL 值 。</strong></li>
+</ul>
+</li>
+<li><p>正则表达式：MySQL中使用 REGEXP 操作符来进行正则表达式匹配</p>
+<table>
+<thead>
+<tr>
+<th align="center">模式</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">^</td>
+<td align="center">匹配输入字符串的开始位置。如果设置了 RegExp 对象的 Multiline 属性，^ 也匹配 ‘\n’ 或 ‘\r’ 之后的位置。</td>
+</tr>
+<tr>
+<td align="center">$</td>
+<td align="center">匹配输入字符串的结束位置。如果设置了RegExp 对象的 Multiline 属性，$ 也匹配 ‘\n’ 或 ‘\r’ 之前的位置。</td>
+</tr>
+<tr>
+<td align="center">.</td>
+<td align="center">匹配除 “\n” 之外的任何单个字符。要匹配包括 ‘\n’ 在内的任何字符，请使用象 ‘[.\n]’ 的模式。</td>
+</tr>
+<tr>
+<td align="center">[…]</td>
+<td align="center">字符集合。匹配所包含的任意一个字符。例如， ‘[abc]’ 可以匹配 “plain” 中的 ‘a’。</td>
+</tr>
+<tr>
+<td align="center">[^…]</td>
+<td align="center">负值字符集合。匹配未包含的任意字符。例如， ‘[^abc]’ 可以匹配 “plain” 中的’p’。</td>
+</tr>
+<tr>
+<td align="center">p1|p2|p3</td>
+<td align="center">匹配 p1 或 p2 或 p3。例如，’z|food’ 能匹配 “z” 或 “food”。’(z|f)ood’ 则匹配 “zood” 或 “food”。</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">匹配前面的子表达式零次或多次。例如，zo* 能匹配 “z” 以及 “zoo”。* 等价于{0,}。</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td align="center">匹配前面的子表达式一次或多次。例如，’zo+’ 能匹配 “zo” 以及 “zoo”，但不能匹配 “z”。+ 等价于 {1,}。</td>
+</tr>
+<tr>
+<td align="center">{n}</td>
+<td align="center">n 是一个非负整数。匹配确定的 n 次。例如，’o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。</td>
+</tr>
+<tr>
+<td align="center">{n,m}</td>
+<td align="center">m 和 n 均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次。</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>事务：主要用于处理操作量大，复杂度高的数据ACID</p>
+<ul>
+<li>在 MySQL 中只有使用了 Innodb 数据库引擎的数据库或表才支持事务。</li>
+<li>事务处理可以用来维护数据库的完整性，保证成批的 SQL 语句要么全部执行，要么全部不执行。</li>
+<li>事务用来管理 insert,update,delete 语句</li>
+</ul>
+</li>
+</ol>
+<pre><code>事务须满足四个条件（ACID）：原子性（**A**tomicity，或称不可分割性）、一致性（**C**onsistency）、隔离性（**I**solation，又称独立性）、持久性（**D**urability）。
+
+- **原子性：**一个事务（transaction）中的所有操作，要么全部完成，要么全部不完成，不会结束在中间某个环节。事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。
+- **一致性：**在事务开始之前和事务结束以后，数据库的完整性没有被破坏。这表示写入的资料必须完全符合所有的预设规则，这包含资料的精确度、串联性以及后续数据库可以自发性地完成预定的工作。
+- **隔离性：**数据库允许多个并发事务同时对其数据进行读写和修改的能力，隔离性可以防止多个事务并发执行时由于交叉执行而导致数据的不一致。事务隔离分为不同级别，包括读未提交（Read uncommitted）、读提交（read committed）、可重复读（repeatable read）和串行化（Serializable）。
+- **持久性：**事务处理结束后，对数据的修改就是永久的，即便系统故障也不会丢失。
+
+
+
+事务控制语句：
+
+- BEGIN 或 START TRANSACTION 显式地开启一个事务；
+- COMMIT 也可以使用 COMMIT WORK，不过二者是等价的。COMMIT 会提交事务，并使已对数据库进行的所有修改成为永久性的；
+- ROLLBACK 也可以使用 ROLLBACK WORK，不过二者是等价的。回滚会结束用户的事务，并撤销正在进行的所有未提交的修改；
+- SAVEPOINT identifier，SAVEPOINT 允许在事务中创建一个保存点，一个事务中可以有多个 SAVEPOINT；
+- RELEASE SAVEPOINT identifier 删除一个事务的保存点，当没有指定的保存点时，执行该语句会抛出一个异常；
+- ROLLBACK TO identifier 把事务回滚到标记点；
+- SET TRANSACTION 用来设置事务的隔离级别。InnoDB 存储引擎提供事务的隔离级别有READ UNCOMMITTED、READ COMMITTED、REPEATABLE READ 和 SERIALIZABLE。
+
+处理事务的两种方法：
+
+1. 用 BEGIN, ROLLBACK, COMMIT来实现
+   - **BEGIN** 开始一个事务
+   - **ROLLBACK** 事务回滚
+   - **COMMIT** 事务确认
+2. 直接用 SET 来改变 MySQL 的自动提交模式
+   - **SET AUTOCOMMIT=0** 禁止自动提交
+   - **SET AUTOCOMMIT=1** 开启自动提交</code></pre><ol start="19">
+<li><p>ALTER命令：修改数据表名或者修改数据表字段</p>
+</li>
+<li><p>索引：对于MySQL的高效运行是很重要的，索引可以大大提高MySQL的检索速度</p>
+<ul>
+<li>好处：对于MySQL的高效运行是很重要的，索引可以大大提高MySQL的检索速度</li>
+<li>缺点：虽然索引大大提高了查询速度，同时却会降低更新表的速度，如对表进行INSERT、UPDATE和DELETE。因为更新表时，MySQL不仅要保存数据，还要保存一下索引文件；建立索引会占用磁盘空间的索引文件</li>
+</ul>
+</li>
+<li><p>元数据</p>
+<ul>
+<li><strong>查询结果信息：</strong> SELECT, UPDATE 或 DELETE语句影响的记录数。</li>
+<li><strong>数据库和数据表的信息：</strong> 包含了数据库及数据表的结构信息。</li>
+<li><strong>MySQL服务器信息：</strong> 包含了数据库服务器的当前状态，版本号等。</li>
+</ul>
+</li>
+<li><p>序列使用：由于一张数据表只能有一个字段自增主键， 如果你想实现其他字段也实现自动增加，就可以使用MySQL序列来实现</p>
+</li>
+<li><p>处理重复数据</p>
+<ul>
+<li>防止表中出现重复数据：设置指定的字段为 <strong>PRIMARY KEY（主键）</strong>或者 <strong>UNIQUE（唯一）</strong>索引来保证数据的唯一性</li>
+<li>统计重复数据<ol>
+<li>确定哪一列包含的值可能会重复。</li>
+<li>在列选择列表使用COUNT(*)列出的那些列。</li>
+<li>在GROUP BY子句中列出的列。</li>
+<li>HAVING子句设置重复数大于1。</li>
+</ol>
+</li>
+<li>过滤重复数据：在 SELECT 语句中使用 DISTINCT 关键字来过滤重复数据</li>
+<li>删除重复数据</li>
+</ul>
+</li>
+<li><p>SQL注入</p>
+<ul>
+<li>概念：通过把SQL命令插入到Web表单递交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令</li>
+<li>防止：<ol>
+<li>永远不要信任用户的输入。对用户的输入进行校验，可以通过正则表达式，或限制长度；对单引号和 双”-“进行转换等。</li>
+<li>永远不要使用动态拼装sql，可以使用参数化的sql或者直接使用存储过程进行数据查询存取。</li>
+<li>永远不要使用管理员权限的数据库连接，为每个应用使用单独的权限有限的数据库连接。</li>
+<li>不要把机密信息直接存放，加密或者hash掉密码和敏感的信息。</li>
+<li>应用的异常信息应该给出尽可能少的提示，最好使用自定义的错误信息对原始错误信息进行包装</li>
+<li>sql注入的检测方法一般采取辅助软件或网站平台来检测，软件一般采用sql注入检测工具jsky，网站平台就有亿思网站安全平台检测工具。MDCSOFT SCAN等。采用MDCSOFT-IPS可以有效的防御SQL注入，XSS攻击等。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>导出数据：可以使用<strong>SELECT…INTO OUTFILE</strong>语句来简单的导出数据到文本文件上。</p>
+</li>
+<li><p>导入数据：<code>mysql -u用户名  -p密码  &lt; 要导入的数据库数据</code></p>
+</li>
+<li><p>数据库事务：构成单一逻辑工作单元的操作集合</p>
+<ul>
+<li><p>定义解释</p>
 <ol>
-<li>地址解析协议ARP<ul>
-<li>将IP地址解析成MAC地址</li>
-<li>每个主机都设有一个ARP高速缓存</li>
-</ul>
-</li>
-<li>网际控制报文协议ICMP<ul>
-<li>为了更有效地转发IP数据报和提高交付成功的机会</li>
-<li>应用举例：ping、tracert</li>
-</ul>
-</li>
-<li>网际组管理协议IGMP</li>
+<li>数据库事务可以包含一个或多个数据库操作,但这些操作构成一个逻辑上的整体</li>
+<li>构成逻辑整体的这些数据库操作,要么全部执行成功,要么全部不执行</li>
+<li>构成事务的所有操作,要么全都对数据库产生影响,要么全都不产生影响,即不管事务是否执行成功,数据库总能保持一致性状态</li>
+<li>以上即使在数据库出现故障以及并发事务存在的情况下依然成立</li>
+<li>事务是数据库系统进行<strong>并发控制</strong>的基本单位,是数据库系统进行<strong>故障恢复</strong>的基本单位,从而也是<strong>保持数据库状态一致性</strong>的基本单位。ACID是事务的基本特性,数据库系统是通过并发控制技术和日志恢复技术来对事务的ACID进行保证的</li>
 </ol>
 </li>
-<li><p>中间设备</p>
+<li><p>作用</p>
 <ol>
-<li>物理层中继系统：转发器</li>
-<li>数据链路层中继系统：网桥或桥接器</li>
-<li>网络层中继系统：路由器</li>
-<li>网桥和路由器的混合物：桥路器</li>
-<li>网络层以上的中继系统：网关</li>
+<li>当数据库操作失败或者系统出现崩溃,系统能够以事务为边界进行恢复,不会出现A账户金额减少而B账户未增加的情况</li>
+<li>当有多个用户同时操作数据库时,数据库能够以事务为单位进行并发控制,使多个用户对B账户的转账操作相互隔离</li>
+<li>事务使系统能够更方便的进行故障恢复以及并发控制,从而保证数据库状态的一致性</li>
 </ol>
 </li>
-<li><p>IP地址：唯一标识符，32位，由互联网名字和数字分配机构进行分配</p>
+<li><p>事务的ACID特性</p>
 <ol>
-<li><p>IP地址的编址方法</p>
+<li><p>原子性(Atomicity):事务中的所有操作作为一个整体像原子一样不可分割，要么全部成功,要么全部失败</p>
+</li>
+<li><p>一致性(Consistency):事务的执行结果必须使数据库从一个一致性状态到另一个一致性状态</p>
+<p>一致性状态：</p>
 <ul>
-<li><p>分类的IP地址</p>
+<li>系统的状态满足数据的完整性约束(主码,参照完整性,check约束等)</li>
+<li>系统的状态反应数据库本应描述的现实世界的真实状态,比如转账前后两个账户的金额总和应该保持不变</li>
+</ul>
+</li>
+<li><p>隔离性(Isolation):并发执行的事务不会相互影响,其对数据库的影响和它们串行执行时一样。比如多个用户同时往一个账户转账,最后账户的结果应该和他们按先后次序转账的结果一样</p>
+</li>
+<li><p>持久性(Durability):事务一旦提交,其对数据库的更新就是持久的。任何事务或系统故障都不会导致数据丢失</p>
+</li>
+<li><p>在事务的ACID特性中<strong>C即一致性是事务的根本追求</strong>,而对数据一致性的破坏主要来自两个方面：</p>
+<ul>
+<li>事务的并发执行</li>
+<li>事务故障或系统故障</li>
+</ul>
+<p>数据库系统是通过并发控制技术和日志恢复技术来避免这种情况发生的：</p>
+<ul>
+<li>并发控制技术保证了事务的隔离性,使数据库的一致性状态不会因为并发执行的操作被破坏</li>
+<li>日志恢复技术保证了事务的原子性,使一致性状态不会因事务或系统故障被破坏。同时使已提交的对数据库的修改不会因系统崩溃而丢失,保证了事务的持久性</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>并发异常与并发控制技术</p>
+<ul>
+<li><p>常见的并发异常</p>
 <ol>
-<li><p>由网络号和主机号组成：<code>IP地址::= { &lt;网络号&gt;, &lt;主机号&gt;}</code></p>
-</li>
-<li><p>各类IP地址的网络号字段和主机号字段</p>
-<img src="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/各类IP地址的网络号字段和主机号字段.png">
-</li>
-<li><p>点分十进制计法</p>
-</li>
-<li><p>IP地址的指派范围</p>
-<img src="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/IP地址的指派范围.png">
-</li>
-<li><p>一般不使用的特殊的IP地址</p>
-<img src="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/一般不使用的特殊的IP地址.png">
-</li>
-<li><p>同一局域网的IP地址网络号必须一样</p>
-</li>
-<li><p>IP地址放在IP数据报的首部，而硬件地址则放在MAC帧的首部</p>
-</li>
+<li>脏写：事务回滚了其它事务对数据项的已提交修改</li>
+<li>丢失更新：事务覆盖了其它事务对数据的已提交修改，导致这些修改好像丢失了一样</li>
+<li>脏读：一个事务读取了另一个事务未提交的数据</li>
+<li>不可重复读：一个事务对同一数据的读取结果前后不一致</li>
+<li>幻读：事务读取某个范围的数据时，因为其它事务的操作导致前后两次读取的结果不一致</li>
 </ol>
 </li>
-<li><p>子网的划分：从主机号借用若干位作为子网号，而主机号相应减少若干位</p>
+<li><p>事务的隔离级别</p>
+<ol>
+<li><p>事务具有隔离性,理论上来说事务之间的执行不应该相互产生影响,其对数据库的影响应该和它们串行执行时一样</p>
+</li>
+<li><p>然而完全的隔离性会导致系统并发性能很低,降低对资源的利用率,因而实际上对隔离性的要求会有所放宽,这也会一定程度造成对数据库一致性要求降低</p>
+</li>
+<li><p>SQL标准为事务定义了不同的隔离级别,从低到高依次是</p>
 <ul>
-<li><code>（IP地址） 与运算 （子网掩码） = 网络地址</code></li>
-<li>默认子网掩码</li>
+<li>读未提交(READ UNCOMMITTED)</li>
+<li>读已提交(READ COMMITTED)</li>
+<li>可重复读(REPEATABLE READ)</li>
+<li>串行化(SERIALIZABLE)</li>
+</ul>
+<p>事务的隔离级别越低,可能出现的并发异常越多,但是通常而言系统能提供的并发能力越强</p>
+</li>
+</ol>
+</li>
+<li><p>事务隔离性的实现——常见的并发控制技术</p>
+<ol>
+<li>并发控制技术是实现事务隔离性以及不同隔离级别的关键,实现方式有很多,按照其对可能冲突的操作采取的不同策略可以分为乐观并发控制和悲观并发控制两大类：<ul>
+<li>乐观并发控制:对于并发执行可能冲突的操作,假定其不会真的冲突,允许并发执行,直到真正发生冲突时才去解决冲突,比如让事务回滚</li>
+<li>悲观并发控制:对于并发执行可能冲突的操作,假定其必定发生冲突,通过让事务等待(锁)或者中止(时间戳排序)的方式使并行的操作串行执行</li>
 </ul>
 </li>
-<li><p>构成超网（路由聚合）</p>
+<li>基于封锁的并发控制<ul>
+<li>核心思想:对于并发可能冲突的操作,比如读-写,写-读,写-写,通过锁使它们互斥执行</li>
+<li>锁的类型：<ol>
+<li>共享锁(S):事务T对数据A加共享锁,其他事务只能对A加共享锁但不能加排他锁</li>
+<li>排他锁(X):事务T对数据A加排他锁,其他事务对A既不能加共享锁也不能加排他锁</li>
+</ol>
 </li>
+<li>基于锁的并发控制流程<ol>
+<li>事务根据自己对数据项进行的操作类型申请相应的锁(读申请共享锁,写申请排他锁)</li>
+<li>申请锁的请求被发送给锁管理器。锁管理器根据当前数据项是否已经有锁以及申请的和持有的锁是否冲突决定是否为该请求授予锁</li>
+<li>若锁被授予,则申请锁的事务可以继续执行;若被拒绝,则申请锁的事务将进行等待,直到锁被其他事务释放</li>
+</ol>
+</li>
+<li>可能出现的问题<ol>
+<li>死锁:多个事务持有锁并互相循环等待其他事务的锁导致所有事务都无法继续执行</li>
+<li>饥饿:数据项A一直被加共享锁,导致事务一直无法获取A的排他锁</li>
+</ol>
+</li>
+<li>对于可能发生冲突的并发操作,锁使它们由并行变为串行执行,是一种悲观的并发控制</li>
 </ul>
 </li>
-<li><p>最长前缀匹配</p>
+<li>基于时间戳的并发控制<ul>
+<li>核心思想：对于并发可能冲突的操作,基于时间戳排序规则选定某事务继续执行,其他事务回滚</li>
+<li>过程：系统会在每个事务开始时赋予其一个时间戳,这个时间戳可以是系统时钟也可以是一个不断累加的计数器值,当事务回滚时会为其赋予一个新的时间戳,先开始的事务时间戳小于后开始事务的时间戳</li>
+<li>每一个数据项Q有两个时间戳相关的字段:<ol>
+<li>W-timestamp(Q):成功执行write(Q)的所有事务的最大时间戳</li>
+<li>R-timestamp(Q):成功执行read(Q)的所有事务的最大时间戳</li>
+</ol>
 </li>
+<li>本质：对于可能冲突的并发操作,以串行的方式取代并发执行,因而它也是一种悲观并发控制</li>
+<li>跟基于锁的并发控制的区别：<ol>
+<li>基于锁是让冲突的事务进行等待,而基于时间戳排序是让冲突的事务回滚</li>
+<li>基于锁冲突事务的执行次序是根据它们申请锁的顺序,先申请的先执行;而基于时间戳排序是根据特定的时间戳排序规则</li>
 </ol>
 </li>
 </ul>
 </li>
-<li><p>路由选择协议</p>
+<li>基于有效性检查的并发控制</li>
+<li>基于快照隔离的并发控制</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>故障与故障恢复技术</p>
 <ul>
-<li>内部网关协议RIP：分布式的、基于距离向量（跳数）的路由选择协议（UDP）</li>
-<li>内部网关协议OSPF：开放最短路径优先</li>
-<li>外部网关协议BGP：不同自治系统的路由器之间交换路由信息的协议</li>
+<li>原因：<ol>
+<li>数据库运行过程中可能会出现故障,这些故障包括事务故障和系统故障两大类<ul>
+<li>事务故障:比如非法输入,系统出现死锁,导致事务无法继续执行</li>
+<li>系统故障:比如由于软件漏洞或硬件错误导致系统崩溃或中止</li>
 </ul>
 </li>
-<li><p>IPv6：128位</p>
+<li>这些故障可能会对事务和数据库状态造成破坏,因而必须提供一种技术来对各种故障进行恢复,保证数据库一致性,事务的原子性以及持久性。数据库通常以日志的方式记录数据库的操作从而在故障时进行恢复,因而可以称之为日志恢复技术</li>
+</ol>
+</li>
+<li>日志恢复的思想<ol>
+<li>撤销事务undo:将事务更新的所有数据项恢复为日志中的旧值,事务撤销完毕时将插入一条<code>T abort</code>记录</li>
+<li>重做事务redo:将事务更新的所有数据项恢复为日志中的新值</li>
+<li>事务正常回滚/因事务故障中止将进行redo</li>
+<li>系统从崩溃中恢复时将先进行redo再进行undo</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>索引</p>
 <ul>
-<li>两种向IPv6过渡的策略<ol>
-<li>双协议栈</li>
-<li>隧道技术</li>
+<li><p><a href="https://baike.baidu.com/item/索引" target="_blank" rel="noopener">索引</a>是对数据库表中一个或多个列（例如，employee 表的姓名 (name) 列）的值进行排序的结构；如果没有索引，就要必须遍历整个表；索引是用来定位的</p>
+</li>
+<li><p>在数据库表中，对字段建立索引可以大大提高查询速度，索引是快速搜索的关键</p>
+</li>
+<li><p>基本概念</p>
+<ol>
+<li>搜索码：它表示的是记录各种字符段的一个集合，它可以是一个或者是多个字符段的任意序列组合，并不是惟一的一个标识记录</li>
+<li>数据目录项：即为索引的相关元素，在建立索引的过程中，数据目录项一般具有各种不同的选择方式</li>
+<li>记录ID：每一个/段索引在存储内容中惟一的一个标识符</li>
 </ol>
 </li>
-</ul>
+<li><p>分类</p>
+<ol>
+<li>聚簇索引：按照数据存放的物理位置为顺序的，能提高多行检索的速度</li>
+<li>非聚簇索引：对于单行的检索很快</li>
+</ol>
 </li>
-<li><p>虚拟专用网VPN：使用专用地址</p>
+<li><p>种类</p>
+<ol>
+<li>唯一索引：唯一索引是不允许其中任何两行具有相同索引值的索引。当现有数据中存在重复的键值时，大多数数据库不允许将新创建的唯一索引与表一起保存。数据库还可能防止添加将在表中创建重复键值的新数据。例如，如果在employee表中职员的姓(lname)上创建了唯一索引，则任何两个员工都不能同姓</li>
+<li>主键索引：数据库表经常有一列或多列组合，其值唯一标识表中的每一行。该列称为表的<a href="https://baike.baidu.com/item/主键" target="_blank" rel="noopener">主键</a>。在数据库关系图中为表定义主键将自动创建主键<a href="https://baike.baidu.com/item/索引" target="_blank" rel="noopener">索引</a>，主键索引是<a href="https://baike.baidu.com/item/唯一索引" target="_blank" rel="noopener">唯一索引</a>的特定类型。该索引要求主键中的每个值都唯一。当在查询中使用主键索引时，它还允许对数据的快速访问</li>
+<li>聚集索引：在聚集索引中，表中行的物理顺序与键值的逻辑（索引）顺序相同。一个表只能包含一个聚集索引。如果某索引不是聚集索引，则表中行的物理顺序与键值的逻辑顺序不匹配。与非聚集索引相比，聚集索引通常提供更快的数据访问速度。聚集索引和非聚集索引的区别，如字典默认按字母顺序排序，读者如知道某个字的读音可根据字母顺序快速定位。因此聚集索引和表的内容是在一起的。如读者需查询某个生僻字，则需按字典前面的索引，举例按偏旁进行定位，找到该字对应的页数，再打开对应页数找到该字。这种通过两个地方而查询到某个字的方式就如非聚集索引</li>
+</ol>
+</li>
+<li><p>代价</p>
+<ol>
+<li>增加了数据库的存储空间</li>
+<li>在插入和修改数据时要花费较多的时间(因为索引也要随之变动)</li>
+</ol>
+</li>
+<li><p>MySQL索引类型</p>
+<ol>
+<li><p>普通索引：最基本的索引，它没有任何限制</p>
 <ul>
-<li>三个专用地址块：<ol>
-<li><strong>10.0.0.0</strong> <strong>到</strong> <strong>10.255.255.255</strong>（1个A类）</li>
-<li><strong>172.16.0.0</strong> <strong>到</strong> <strong>172.31.255.255</strong>（16个连续B类）</li>
-<li><strong>192.168.0.0</strong> <strong>到</strong> <strong>192.168.255.255</strong>（256个连续C类）</li>
+<li><p>创建索引：<code>CREATE INDEX indexName ON mytable(username(length));</code></p>
+<p>如果是CHAR，VARCHAR类型，length可以小于字段实际长度；如果是BLOB和TEXT类型，必须指定 length，下同</p>
+</li>
+<li><p>修改表结构：<code>ALTER mytable ADD INDEX [indexName] ON (username(length))</code></p>
+</li>
+<li><p>创建表的时候直接指定：</p>
+<p>CREATE TABLE mytable(  </p>
+<p>ID INT NOT NULL,   </p>
+<p>username VARCHAR(16) NOT NULL,  </p>
+<p>INDEX [indexName] (username(length))  </p>
+<p>);  </p>
+</li>
+<li><p>删除索引的语法：<code>DROP INDEX [indexName] ON mytable;</code></p>
+</li>
+</ul>
+</li>
+<li><p>唯一索引：索引列的值必须唯一，但允许有空值；如果是组合索引，则列值的组合必须唯一</p>
+</li>
+<li><p>主键索引：它是一种特殊的唯一索引，不允许有空值。一般是在建表的时候同时创建主键索引</p>
+</li>
+<li><p>组合索引</p>
+</li>
 </ol>
 </li>
 </ul>
 </li>
-<li><p>网络地址转换NAT</p>
+<li><p>范式</p>
+<ul>
+<li><p>参考：<a href="https://blog.csdn.net/wyh7280/article/details/83350722" target="_blank" rel="noopener">https://blog.csdn.net/wyh7280/article/details/83350722</a></p>
+</li>
+<li><p>基本概念</p>
+<ol>
+<li><p>超码：在关系中能唯一标识元组的属性集称为关系模式的超码</p>
+</li>
+<li><p>候选码：不含有多余属性的超码称为候选码。也就是关系中的一个属性组，其值能唯一标识一个元组。若从属性组中去掉任何一个属性，它就不具有这一性质了，这样的属性组称作候选码</p>
+<p>主属性：任何一个候选码中的属性称作主属性</p>
+</li>
+<li><p>主码(primary key)：用户从一个关系的多个候选码中，选定一个作为主码</p>
 </li>
 </ol>
-<hr>
-<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><ol>
-<li>网络层是为主机之间提供逻辑通信，而传输层为应用进程之间提供端到端的逻辑通信</li>
-<li>用户数据报协议UDP<ul>
-<li>单位：UDP报文或用户数据报</li>
-<li>提供无连接服务</li>
-<li>不可靠传输，尽最大努力交付</li>
-<li>面向报文,一次发送一个完整的报文</li>
-<li>没有拥塞控制</li>
-</ul>
 </li>
-<li>传输控制协议TCP<ul>
-<li>单位：TCP报文段</li>
-<li>提供面向连接服务</li>
-<li>可靠传输</li>
-<li>不提供广播或多播服务</li>
-<li>面向字节流（流：流入或流出进程的字节序列）</li>
-</ul>
+<li><p>函数依赖：一个或者一组属性的值可以决定其他属性的值。候选键都可以做到</p>
 </li>
-<li>端口号：识别进程<ul>
-<li>常用端口<ol>
-<li>RPC：111：UDP</li>
-<li><strong>DNS：53：UDP</strong></li>
-<li>TFTP：69：UDP</li>
-<li>SNMP：161：UDP</li>
-<li>SNMP(trap)：162：UDP</li>
-<li>SMTP：25：TCP</li>
-<li>FTP：21：TCP</li>
-<li>Telnet：23：TCP</li>
-<li>HTTP：80：TCP</li>
-<li>HTTPS：443：TCP</li>
+<li><p>部分依赖</p>
+</li>
+<li><p>传递依赖</p>
+</li>
+<li><p>范式</p>
+<ol>
+<li>1NF：关系中每一分量不可再分。即不能以集合、序列等作为属性。（也就是不能表中套表，要保证数据的原子性。）</li>
+<li>2NF：在1NF基础上，消除非主属性对键的部分依赖，则称它符合2NF</li>
+<li>3NF：在2NF基础上，消除非主属性对键的传递依赖，则称它符合3NF</li>
+<li>BCNF：对于关系模式R，如果每一个函数依赖的决定因素都包含键，则R属于BCNF范式</li>
 </ol>
 </li>
 </ul>
 </li>
-<li>套接字socket：（IP地址：端口号）</li>
-<li>可靠传输的工作原理<ul>
-<li>停止等待协议<ol>
-<li>每发送完一个分组就停止发送，等待对方的确认ACK。在收到确认后再发送下一个分组</li>
-<li>超时重传</li>
-<li>确认丢失</li>
-<li>确认迟到</li>
-<li>优点：简单</li>
-<li>缺点：信道利用率太低</li>
-<li>可采用流水线传输提高传输效率</li>
-</ol>
-</li>
-<li>连续ARQ协议（滑动窗口协议）<ol>
-<li>是TCP协议的精髓所在</li>
-<li>发送方维持的发送窗口：位于发送窗口内的分组都可连续发送出去，而不需要等待对方的确认</li>
-<li>发送方每收到一个确认，就把发送窗口向前滑动一个分组的位置</li>
-<li>累计确认</li>
-<li>回退N</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>TCP拥塞控制算法<ul>
-<li>慢开始</li>
-<li>拥塞避免</li>
-<li>快重传</li>
-<li>快恢复</li>
-</ul>
-</li>
-<li>TCP的连接建立<ul>
-<li>TCP建立连接的过程叫做握手</li>
-<li>握手需要在客户和服务器之间交换三个TCP报文段</li>
-<li><strong>过程</strong></li>
-</ul>
-</li>
-<li>TCP的连接释放<ul>
-<li>TCP释放连接的过程叫做挥手</li>
-<li>挥手需要在客户和服务器之间交换四个TCP报文段</li>
-<li><strong>过程</strong>（<a href="https://www.nowcoder.com/ta/review-network/review?tpId=33&amp;tqId=21194&amp;query=&amp;asc=true&amp;order=&amp;page=6）" target="_blank" rel="noopener">https://www.nowcoder.com/ta/review-network/review?tpId=33&amp;tqId=21194&amp;query=&amp;asc=true&amp;order=&amp;page=6）</a></li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><ol>
-<li>域名系统DNS（UDP协议）<ul>
-<li>分布式</li>
-<li>域名到IP地址的解析是由域名服务器完成的</li>
-<li>结构：<code>...三级域名.二级域名.顶级域名</code></li>
-</ul>
-</li>
-<li>文件传输协议FTP</li>
-<li>简单文件传送协议TFTP</li>
-<li>远程中断协议TELNET</li>
-<li>统一资源定位符URL：<code>&lt;协议&gt;://&lt;主机&gt;:&lt;端口&gt;/&lt;路径&gt;</code></li>
-<li>超文本传输协议HTTP：面向事务的应用层协议；是无状态的；本身是无连接，虽然它使用了面向连接的TCP向上提供的服务</li>
-<li>代理服务器（万维网高速缓存）</li>
-<li>Cookie表示在HTTP服务器和客户之间传递的状态信息</li>
-<li>超文本标记语言HTML：用于显示数据</li>
-<li>可扩展标记语言XML：用于传输数据，是对HTML的补充</li>
-<li>层叠样式表CSS</li>
-<li>邮件发送协议SMTP</li>
-<li>邮件读取协议POP3和IMAP</li>
-<li>动态主机配置协议DHCP</li>
-<li>简单网络管理协议SNMP</li>
-</ol>
-<hr>
-<h3 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h3><ol>
-<li>被动攻击<ul>
-<li>窃听，流量分析，截获</li>
-</ul>
-</li>
-<li>主动攻击<ul>
-<li>篡改</li>
-<li>恶意程序</li>
-<li>拒绝服务</li>
-</ul>
-</li>
-<li>分布式拒绝服务DDoS</li>
-<li>中间人攻击</li>
 </ol>
 
       
@@ -739,7 +955,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -808,7 +1024,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
