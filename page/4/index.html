@@ -124,7 +124,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">13</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">14</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -134,7 +134,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">16</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">17</span></a>
 
   </li>
   </ul>
@@ -165,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/05/21/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/05/31/%E5%9B%AD%E7%BD%91%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -179,7 +179,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/05/21/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Linux学习笔记</a>
+            <a href="/2020/05/31/%E5%9B%AD%E7%BD%91%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">校园网维护笔记</a>
         </h1>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-05-21 19:06:00 / 修改时间：19:45:23" itemprop="dateCreated datePublished" datetime="2020-05-21T19:06:00+08:00">2020-05-21</time>
+              <time title="创建时间：2020-05-31 11:00:00 / 修改时间：11:00:52" itemprop="dateCreated datePublished" datetime="2020-05-31T11:00:00+08:00">2020-05-31</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -198,7 +198,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AC%94%E8%AE%B0%E6%9D%82%E7%83%A9/" itemprop="url" rel="index"><span itemprop="name">笔记杂烩</span></a>
+                  <a href="/categories/%E7%AB%99%E9%95%BF%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">站长杂谈</span></a>
                 </span>
             </span>
 
@@ -213,754 +213,92 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h2><p>作者：亚双义、一真</p>
+          <h2 id="校园网维护笔记"><a href="#校园网维护笔记" class="headerlink" title="校园网维护笔记"></a>校园网维护笔记</h2><p>作者：亚双义、一真</p>
 <p>邮箱：<a href="mailto:chenzhiyuan1999@gmail.com">chenzhiyuan1999@gmail.com</a></p>
-<p>时间：2020-3-17</p>
+<p>时间：2020-5-31</p>
 <hr>
-<h3 id="Linux简介"><a href="#Linux简介" class="headerlink" title="Linux简介"></a>Linux简介</h3><ol>
-<li><p>简介</p>
-<ul>
-<li>Linux是操作系统</li>
-<li>Linux沿袭了Unix的良好特性</li>
-<li>Linux就是内核与系统调用接口这两层</li>
-<li>是云计算和大数据平台的基石</li>
-</ul>
-</li>
-<li><p>主要特点</p>
-<ul>
-<li>系统稳定</li>
-<li>免费</li>
-<li>安全性高</li>
-<li>多任务、多用户</li>
-<li>不耗资源</li>
-<li>适合嵌入式系统</li>
-</ul>
-</li>
-<li><p>Linux内核的功能</p>
-<ul>
-<li>进程调度</li>
-<li>存储管理</li>
-<li>虚拟文件系统</li>
-<li>网络接口</li>
-<li>进程通信</li>
-</ul>
-</li>
-<li><p>Linux内核的版本</p>
-<ul>
-<li>内核版本号格式为：<code>a.bb.cc</code>(<code>a</code>是主版本号，<code>bb</code>是次版本号，<code>cc</code>是修订版本号)</li>
-<li><code>bb</code>为偶数时表示稳定版，为奇数时表示开发测试版</li>
-<li>内核文件名字是<code>vmlinuz+版本号</code></li>
-<li>内核文件存放在目录<code>/boot</code>中</li>
-</ul>
-</li>
-<li><p>引导和安装</p>
-<ul>
-<li>Linux引导装载程序一般安装在硬盘的<code>MBR</code></li>
-<li><code>/etc/inittab</code>可以设置开机直接进入图形化界面</li>
-<li><code>swap分区</code>是交换分区，作为虚拟内存使用，等于1倍或2倍的物理内存</li>
-<li>常用引导装载程序有<ol>
-<li>grub</li>
-<li>lilo</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>Linux发行版的主要分支</p>
-<ul>
-<li>RedHat，代表作：RHEL</li>
-<li>Slackware，代表作：SUSE</li>
-<li>Debian，代表作：Ubuntu</li>
-</ul>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>算了算快有半年没返校了，网络维护这块如果缺少了实践还是挺容易遗忘的。正好借此机会整理一下，顺便复习一二。</p>
 <hr>
-</li>
-</ol>
-<h3 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h3><ol>
-<li><p>简介</p>
+<h3 id="故障介绍"><a href="#故障介绍" class="headerlink" title="故障介绍"></a>故障介绍</h3><p>一般来说，接到报修上门维护时，要用清晰的逻辑来判断是哪一块发生了故障，我们所遇到的故障大致分为以下几种：</p>
 <ul>
-<li>Shell是介于使用者和操作系统核心程序（Kernel）间的一个接口</li>
-<li>即Linux中的命令行（默认Shell总是/bin/bash）</li>
-<li><code>echo $SHELL</code>：查看Linux中系统变量SHELL的值</li>
-<li>shell写在<code>/etc/shells</code>文件中，共有5种shell</li>
+<li>用户电脑硬件问题（网卡损坏）——<strong>1</strong></li>
+<li>用户电脑软件问题（网卡驱动损坏、网络设置出错、锐捷客户端出问题）——<strong>2</strong></li>
+<li>用户设备到端口的网线——<strong>3</strong></li>
+<li>端口损坏——<strong>4</strong></li>
+<li>端口到交换机的网线——<strong>5</strong></li>
+<li>交换机故障——<strong>6</strong></li>
+<li>交换机到核心交换机——<strong>7</strong></li>
 </ul>
-</li>
-<li><p>Bash</p>
-<ul>
-<li><code>Bourne Again Shell</code>的缩写</li>
-</ul>
-</li>
-<li><p>使用Shell的方法（图形化界面）</p>
-<ul>
-<li>终端窗口</li>
-<li>虚拟终端（<code>Ctrl+Alt+F2</code>~<code>Ctrl+Alt+F6</code>），返回图形界面（<code>Ctrl+Alt+F1</code>）</li>
-</ul>
-</li>
-<li><p><code>[root@czy ~]#</code>的含义</p>
-<ul>
-<li><code>root</code>表示当前登录的用户名</li>
-<li><code>czy</code>表示主机名</li>
-<li><code>~</code>表示当前工作目录</li>
-<li><code>#</code>表示该处为提示符，<code>#</code>表示超级用户，<code>$</code>表示普通用户</li>
-</ul>
-</li>
-<li><p>常用命令</p>
-<ul>
-<li><code>su</code>：切换账户：<code>su [-] [用户名]</code>，<code>su</code>等价于<code>su root</code></li>
-<li>查看发行号<ol>
-<li><code>cat /etc/redhat-release</code>：查看操作系统发行版本号</li>
-<li><code>uname -r</code>：查看操作系统内核发行号</li>
-</ol>
-</li>
-<li><code>man</code>的使用：帮助文档<ol>
-<li>命令格式：<code>man 命令名称</code></li>
-<li><code>J键</code>：逐行向下翻</li>
-<li><code>K键</code>：逐行向上翻</li>
-<li><code>空格键</code>：向下翻页</li>
-<li><code>B键</code>：向上翻页</li>
-<li><code>Q键</code>：退出man命令</li>
-</ol>
-</li>
-<li><code>命令名称 --help</code>：使用帮助</li>
-<li>文件及目录管理命令<ol>
-<li><code>cp</code>：拷贝文件：<code>cp [-f i r] 源文件 目标文件</code>：<code>-f</code>表示直接覆盖，<code>-i</code>表示征求用户意见，<code>-r</code>表示递归（拷贝目录时使用）</li>
-<li><code>mv</code>：移动文件：<code>mv [-f i] 源文件 目标文件</code></li>
-<li><code>rm</code>：删除文件：<code>rm [-f -i -r] 文件名或目录名</code></li>
-<li><code>ls</code>：列出文件和目录：<code>ls [-l i d a] [文件名或目录名]</code></li>
-<li><code>mkdir</code>：创建目录：<code>mkdir [-p] 目录名</code></li>
-<li><code>rmdir</code>：删除目录：<code>rmdir [-p] 目录名</code>：只能删除空目录</li>
-<li><code>pwd</code>：查看当前工作目录</li>
-<li><code>cd</code>：切换目录：<code>cd [路径名]</code><ul>
-<li><code>cd</code>：等价于<code>cd ~</code>：进入用户主目录</li>
-<li><code>cd ..</code>：进入父目录</li>
-<li><code>cd -</code>：返回上一个工作目录</li>
-<li><code>cd /</code>：切换到根目录</li>
-</ul>
-</li>
-<li><code>find</code>、<code>locate</code>：查找文件和目录</li>
-<li><code>touch</code>或 <code>&gt;</code>或 <code>cat</code>：新建文件</li>
-<li><code>useradd</code>：新建用户（不能全数字）</li>
-<li><code>passwd</code>：给已创建的用户设置密码</li>
-<li>查看文本文件<ul>
-<li><code>cat</code>：从第一行开始显示</li>
-<li><code>tac</code>：从最后一行开始显示</li>
-<li><code>more</code>：一页一页地显示</li>
-<li><code>less</code>：可以往前翻页的more</li>
-<li><code>head</code>：只看文本前几行</li>
-<li><code>tail</code>：只看文本的后几行</li>
-<li><code>nl</code>：显示文本内容与行号</li>
-</ul>
-</li>
-<li><code>file</code>：查看文件类型：<code>file 文件名</code></li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>运行级别</p>
-<ul>
-<li>定义：操作系统当前正在运行的功能级别</li>
-<li>Linux定义了0~6的7种运行级别，定义在<code>/etc/inittab</code>文件中</li>
-<li>7钟运行级别如下：<ul>
-<li>0  halt  关机，代表系统停机状态</li>
-<li>1  Single user mode  单用户模式，只支持root账户（类似Win的安全模式）</li>
-<li>2  Multiuser，without NFS  不支持网络文件系统的多用户模式</li>
-<li>3  Full Multiuser mode  完全多用户模式（默认不启动X Window图形界面服务）</li>
-<li>4  unused  系统未使用，用作保留</li>
-<li>5  X11  图形界面的多用户模式（默认启动X Window图形界面服务）（CentOS开机默认进入）</li>
-<li>6  Reboot  重启</li>
-</ul>
-</li>
-<li>原理<ol>
-<li>在目录<code>/etc/rc.d/init.d</code>下有许多服务器脚本程序，一般称为服务（service）</li>
-<li>在<code>/etc/rc.d</code>下有7个名为<code>rcN.d</code>（N取值为0~6）的目录，对应系统地7个运行级别</li>
-<li><code>rcN.d</code>目录下是一些符号链接文件，指向<code>init.d</code>目录下的service脚本文件，命名规则为<code>K+nn+服务名</code>或<code>S+nn+服务名</code>(nn为两位数字)</li>
-<li>系统根据指定的运行级别进入对应的<code>rcN.d</code>目录，并按照文件名顺序检索目录下的链接文件：对于K（Kill）开头文件，系统将终止其对应服务；对于S（Start）开头文件，系统将启动其对应服务</li>
-<li>CentOs默认情况下主要有两种targets：<code>multi-user.target</code>和<code>graphical.target</code></li>
-</ol>
-</li>
-<li>相关命令<ol>
-<li><code>runlevel</code>：查看运行级别</li>
-<li><code>init N</code>：进入其它运行级别（N取0~6） </li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>常用快捷键</p>
-<ul>
-<li><code>Tab</code><ol>
-<li>命令补全</li>
-<li>文件名或路径补全</li>
-<li>连续按2次<code>Tab</code>键，显示以已输入字符开头的所有命令、文件名或路径</li>
-</ol>
-</li>
-<li><code>Ctrl+D</code><ol>
-<li>退出终端</li>
-<li>若处于编辑状态，直接退出编辑状态</li>
-<li>从光标处向右删除</li>
-</ol>
-</li>
-<li><code>Ctrl+C</code><ol>
-<li>取消当前命令行的编辑</li>
-<li>结束当前执行的命令</li>
-</ol>
-</li>
-<li><code>Ctrl+L</code>：终端清屏</li>
-<li><code>Ctrl+Z</code>：将正在运行的程序送到后台</li>
-<li><code>Ctrl+R</code>：搜索历史命令</li>
-<li><code>Ctrl+A</code>：移动光标到所在行的行首</li>
-<li><code>Ctrl+E</code>：移动光标到所在行的行尾</li>
-</ul>
+<p>看起来是有挺多种故障类型，但其实只要掌握套路，逐个排除就能很快速地找出故障原因</p>
 <hr>
-</li>
-</ol>
-<h3 id="Linux的文件类型"><a href="#Linux的文件类型" class="headerlink" title="Linux的文件类型"></a>Linux的文件类型</h3><ol>
-<li><p>文件类型及符号</p>
-<ul>
-<li>普通文件：<code>-</code></li>
-<li>目录文件：<code>directory</code>：d</li>
-<li>字符设备文件：<code>character</code>：c</li>
-<li>块设备文件：<code>block：</code>：b</li>
-<li>套接字文件：<code>socket</code>：s</li>
-<li>命名管道文件：<code>pipe</code>：p</li>
-<li>符号链接文件：<code>link</code>：l</li>
-</ul>
-</li>
-<li><p><code>find</code>命令查找指定类型的文件</p>
-<p><code>find / -type [f d b c s p l] [-ls] [|wc-l]</code>：<code>[-ls]</code>可以显示找出的文件的详细信息，<code>[| wc -l]</code>管道，可统计数量</p>
-</li>
-<li><p>文件命名规则</p>
-<ul>
-<li>除字符<code>/</code>外，所有字符都可使用</li>
-<li>长度不超过255个字符</li>
-<li>若文件名的第一个字符为<code>.</code>，表示该文件为隐藏文件</li>
-<li>区分大小写</li>
-<li>文件属性与取名无关</li>
-</ul>
-</li>
-<li><p>目录、路径基础</p>
-<ul>
-<li>目录：指包含许多文件项目的一类特殊文件。分为：父目录、子目录、工作目录、用户主目录</li>
-<li><code>.</code>表示当前目录，<code>..</code>表示父目录，<code>~</code>表示用户主目录</li>
-<li>绝对路径：由根目录<code>/</code>开始写起</li>
-<li>相对路径：不是由根目录<code>/</code>写起，而是由当前目录开始</li>
-</ul>
-</li>
-<li><p>文件、目录权限管理</p>
-<ul>
-<li><p>三类用户：</p>
+<h3 id="维护套路"><a href="#维护套路" class="headerlink" title="维护套路"></a>维护套路</h3><p>以下是个人摸索出的套路，未必正确，仅供参考：</p>
 <ol>
-<li>文件所有者owner：也就是文件创建者：<code>rwx</code></li>
-<li>文件的同组用户group：同组用户对属于该组的文件有相同的访问权限：<code>rw-</code></li>
-<li>其他用户others：既非以上两种用户，也非用户root：<code>r-x</code></li>
-</ol>
-</li>
-<li><p>权限表示</p>
-<ol>
-<li>字母表示法：<code>rwx</code>对应于所有者的权限，即可读可写可执行</li>
-<li>数字表示法</li>
-</ol>
-</li>
-<li><p>可输入<code>ls-l</code>或<code>ll</code>命令查看文件权限</p>
-</li>
-<li><p><code>chattr</code>用于设置文件的隐藏权限，<code>lsattr</code>用于显示文件的隐藏权限</p>
-</li>
-<li><p>由于系统默认屏蔽（root的umask）的权限为022（普通用户则为002），因此新创建的目录权限就为777-022=755，新创建的普通文件权限为666-022=644。</p>
-</li>
-<li><p>改变文件所有权</p>
-<ol>
-<li><p><code>chown</code>：改变文件所有权：<code>chown [OPTION] ...[OWNER] [:GROUP] FILE ...</code></p>
-</li>
-<li><p><code>chgrp</code>：改变文件所在组：<code>chgrp :[选项] [组名] [文件名]</code></p>
-</li>
-<li><p><code>chmod</code>：数字修改法（<code>chmod n1n2n3 &lt;文件|目录&gt;</code>）、字母修改法（加减权限）</p>
-<p><code>[ugoa...][[+-=][rwxX]...][,...]</code></p>
-<ul>
-<li>u 表示该文件的拥有者，g 表示与该文件的拥有者属于同一个群体(group)者，o 表示其他以外的人，a 表示这三者皆是</li>
-<li>r 表示可读取，w 表示可写入，x 表示可执行，X 表示只有当该文件是个子目录或者该文件已经被设定过为可执行</li>
-<li>+ 表示增加权限、- 表示取消权限、= 表示唯一设定权限</li>
-</ul>
-</li>
-<li><p>改变文件夹内所有文件所有权时要加<code>-R</code>递归</p>
-</li>
-</ol>
-</li>
-<li><p>特殊权限</p>
-<ol>
-<li><code>s权限</code>（setuid）：SUID：让普通用户可以以root用户角色运行只有root账户才能运行的程序或命令：<code>4---</code></li>
-<li><code>s权限</code>（setgid）：SGIT：任何用户在此目录下创建的文件都具有和该目录所属的组相同的组：<code>2---</code></li>
-<li><code>t权限</code>（sticky bit）：SBIT：防删除位：用户能添加文件但不能删除：<code>1---</code></li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>文件归档与压缩</p>
-<ul>
-<li><p>压缩/解压缩命令：压缩后的后缀名：打开压缩文件的命令</p>
-<ol>
-<li><code>gzip/gunzip(gzip -d)</code>：<code>*.gz</code>：<code>zcat</code></li>
-<li><code>compress/uncompress</code>：<code>*.z</code>：<code>zcat</code></li>
-<li><code>bzip2/bunzip2(bzip2 -d)</code>：<code>*.bz2</code>：<code>bzcat</code></li>
-</ol>
-</li>
-<li><p>先归档再压缩：<code>.tar</code>：打包但未压缩的文件</p>
-</li>
-<li><p>归档命令：<code>tar &lt;选项 备份后的文件名 源文件或目录</code>：为文件和目录做备份，归档为tar文件</p>
-</li>
-</ul>
-</li>
-<li><p>软链接：类似于windows的快捷方式：<code>ln -s [目标目录] [软链接地址]</code></p>
-</li>
-</ol>
-<hr>
-<h3 id="Linux中的硬盘管理"><a href="#Linux中的硬盘管理" class="headerlink" title="Linux中的硬盘管理"></a>Linux中的硬盘管理</h3><ol>
-<li><p>硬盘一般分为IDE硬盘、SCSI硬盘和SATA硬盘</p>
-<ul>
-<li>在Linux中，IDE接口的设备被称为<code>hd</code></li>
-<li>SCSI和SATA接口的设备则被称为<code>sd</code>。第1块硬盘被称作<code>sda</code>，第2块被称作<code>sdb</code>…以此类推</li>
-<li>Linux规定，一块硬盘上只能存在<strong>4个主分区</strong>（或3个主分区+1个扩展分区），分别被命名为<code>sda1、sda2、sda3和sda4</code>（此时不能再创建扩展分区）</li>
-<li>一块硬盘最多只能存在<strong>1个扩展分区</strong>，扩展分区上可新建逻辑分区</li>
-<li>逻辑分区从5开始标识，每多一个逻辑分区，就在末尾的分区号上加1。逻辑分区没有个数限制</li>
-</ul>
-</li>
-<li><p>硬盘分区及格式化</p>
-<ul>
-<li>查看电脑硬盘信息命令：<code>ls /dev | grep sd</code></li>
-<li>进入指定硬盘：<code>fdisk /dev/硬盘名</code></li>
-<li>在指定硬盘上新建分区：<code>new</code></li>
-<li>操作完后记得输入<code>w</code>保存写入</li>
-<li>格式化分区：<code>mkfs -t 文件格式 /dev/分区名</code>（否则无法打开分区）</li>
-<li>修改完/etc/fstab文件后务必使用<code>mount -a</code>命令测试有没有错误</li>
-<li>挂载磁盘到根目录某空文件夹：（否则无法打开分区）<ol>
-<li>先在根目录新建空文件夹：<code>mkdir /名称</code></li>
-<li>将分区映射到该空文件夹：<code>mount /dev/分区名 文件夹</code></li>
-</ol>
-</li>
-<li>自动挂载文件系统（否则每次开机都要重新挂载）：OS启动后会自动挂载磁盘，在<code>/etc/fstab</code>文件中存储了自动挂载文件系统的参数<ol>
-<li>可在<code>/etc/fstab</code>文件尾部添加<code>/dev/分区名 /web 文件格式</code> defaults 0 0：<code>gedit /etc/fstab</code></li>
-<li>保存后重启</li>
-<li>系统启动后就可以通过<code>/web</code>目录直接访问相应分区中的内容，而不用每次都使用mount命令来挂载该分区</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>磁盘限额</p>
-<ul>
-<li><p>磁盘限额是系统管理员用来监控和限制用户或组对磁盘空间的使用情况的工具；它可以保证所有用户都拥有自己独立的文件系统空间，确保用户使用系统空间的公平性和安全性</p>
-</li>
-<li><p>使用磁盘限额的必须条件</p>
-<ol>
-<li>磁盘限额是针对分区的，只有分区才有磁盘限额的说法</li>
-<li>需要内核的支持</li>
-<li>分区格式必须是<code>ext4</code>的文件系统才行</li>
-<li>只有管理员的权限才能设置磁盘限额</li>
-<li>磁盘限额只能限制普通用户，对root用户无效</li>
-</ol>
-</li>
-<li><p>基本概念</p>
-<ol>
-<li>硬限制：指的是每个用户或组可拥有的磁盘空间或文件的绝对数量，绝对不允许超过这个限制</li>
-<li>软限制：一个用户在文件系统可拥有的最大磁盘空间和最多文件数量，在某个宽限期内可以暂时超过这个限制</li>
-<li>宽限时间：默认为7天。如果7天后，用户使用磁盘空间的数量仍然超出软限制，则系统将会禁止此用户账号。要重新激活账号，必须由系统管理员来进行</li>
-</ol>
-</li>
-<li><p>限制方面</p>
-<ol>
-<li>限制用户或组可以拥有的文件数，每个文件都有一定的大小</li>
-<li>限制分配给用户或组的磁盘块的数目</li>
-</ol>
-</li>
-<li><p>相关命令</p>
-<p><img src="/2020/05/21/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C%E7%A3%81%E7%9B%98%E9%99%90%E9%A2%9D%E5%91%BD%E4%BB%A4.png" alt="磁盘限额命令"></p>
-</li>
-<li><p>通过将硬盘中某一个可用分区的类型转换为Linux swap/ Solaris分区，然后制作成swap交换分区，就可以增加Linux系统内的虚拟内存</p>
-</li>
+<li>一般来说如果是一大块区域集体报修（比如一层宿舍楼），那么大概率是故障6或是故障7</li>
+<li>使用交换法可以快速判断是否是故障1、故障2或者是故障3，具体做法如下：<ul>
+<li>用报修用户的设备连接到可用端口上，若设备可上网，则说明是端口问题；若设备依旧不可上网，则大概率说明是设备自身问题</li>
+<li>亦可用其余可正常上网的设备连接到报修端口上，若设备可上网，则大概率说明是报修用户设备自身问题；若设备不可上网，则说明是端口问题</li>
 </ul>
 </li>
 </ol>
 <hr>
-<h3 id="文本编辑器vim"><a href="#文本编辑器vim" class="headerlink" title="文本编辑器vim"></a>文本编辑器vim</h3><ol>
-<li><p>vim的工作模式</p>
+<h3 id="故障解决方案"><a href="#故障解决方案" class="headerlink" title="故障解决方案"></a>故障解决方案</h3><p>下面具体写出针对各个故障的解决方法：</p>
 <ul>
-<li>Vi<ol>
-<li>Visual Editor的缩写</li>
-<li>命令行界面下的文本编辑器</li>
-<li>Unix操作系统中默认的编辑器</li>
+<li><p>用户电脑硬件问题（网卡损坏）——<strong>1</strong></p>
+<ol>
+<li>可以使用USB——网卡转换器代替使用</li>
 </ol>
 </li>
-<li>Vim<ol>
-<li>Vi IMproved的缩写</li>
-<li>Vi的升级版</li>
-<li>用彩色显示文本</li>
-<li>可视为程序编辑器</li>
+<li><p>用户电脑软件问题（网卡驱动损坏、网络设置出错、锐捷客户端出问题）——<strong>2</strong></p>
+<ol>
+<li>检查网卡驱动，可考虑到电脑品牌官网下载相应驱动</li>
+<li>检查网卡是否未启用</li>
+<li>检查IPv4的设置（ip地址、子网掩码、dns）</li>
+<li>重装锐捷客户端（我校一般是使用4.85版本，访问<code>1.1.1.1</code>可获取安装包）</li>
+<li>以管理员身份运行<code>netsh winsock reset</code>，此命令可初始化网络环境</li>
+<li>上述操作都无法解决问题的话，建议备份数据，重装系统</li>
 </ol>
 </li>
-<li>Vim的3种工作模式<ol>
-<li>一般模式（指令模式）<ul>
-<li>命令：<code>vim filename</code></li>
-<li>操作：移动光标；删除字符或行；复制和粘贴；查找和替换</li>
-</ul>
+<li><p>用户设备到端口的网线——<strong>3</strong></p>
+<ol>
+<li><p>重新买根网线</p>
 </li>
-<li>编辑模式<ul>
-<li>命令：按<code>i,I,a,A,o,O,r,R</code>任意一键进入编辑模式；退出按<code>esc</code>键</li>
-<li>进入编辑模式后，屏幕的最后一行出现“INSERT”或“REPLACE”的字样</li>
-<li>操作：编辑文本</li>
-</ul>
-</li>
-<li>命令行模式<ul>
-<li>命令：按<code>:</code>键</li>
-<li>操作：保存文件；退出vim；读入外部文件；显示行号</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>vim常用命令</p>
+<li><p>或是自己重做网线，所用到工具如下：</p>
 <ul>
-<li><p>一般模式下的功能键分类</p>
+<li>压线钳</li>
+<li>寻线器</li>
+<li>测线器</li>
+<li>双绞线（顺序：白橙、橙、白绿、蓝、白蓝、绿、白棕、棕）</li>
+<li>RJ-45水晶头</li>
+</ul>
+<p>限于篇幅此处不再赘述制作教程，网上挺多写的不错的</p>
+</li>
+</ol>
+</li>
+<li><p>端口损坏——<strong>4</strong></p>
 <ol>
-<li><p>移动光标</p>
-<p><img src="/2020/05/21/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C%E4%B8%80%E8%88%AC%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%A7%BB%E5%8A%A8%E5%85%89%E6%A0%87.png" alt="一般模式下移动光标"></p>
-</li>
-<li><p>删除、复制和粘贴</p>
-<p><img src="/2020/05/21/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C%E4%B8%80%E8%88%AC%E6%A8%A1%E5%BC%8F%E4%B8%8B%E5%88%A0%E9%99%A4%E3%80%81%E5%A4%8D%E5%88%B6%E5%92%8C%E7%B2%98%E8%B4%B4.png" alt="一般模式下删除、复制和粘贴"></p>
-</li>
-<li><p>查找和替换</p>
-<p><img src="/2020/05/21/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C%E4%B8%80%E8%88%AC%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%9F%A5%E6%89%BE%E5%92%8C%E6%9B%BF%E6%8D%A2.png" alt="一般模式下查找和替换"></p>
-</li>
+<li>拆开端口，重做模块，过程大致与制作网线类似</li>
 </ol>
 </li>
-<li><p>从一般模式进入编辑模式</p>
-<p><img src="/2020/05/21/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C%E4%BB%8E%E4%B8%80%E8%88%AC%E6%A8%A1%E5%BC%8F%E8%BF%9B%E5%85%A5%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F.png" alt="从一般模式进入编辑模式"></p>
-</li>
-<li><p>命令行模式</p>
-<p><img src="/2020/05/21/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5C%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F.png" alt="命令行模式"></p>
-</li>
-</ul>
-</li>
-<li><p>vim的其它事项</p>
-<ul>
-<li>文件救援——交换文件（.filename.swp）——临时文件，用于备份缓冲区内容</li>
-<li>高级功能——改变颜色</li>
-<li>高级功能——多窗口编辑<ol>
-<li>开启分屏命令：<code>vim -On [FILE_1] [FILE_2]</code>（垂直分割）或<code>vim -on [FILE_1] [FILE_2]</code>（水平分割）</li>
-<li>n：分几个屏，可缺省</li>
-<li>切换窗口命令：<code>[Ctrl]+w+方向键</code></li>
-<li>关闭分屏命令：<code>:only</code>或<code>[Ctrl+W+o]</code></li>
-</ol>
-</li>
-<li>高级功能——多文件编辑<ol>
-<li>开启命令：<code>vim file1 file2 file3</code></li>
-<li>编辑下一个文件（右侧）：<code>:n</code></li>
-<li>编辑上一个文件（左侧）：<code>:N</code></li>
-<li>列出目前vim开启的所有文件：<code>:files</code></li>
-</ol>
-</li>
-<li>高级功能——块选择</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="用户账户和组帐户管理"><a href="#用户账户和组帐户管理" class="headerlink" title="用户账户和组帐户管理"></a>用户账户和组帐户管理</h3><ol>
-<li><p>用户账户管理</p>
-<ul>
-<li><p>Linux使用用户权限机制对系统进行管理</p>
+<li><p>端口到交换机的网线——<strong>5</strong></p>
 <ol>
-<li>主要功能：提供不同用户使用本系统的权限分配</li>
-<li>目的：保证用户数据与文件的安全</li>
+<li>使用高级测线器可找出距离测线器多长距离、哪根线发生断点或故障</li>
+<li>由于涉及到墙线的布置，需要寻找校内专业网管解决（其实我有点好奇这种墙线是怎么重新布置的0.0）</li>
 </ol>
 </li>
-<li><p>账号实质上就是一个用户在系统上的标识，系统依据账户来区分每个用户的文件、进程、任务，给每个用户提供特定的工作环境</p>
-</li>
-<li><p>Linux的三类用户</p>
+<li><p>交换机故障——<strong>6</strong></p>
 <ol>
-<li><p>超级用户（root用户）</p>
-<p>每个Linux系统都必须有，并且只有一个。它拥有最高的权限，可以删除、终止任何程序</p>
-</li>
-<li><p>系统用户</p>
-<p>与系统运行和系统提供的服务密切相关的用户，通常在安装相关的软件包时自动创建并保持默认状态。系统用户不能登录计算机</p>
-</li>
-<li><p>普通用户</p>
-<p>在系统安装后由超级用户创建的，通常完成指定权限的操作，而且也只能操作自己所拥有权限的文件和目录</p>
-</li>
+<li>先重启交换机（必须同时断电），看看是否恢复正常上网</li>
+<li>寻线后，换根跳线</li>
+<li>重新插拔堆叠模块及光纤，避免灰尘堆积导致接触不良</li>
 </ol>
 </li>
-<li><p>用户账户文件<code>/etc/passwd</code>组成——存储用户账户信息</p>
+<li><p>交换机到核心交换机——<strong>7</strong></p>
 <ol>
-<li>用户名：在系统中时唯一的，可由字母、数字和符合组成</li>
-<li>口令：此字段用“x”代替，而将口令保存在<code>/etc/shadow</code>文件中</li>
-<li>用户ID（UID）：系统内部用它来标识用户且唯一<ul>
-<li>超级用户：UID=0,GID=0</li>
-<li>系统用户：0&lt;UID&lt;1000</li>
-<li>普通用户：UI&gt;=1000</li>
-</ul>
-</li>
-<li>组ID（GID）：系统内部用它来标识组属性</li>
-<li>用户相关信息：例如用户全名等</li>
-<li>用户主目录：用户登录系统后所进入的目录</li>
-<li>用户登录环境：用户第一次登录Shell环境</li>
-</ol>
-</li>
-<li><p>用户影子文件：<code>/etc/shadow</code>存储关于账户口令相关设置——只有root才有权限进行修改，普通用户不能读取该文件</p>
-<ol>
-<li>用户名：用户登录到系统时使用的名字，而且是唯一的</li>
-<li>口令：存放MD5加密过的口令</li>
-<li>标识从1970年1月1日到用户最近一次修改口令所经过的天数</li>
-<li>口令保持有效的最小天数，即口令在多少天内不能被用户修改</li>
-<li>口令在多少天后需要被修改</li>
-<li>口令到期前多少天内给用户发出警告</li>
-<li>口令过期多少天后口令失效</li>
+<li>有可能是校内DHCP服务器挂了，可以自行修改DNS，一般推荐阿里的：<code>223.5.5.5</code>，亲测有效~</li>
+<li>非上述故障的话一般只能找校内专业网管维护了，学生接触不到此核心层</li>
 </ol>
 </li>
 </ul>
-</li>
-<li><p>组帐户管理</p>
-<ul>
-<li><p>组管理</p>
-<ol>
-<li>组是具有相同特性的用户集合</li>
-<li>设置的目的主要是便于权限的统一组织和分配</li>
-</ol>
-</li>
-<li><p>组按性质划分为系统组和私有组账户</p>
-<ol>
-<li>系统组：安装Linux及部分服务性程序时系统自动设置的组</li>
-<li>私有组：系统安装完成后，由超级用户新建的组</li>
-</ol>
-</li>
-<li><p>组管理文件构成</p>
-<ol>
-<li>组帐户文件：<code>/etc/group</code><ul>
-<li>组名：组的名称，由字母、数字和符号组成</li>
-<li>组ID（GID）：识别不同组的唯一标识</li>
-<li>组口令：默认情况下不使用，必须经过特殊设置</li>
-<li>组内用户列表：属于该组的所有用户名表，用“，”间隔</li>
-</ul>
-</li>
-<li>组影子文件：<code>/etc/gshadow</code><ul>
-<li>同上</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p>组帐户管理命令</p>
-<ol>
-<li><p>groupadd命令</p>
-<p>格式：<code>groupadd [-g GID] &lt;组帐户名&gt;</code></p>
-<p>功能：新建组群，只有超级用户才能使用此命令。该指令的执行将在<code>/etc/group</code>文件和<code>etc/gshadow</code>文件中分别增加一行记录</p>
-<p>选项：</p>
-<ul>
-<li>-g：用于指定GID；不加的话则使用系统默认GID</li>
-<li>-r：用于创建系统组账号（GID小于1000）</li>
-</ul>
-</li>
-<li><p>groupmod命令</p>
-<p>格式：<code>groupmod [参数] &lt;组帐户名&gt;</code></p>
-<p>功能：修改指定组群，只有超级用户才能使用此命令。该指令的执行将修改<code>/etc/group</code>文件相应记录的内容</p>
-<p>选项：</p>
-<ul>
-<li>-g：改变组帐户的GID；组帐户名保存不变</li>
-<li>-n：改变组帐户名</li>
-</ul>
-</li>
-<li><p>groupdel命令</p>
-<p>格式：<code>groupdel &lt;组帐户名&gt;</code></p>
-<p>功能：删除指定组群，只有超级用户才能使用此命令</p>
-<p>注意：</p>
-<ul>
-<li>被删除的组帐户必须存在</li>
-<li>当有用户使用组帐户作为私有组时不能删除</li>
-<li>与用户名同名的私有组账户在使用<code>userdel</code>命令删除用户时被同时删除</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-<hr>
-</li>
-</ol>
-<h3 id="系统管理"><a href="#系统管理" class="headerlink" title="系统管理"></a>系统管理</h3><ol>
-<li>图形界面管理<ul>
-<li>X-Window<ol>
-<li>X-Server（X服务器）：处理来自X-客户机的请求</li>
-<li>X-Client（X客户机）：任何一个应用程序都是X-客户机</li>
-<li>X-Protocol（X通信协议）：是X-服务器与X-客户机之间的通信协议</li>
-</ol>
-</li>
-<li>X-Window的特点<ol>
-<li>良好的网络支持</li>
-<li>个性化的窗口界面</li>
-<li>跨平台特性</li>
-<li>开源软件</li>
-</ol>
-</li>
-<li>GNOME图形环境：是一种流行的Linux桌面环境</li>
-</ul>
-</li>
-<li>进程管理<ul>
-<li>进程分类<ol>
-<li>交互进程：由shell启动的进程，既可以在前台运行，也可以在后台运行</li>
-<li>批处理进程：是一个进程序列，该进程负责按照顺序启动其它进程</li>
-<li>守护进程：指执行特定功能或者执行系统相关任务的后台进程</li>
-</ol>
-</li>
-<li>启动前台进程：用户在shell输入一条命令，即可启动一个前台进程</li>
-<li>启动后台进程：只需在命令后面添加一个字符“&amp;”</li>
-<li>查看进程状态的命令<ol>
-<li><code>uptime</code>：查看过去的1、5、15分钟内运行队列中的平均进程数量</li>
-<li><code>ps</code>：监控系统后台进程的工作情况</li>
-<li><code>top</code>：显示进程所占系统资源；默认每隔3秒刷新一次</li>
-</ol>
-</li>
-<li>终止前台进程<ol>
-<li>在程序退出时，该前台进程将自动结束</li>
-<li>在程序运行过程中，按<code>ctrl+c</code>退出前台进程</li>
-</ol>
-</li>
-<li>终止后台进程：使用<code>kill</code>命令<ol>
-<li><code>kill -15 pid</code>——正常结束一个进程</li>
-<li><code>kill -9 pid</code>——强制终止一个进程</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>软件包管理<ul>
-<li>CentOS安装软件经常使用的软件包管理器为RPM和YUM</li>
-<li>RPM：Redhat Package Manager<ol>
-<li>缺点<ul>
-<li>安装的环境必须与编译时的环境一致或相当</li>
-<li>包与包之间可能存在着相互依赖的情况</li>
-<li>卸载包前需要先把依赖包卸载</li>
-</ul>
-</li>
-<li>命名格式：<code>name-version-release.arch.rpm</code></li>
-<li>优点<ul>
-<li>可以安装、删除、升级和管理软件</li>
-<li>可以把自己做的程序包打包成rpm包发布</li>
-<li>能利用签名GPG和MD5检测软件包的来源安全性和内容完整性</li>
-</ul>
-</li>
-<li>使用权限<ul>
-<li>RPM软件的安装、删除、更新只有root权限才能使用</li>
-<li>对于查询功能任何用户都可以操作</li>
-<li>如果普通用户拥有安装目录的权限，也可以进行安装</li>
-</ul>
-</li>
-<li>常用命令<ul>
-<li><code>rpm -ivh 文件名</code>：安装RPM包</li>
-<li><code>rpm -Uvh 文件名</code>：升级RPM包</li>
-<li><code>rpm -q rpm 包名</code>：查询一个包是否安装</li>
-<li><code>rpm -e 文件名</code>：卸载RPM包</li>
-<li><code>rpm -qi 包名</code>：得到一个已安装rpm包的相关信息</li>
-<li><code>rpm -ql 包名</code>：列出一个rpm包安装的文件</li>
-<li><code>rpm -qf 文件的绝对路径</code>：列出某一个文件属于哪个rpm包</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>yum<ol>
-<li>安装软件：<code>yum install vstfpd</code></li>
-<li>删除软件：<code>yum remove vsftpd</code></li>
-<li>查询软件<ul>
-<li>搜寻与磁盘阵列相关的软件：<code>yum search raid</code></li>
-<li>找出mdadm这个软件的功能如何：<code>yum info mdadm</code></li>
-<li>列出yum服务器上面提供的所有软件名称：<code>yum list</code></li>
-<li>列出目前服务器上可供本机进行升级的软件：<code>yum list updates</code></li>
-<li>列出提供passwd这个文件的软件有哪些：<code>yum provides passwd</code></li>
-</ul>
-</li>
-<li>查询软件组：<code>yum grouplist</code></li>
-<li>安装软件组：<code>yum groupinstall Eclipse</code></li>
-<li>删除软件组：<code>yum groupremove Eclipse</code></li>
-</ol>
-</li>
-</ul>
-</li>
-<li>网络管理（网络环境配置及测试）<ul>
-<li>通过主机名可以实现局域网内的访问<ol>
-<li>查看主机名：<code>hostname</code></li>
-<li>设置主机名：<code>hostname 新名字</code>(临时生效)</li>
-<li>在文件中修改主机名：<code>vi /etc/hostname</code>(永久生效)</li>
-</ol>
-</li>
-<li>使用ifconfig配置网卡<ol>
-<li>查看所有网卡信息：<code>ifconfig</code></li>
-<li>查看指定网卡的情况：<code>ifconfig eth0</code></li>
-<li>配置ip地址：<code>ifconfig 网卡名 ip地址 netmask 子网掩码</code></li>
-<li>禁用网卡：<code>ifconfig 网卡名 down</code></li>
-<li>启用网卡：<code>ifconfig 网卡名 up</code></li>
-</ol>
-</li>
-<li>ping命令检测到特定主机的网络连通性：<code>ping [可选项] ip/域名/主机名</code></li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="Shell编程入门"><a href="#Shell编程入门" class="headerlink" title="Shell编程入门"></a>Shell编程入门</h3><ol>
-<li><p>Shell的编程过程</p>
-<ul>
-<li>Shell独立于内核，它是连接内核和应用程序的桥梁，并由输入设备读取命令，再将其转为计算机可以理解的机械码，Linux内核才能执行该命令</li>
-<li>Shell不但能与用户进行逐个命令交互执行，也可以通过脚本语言进行编程</li>
-<li>通过对Shell进行编程，可使大量任务自动化，对于系统管理、系统维护方面特别有用</li>
-<li>Shell脚本通常都是以<code>.sh</code>为后缀</li>
-<li>第一行必须以<code>#! /bin/bash</code>开头，意思是该文件使用的是bash语法</li>
-<li>Shell脚本的运行<ol>
-<li>赋予权限，直接执行：<ul>
-<li><code>chmod a+x first.sh</code></li>
-<li><code>./first.sh</code></li>
-</ul>
-</li>
-<li>使用Shell程序执行：<code>sh first.sh</code></li>
-<li>Shell的调试执行：<code>sh -x first.sh</code></li>
-</ol>
-</li>
-<li>查看系统内置了哪些Shell<ol>
-<li><code>cat /etc/shells</code></li>
-<li><code>chsh -list</code></li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>Shell的语法介绍</p>
-<ul>
-<li><p>Shell的环境变量：PATH、SHELL、HOME</p>
-</li>
-<li><p>使用变量：在Shell程序中所有变量中保存的值都是<strong>字符串</strong></p>
-<p><img src="/2020/05/21/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%5CShell%E8%AF%AD%E6%B3%95.png" alt="Shell语法"></p>
-</li>
-<li><p>常用的预定义变量</p>
-<ol>
-<li><code>$#</code>：传递到脚本或函数的参数数量</li>
-<li><code>$*</code>：传递到脚本或函数的全部参数</li>
-<li><code>$?</code>：前一个命令执行情况，返回0表示成功，其他值表示失败</li>
-<li><code>$$</code>：当前进程的ID（PID）</li>
-<li><code>$!</code>：后台运行的最后一个进程的进程ID（PID）</li>
-<li><code>$0</code>：当前脚本的名称</li>
-</ol>
-</li>
-<li><p>输入输出命令</p>
-<ol>
-<li>输出命令：<code>echo</code></li>
-<li>输入命令：<code>read</code></li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>调试Shell程序</p>
-<ul>
-<li>常见的一般错误<ol>
-<li>输入错误</li>
-<li>字符大小写错误：Linux严格区分大小写，所有关键字都用小写字母表示，建议变量名用大写字母组合表示</li>
-<li>循环错误</li>
-</ol>
-</li>
-<li>调试跟踪<ol>
-<li><code>-n选项</code>：不执行脚本，仅检查脚本中的语法问题</li>
-<li><code>-v选项</code>：将执行过的每一个脚本命令都原样输出到终端</li>
-<li><code>-x选项</code>：在执行过的每个命令的行首添加“+”号显示在终端，并显示变量的值。使用该选项更方便跟踪程序的执行过程</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
 
       
     </div>
@@ -980,7 +318,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1049,7 +387,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1062,7 +400,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

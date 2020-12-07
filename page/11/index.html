@@ -124,7 +124,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">13</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">14</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -134,7 +134,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">16</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">17</span></a>
 
   </li>
   </ul>
@@ -165,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/03/28/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -179,7 +179,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/28/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">操作系统学习笔记</a>
+            <a href="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">计算机网络学习笔记</a>
         </h1>
 
         <div class="post-meta">
@@ -189,14 +189,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-03-28 01:40:00" itemprop="dateCreated datePublished" datetime="2020-03-28T01:40:00+08:00">2020-03-28</time>
+              <time title="创建时间：2020-03-31 19:25:00" itemprop="dateCreated datePublished" datetime="2020-03-31T19:25:00+08:00">2020-03-31</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-16 18:34:00" itemprop="dateModified" datetime="2020-04-16T18:34:00+08:00">2020-04-16</time>
+                <time title="修改时间：2020-05-21 19:33:02" itemprop="dateModified" datetime="2020-05-21T19:33:02+08:00">2020-05-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -219,424 +219,506 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="操作系统学习笔记"><a href="#操作系统学习笔记" class="headerlink" title="操作系统学习笔记"></a>操作系统学习笔记</h2><p>作者：亚双义、一真</p>
+          <h2 id="计算机网络学习笔记"><a href="#计算机网络学习笔记" class="headerlink" title="计算机网络学习笔记"></a>计算机网络学习笔记</h2><p>作者：亚双义、一真</p>
 <p>邮箱：<a href="mailto:chenzhiyuan1999@gmail.com">chenzhiyuan1999@gmail.com</a></p>
 <p>时间：2020-3-27</p>
 <hr>
-<h3 id="计算机系统概述"><a href="#计算机系统概述" class="headerlink" title="计算机系统概述"></a>计算机系统概述</h3><ol>
-<li><p>计算机硬件组成：处理器、内存、输入输出设备、系统总线；</p>
-<p>计算机的五大组成部件是控制器、运算器、存储器、输入设备、输出设备</p>
+<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ol>
+<li><p>互联网两大重要基本特点：连通性、共享</p>
 </li>
-<li><p>计算机部件内部结构</p>
+<li><p>网络的概念</p>
 <ul>
-<li>PC——程序计数器</li>
-<li>IR——指令寄存器</li>
-<li>MAR——存储器地址寄存器：确定下次读写的内存单元地址</li>
-<li>MBR——存储器缓冲寄存器：存放要写入内存或从内存读取的数据</li>
-<li>I/O AR——输入输出地址寄存器：确定某个I/O设备</li>
-<li>I/O BR——输入输出缓冲寄存器：CPU与I/O设备间输入输出的数据</li>
+<li>互联网Internet：世界上最大的、覆盖全球的计算机网络</li>
+<li>计算机网络：由若干结点和连接这些结点的链路组成</li>
+<li>互连网internet：网络的网络，通过路由器互连</li>
 </ul>
 </li>
-<li><p>指令的执行</p>
+<li><p>互联网服务提供者ISP</p>
+</li>
+<li><p>互联网的组成</p>
 <ul>
-<li>基本指令周期：取指，执行</li>
-<li>四类指令：<ol>
-<li>处理器-存储器：在寄存器和内存单元间传送数据</li>
-<li>处理器-I/O：处理器和I/O设备间传送数据</li>
-<li>数据处理：算术/逻辑运算</li>
-<li>控制转移：设置PC值，改变执行顺序</li>
+<li>边缘部分：由所有连接在互联网上的主机组成</li>
+<li>核心部分：由大量网络和连接这些网络的路由器组成，为边缘部分提供服务</li>
+</ul>
+</li>
+<li><p>端系统之间的两种通信方式：客户-服务器方式（C/S方式）、对等方式（P2P方式）</p>
+</li>
+<li><p>P2P：是一种网络新技术，依赖zd网络中参与者的计算能力和带宽，而不是把依赖都聚集在较少的几台服务器上；也是下载术语，意思是在你自己下载的同时，自己的电脑还要继续做主机上传，这种下载方式，人越多速度越快但缺点是对硬盘损伤比较大（在写的同时还要读），还有对内存占用较多，影响整机速度</p>
+</li>
+<li><p>互联网核心部分：路由器</p>
+<p>实现分组交换，转发数据包</p>
+</li>
+<li><p>电路交换、报文交换、分组交换</p>
+</li>
+<li><p>按网络作用范围分类</p>
+<ul>
+<li>广域网WAN</li>
+<li>局域网LAN</li>
+<li>城域网MAN</li>
+<li>个人区域网PAN</li>
+</ul>
+</li>
+<li><p>计算机网络的性能指标</p>
+<ul>
+<li>速率（数据率）</li>
+<li>带宽（最高数据率）</li>
+<li>吞吐率：单位时间内通过某网络的数据量，受带宽或额定速率的限制</li>
+<li>时延：发送时延+传播时延+处理时延+排队时延<ol>
+<li>发送时延：<code>数据帧长度/发送速率</code></li>
+<li>传播时延：<code>信道长度/信号在信道上的传播速率</code></li>
+<li>处理时延</li>
+<li>排队时延</li>
+</ol>
+</li>
+<li>时延带宽积：<code>传播时延*带宽</code></li>
+<li>往返时间RTT</li>
+<li>利用率：分为信道利用率（并非越高越好，当很高时时延也会增加）和网络利用率</li>
+</ul>
+</li>
+<li><p>时延与网络利用率关系：<code>网络当前时延=网络空闲时的时延/（1-网络利用率）</code></p>
+</li>
+<li><p>两种国际标准</p>
+<ul>
+<li>OSI/RM开放系统互连基本参考模型（法律上的国际标准）</li>
+<li>TCP/IP（事实上的国际标准）</li>
+</ul>
+</li>
+<li><p>网络协议三要素：语法+语义+同步（交换规则）</p>
+</li>
+<li><p>TCP/IP五层协议：在协议的控制下，两个对等实体间的通信使得本层能够向上一层提供服务（协议是水平的）；而要实现本层协议，还需要使用下层所提供的服务（服务是垂直的）</p>
+</li>
+</ol>
+<hr>
+<h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><ol>
+<li>基本概念<ul>
+<li>物理层考虑的是怎样才能在连接各种计算机的传输媒体上传输数据比特流，而不是指具体的传输媒体</li>
+<li>用于物理层的协议也称为物理层规程</li>
+<li>物理层作用时尽可能屏蔽掉不同传输媒体和通信手段的差异</li>
+</ul>
+</li>
+<li>主要任务：确定与传输媒体的接口的一些特性<ul>
+<li>机械特性</li>
+<li>电气特性</li>
+<li>功能特性</li>
+<li>过程特性</li>
+</ul>
+</li>
+<li>数据通信系统包括：源系统，传输系统，目的系统</li>
+<li>常用术语<ul>
+<li>数据：运送消息的实体</li>
+<li>信号：数据的电气的或电磁的表现</li>
+<li>模拟信号：代表消息的参数的取值是连续的</li>
+<li>数字信号：代表消息的参数的取值是离散的</li>
+<li>码元：在使用时间域的波形表示数字信号时，代表不同离散数值的基本波形</li>
+<li>信道：表示向某一个方向传送信息的媒体</li>
+<li>单工信道</li>
+<li>半双工信道</li>
+<li>全双工信道</li>
+<li>基带信号：来自信源的信号（包含较多低频成分，因此要进行调制）</li>
+<li>调制<ol>
+<li>基带调制：仅进行波形变换，变换后仍是基带信号。该过程称为编码<ul>
+<li>不归零制</li>
+<li>归零制</li>
+<li>曼彻斯特编码</li>
+<li>差分曼彻斯特编码</li>
+</ul>
+</li>
+<li>带通调制：使用载波进行调制，把基带信号转换为模拟信号（带通信号）<ul>
+<li>调幅</li>
+<li>调频</li>
+<li>调相</li>
+</ul>
+</li>
 </ol>
 </li>
 </ul>
 </li>
-<li><p>中断</p>
-<ul>
-<li>概念：由于发生某些事件，暂停当前程序在CPU上的运行，转而执行响应事件的中断处理程序。待处理完成后，再返回断点继续执行或调度其它程序执行</li>
-<li>分类<ol>
-<li>程序中断</li>
-<li>时钟中断</li>
-<li>I/O中断</li>
-<li>硬件失效中断</li>
+<li>信道的极限容量受以下两个因素限制<ul>
+<li>信道能够通过的频率范围<ol>
+<li>奈氏准则：在任何信道中，码元传输的速率是有上限的，否则就会出现码间串扰（失真）的问题</li>
 </ol>
 </li>
-<li>中断提高CPU利用率<ol>
-<li>无中断时，CPU和I/O设备串行工作</li>
-<li>有中断时，CPU和I/O设备并行工作</li>
-</ol>
-</li>
-<li>中断和指令周期：CPU在执行完一条指令之后、执行下一条指令之前，检测并处理中断</li>
-<li>中断处理——硬件连接：CPU和中断控制器之间用总线上的中断请求线连接。设备发出中断后，CPU响应中断</li>
-<li>中断处理——软件实现：每个中断有一个中断向量号（中断处理程序的内存入口地址），是该中断在中断向量表中的编号</li>
-<li>多个中断——两个处理方法<ol>
-<li>顺序处理：当处理一个中断时，禁止中断。多个中断被顺序处理</li>
-<li>中断嵌套：允许高优先级的中断请求打断低级中断的处理</li>
+<li>信噪比<ol>
+<li>信噪比即信号平均功率与噪声平均功率之比，单位为分贝（dB）</li>
+<li>香农公式：得出<code>信道极限信息传输速率=信道带宽*log2(1+信道平均功率/信道噪声功率)</code>：<code>C=Wlog2(1+S/N)</code></li>
+<li>因此可用编码的方法让每一个码元携带更多比特的信息量</li>
 </ol>
 </li>
 </ul>
 </li>
-<li><p>存储器</p>
-<ul>
-<li>平均存取时间：<code>（访问一次Cache时间+访问一次内存时间）*（1-Cache命中率）+访问一次Cache时间*Cache命中率</code></li>
-<li>两级存储器（Cache-内存）有效的原因：程序的局部性原理<ol>
-<li>时间局部性：在一段小的时间间隔内，被访问过的某指令或数据，可能很快会被再次访问</li>
-<li>空间局部性：在一段小的时间间隔内，程序访问的地址空间往往集中在某个区域（簇）</li>
+<li>传输媒体<ul>
+<li>导引型传输媒体：固体媒体传播<ol>
+<li>双绞线（其中屏蔽双绞线STP带金属屏蔽层）</li>
+<li>同轴电缆</li>
+<li>光缆（多模光纤，单模光纤）</li>
 </ol>
 </li>
-<li>直接内存存取DMA：在DMA控制器的控制下，通过窃取总线周期，在内存和设备间（不经过CPU）传送整块数据</li>
+<li>非导引型传输媒体：无线传输<ol>
+<li>短波通信</li>
+<li>微波通信（地面微波接力通信，卫星通信）</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>信道复用技术（复用：允许用户使用一个共享信道进行通信，降低成本，提高利用率）<ul>
+<li>频分复用FDM：所有用户在同样时间占用不同带宽（频率带宽）资源</li>
+<li>时分复用TDM：所有用户在不同时间占用相同带宽（频率带宽）资源</li>
+<li>统计时分复用STDM</li>
+<li>波分复用WDM：光的频分复用</li>
+<li>码分复用CDM：码片序列（若发送比特1则发送自己的m bit码片序列，若发送比特2则发送该码片序列的二进制反码）</li>
+</ul>
+</li>
+<li>宽带接入技术<ul>
+<li>用户要连接到互联网，必须先连接到某个ISP</li>
+<li>非对称数字用户线ADSL：用数字技术对现有的模拟电话用户线进行改造，使它能够承载宽带业务（低端频谱留给传统电话用，把原来没用的高端频谱留给用户上网使用）：ADSL在用户线的两端各安装一个ADSL调制解调器</li>
+<li>离散多音调DMT技术：采用频分复用（属于ADSL）</li>
+<li>光纤同轴混合网（HFC网）</li>
+<li>FTTx技术</li>
 </ul>
 </li>
 </ol>
 <hr>
-<h3 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h3><ol>
-<li>操作系统：控制用户程序执行，充当用户程序和计算机硬件之间的接口</li>
-<li>特征：并行性、共享性、虚拟性和不确定性</li>
-<li>OS主要功能：进程管理、内存管理、文件管理、设备管理</li>
-<li>OS目标<ul>
-<li>方便：使计算机易于使用，界面友好</li>
-<li>有效：提高计算机系统的资源利用率</li>
-<li>扩展能力：可扩展、兼容、移植新的功能</li>
+<h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><ol>
+<li>数据链路层信道<ul>
+<li>点对点信道</li>
+<li>广播信道</li>
 </ul>
 </li>
-<li>OS主要性能指标：吞吐率、资源利用率</li>
-<li>分时OS：把CPU时间分割成时间片，每个用户依次轮流使用时间片（满足用户交互和及时响应的要求），强交互性但响应不太及时，能同时执行多个程序（关键问题：及时接收，及时处理）</li>
-<li>批处理OS：提高资源利用率、大吞吐率和作业流程的自动化，能同时执行多个程序</li>
-<li>实时OS：时间响应很及时但仅有简单地交互能力，能同时执行多个程序</li>
+<li>数据链路：把实现通信协议的硬件和软件加到链路（一条无源的点到点的物理线路段，中间没有任何其他交换结点）上，构成数据链路</li>
+<li>数据链路层三个基本问题<ul>
+<li>封装成帧：在一段数据前后分别添加首部和尾部，确定帧的界限</li>
+<li>透明传输：若数据中某个字节的二进制代码恰好和<code>SOH</code>或<code>EOT</code>一样，数据链路层就会错误地“找到帧的边界”<ol>
+<li>解决方法：字节填充或字符填充，即在<code>SOU</code>或<code>EOT</code>前面插入转义字符<code>ESC</code></li>
+</ol>
+</li>
+<li>差错检测：在传输过程中可能会产生比特差错：1可能会变成0，而0也可能变成1<ol>
+<li>误码率：一段时间内传输错误的比特占所传输比特总数的比率（跟信噪比有很大关系）</li>
+<li>循环冗余检验CRC</li>
+<li>帧检验序列FCS（在数据后面加上的冗余码）</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>点对点协议PPP<ul>
+<li>满足的需求<ol>
+<li>简单</li>
+<li>封装成帧</li>
+<li>透明性</li>
+<li>多种网络层协议</li>
+<li>多种类型链路</li>
+<li>差错检测</li>
+</ol>
+</li>
+<li>PPP面向字节，所有的PPP帧长度都是整数字节</li>
+</ul>
+</li>
+<li>局域网的数据链路层<ul>
+<li>局域网特点<ol>
+<li>网络为一个单位所拥有</li>
+<li>地理范围和站点数目均有限</li>
+</ol>
+</li>
+<li>局域网拓扑结构<ol>
+<li>星形网</li>
+<li>总线网</li>
+<li>环形网</li>
+</ol>
+</li>
+<li>媒体共享技术<ol>
+<li>静态划分信道<ul>
+<li>频分复用</li>
+<li>时分复用</li>
+<li>波分复用</li>
+<li>码分复用</li>
+</ul>
+</li>
+<li>动态媒体接入控制<ul>
+<li>随机接入</li>
+<li>受控接入</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>以太网两个标准<ol>
+<li>DIX Ethernet V2是世界上第一个局域网产品的规约</li>
+<li>IEEE 802.3是第一个IEEE的以太网标准</li>
+</ol>
+</li>
+<li>数据链路层的两个子层<ol>
+<li>逻辑链路控制LLC</li>
+<li>媒体接入控制MAC</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>CSMA/CD协议：用于半双工通信<ul>
+<li>两种重要措施<ol>
+<li>采用较为灵活的无连接的工作方式</li>
+<li>以太网发送的数据都使用曼彻斯特</li>
+</ol>
+</li>
+<li>含义：载波监听多点接入/碰撞检测<ol>
+<li>多点接入：许多计算机以多点接入的方式连接在一根总线上</li>
+<li>载波监听：每一个站在发送数据前要先检测总线上是否有其他计算机发送数据</li>
+<li>碰撞检测：计算机边发送数据边检测信道上的电压大小</li>
+</ol>
+</li>
+<li>检测到碰撞后，立即停止发送，然后等待一段随机时间后再次发送</li>
+<li>争用期以太网的两倍端到端时延<code>2t</code>，经过争用期还没检测到碰撞，则这次发送肯定不会发生碰撞</li>
+<li>二进制指数类型退避算法</li>
+<li>争用期长度：10Mbit/s以太网为51.2us；对于10Mbit/s以太网，在争用期内可发送512bit，即64字节</li>
+<li>最短有效帧长：64字节；凡长度小于64字节的帧都是由于冲突而异常中止的无效帧</li>
+<li>帧间最小间隔：9.6us，相当于96bit的发送时间，即一个站在检测到总线空闲后，还要等待9.6us才能再次发送数据（为了使刚刚收到数据帧的站的接收缓存来得及清理，做好接收下一帧的准备）</li>
+<li>流程<ol>
+<li>准备发送：先检测信道</li>
+<li>检测信道</li>
+<li>检查碰撞</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>集线器工作在物理层，使用集线器的以太网在逻辑上仍是总线网，各工作站使用CSMA/CD协议，并共享逻辑上的总线</li>
+<li>以太网的信道利用率<ul>
+<li>发生碰撞时，信道利用率不能达到100%</li>
+<li><code>帧发送时间=帧长/数据发送速率</code></li>
+<li><code>成功发送一个帧所占用信道时间=帧发送时间+单程端到端t</code></li>
+<li><code>参数a=端到端时延/帧发送时间</code>，要尽可能小才会提高信道利用率；因此帧长不能太短，以太网连线长度要限制 </li>
+<li><code>理想情况下的极限信道利用率Smax=1/(1+参数a)</code></li>
+</ul>
+</li>
+<li>MAC层的硬件地址：MAC地址，是每一个站的标识符，48位（高位24位是组织唯一标识符，地位24位是扩展唯一标识符）</li>
+<li>MAC帧格式：以太网V2格式</li>
+<li>交换机：工作在数据链路层，根据MAC帧的目的地址对收到的帧进行转发和过滤<ul>
+<li>实质上是一个多接口的网桥</li>
+<li>全双工方式</li>
+<li>具有并行性</li>
+<li>即插即用设备，内部的帧交换表是通过自学习算法自动地逐渐建立起来</li>
+<li>交换机使用了生成树协议STP</li>
+<li>交换机是一个广播域，交换机的端口区分冲突域</li>
+</ul>
+</li>
+<li>从总线以太网到星形以太网</li>
+<li>虚拟局域网VLAN</li>
+<li>速率达到或超过100Mbit/s的以太网称为高速以太网：可在全双工方式下工作而无冲突发生</li>
 </ol>
 <hr>
-<h3 id="进程描述和控制"><a href="#进程描述和控制" class="headerlink" title="进程描述和控制"></a>进程描述和控制</h3><ol>
-<li>进程：程序在一个数据集上的一次执行过程</li>
-<li>进程与程序的联系与区别<ul>
-<li>程序是静态的；进程是动态的，且一个进程运行时可以创建其它进程</li>
-<li>一个程序可对应一个进程，也可对应多个进程</li>
-</ul>
-</li>
-<li>进程的组成：程序代码、数据集和栈、进程控制块PCB（是进程存在的唯一标识）</li>
-<li>上下文：进程运行时CPU的寄存器数据集合（现场）</li>
-<li>分派器调度时发生上下文切换：保存旧进程上下文到它的PCB，从新进程的PCB恢复它的上下文到寄存器</li>
-<li>进程提高了资源利用率和吞吐率，但增加了系统的时间和空间开销</li>
-<li>进程的创建和终止<ul>
-<li>创建：OS为该进程建立PCB，分配内存空间</li>
-<li>终止：回收内存，释放资源，销毁PCB</li>
-</ul>
-</li>
-<li>进程的五种状态<ul>
-<li>新建：分配内存后将被设为就绪态</li>
-<li>就绪：进程已得到除CPU外的其它所需资源</li>
-<li>运行：进程的指令正被执行</li>
-<li>阻塞：进程正等待资源或某事件发生</li>
-<li>退出：进程正常或异常结束。回收资源，善后</li>
-<li>五状态模型：处于同一状态的进程PCB组成一个进程队列</li>
-</ul>
-</li>
-<li>进程控制块PCB：进程属性的集合<ul>
-<li>OS进程表中包含所有进程的PCB</li>
-<li>PCB的索引（PID）唯一地标识该进程</li>
-</ul>
-</li>
-<li>CPU执行模式<ul>
-<li>用户态：只能执行非特权指令</li>
-<li>系统态（内核态）：可以执行所有指令，使用所有资源以及改变CPU状态</li>
-<li>何时CPU从用户态到系统态？<ol>
-<li>执行系统调用（即内核代码）时</li>
-<li>发生中断或异常时，执行中断处理程序</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h3><ol>
-<li>进程与线程<ul>
-<li>进程：分配资源的单位，不频繁地进行切换</li>
-<li>线程：被调度执行的单位，虽然不拥有系统资源，但线程也拥有一定的资源，比如线程栈等，可频繁调度切换，轻装运行</li>
-<li>进程的两个特性：分配资源，被调度执行</li>
-</ul>
-</li>
-<li>线程<code>!=</code>子进程：多个线程共享进程空间，通信快；子进程空间各自独立，慢</li>
-<li>多线程的优点<ul>
-<li>创建/终止一个线程比创建/终止进程的时间少</li>
-<li>上下文切换开销小</li>
-<li>资源共享：进程的资源供其所有线程共享；线程间共享内存，通信方便</li>
-<li>并发程度高，可利用多处理器结构</li>
-</ul>
-</li>
-<li>线程的三种状态<ul>
-<li>运行态</li>
-<li>就绪态</li>
-<li>阻塞态</li>
-</ul>
-</li>
-<li>线程分为两类：用户级线程ULT（由用户空间中的线程库完成，OS内核不知道其存在；若发生阻塞则会阻塞所属进程；不能利用多CPU结构；内核为进程分配CPU，进程调度其某个ULT运行），内核级线程KLT（可利用多CPU结构；调度时要切换到系统态，开销大；类似进程）</li>
-</ol>
-<hr>
-<h3 id="并发性：互斥和同步"><a href="#并发性：互斥和同步" class="headerlink" title="并发性：互斥和同步"></a>并发性：互斥和同步</h3><ol>
-<li><p>概念</p>
+<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><ol>
+<li><p>网络层提供的两种服务</p>
 <ul>
-<li>并行：多个事件在同一时刻发生</li>
-<li>并发：多个事件在同一时间间隔发生</li>
-<li>原子操作：一个函数或动作序列不可分割，要么作为一个整体执行（不可中断），要么都不执行</li>
-<li>临界资源：一次仅允许一个进程独占使用的不可剥夺资源</li>
-<li>互斥：当一个进程正在临界区中访问临界资源时，其它进程不能进入临界区</li>
-<li>同步：合作的并发进程需要按先后次序执行</li>
-<li>死锁：多个进程全部阻塞，形成等待资源的循环链</li>
-<li>饥饿：一个进程长期得不到资源</li>
+<li>让网络负责可靠交付：面向连接，通信之前先建立虚电路（逻辑链接）</li>
+<li>网络提供数据报服务：网络层向上只提供简单灵活的、无连接的、尽最大努力交付的数据报服务</li>
 </ul>
 </li>
-<li><p>考虑互斥和同步的原因：由于多个进程并发甚至并行执行，对资源的共享和竞争，使得并发进程之间相互制约</p>
-</li>
-<li><p>互斥的要求</p>
+<li><p>网际协议IP</p>
 <ul>
-<li>强制互斥</li>
-<li>有限等待</li>
-<li>有空让进</li>
-<li>让权等待</li>
-</ul>
-</li>
-<li><p>信号量</p>
-<ul>
-<li><p>概念：不要求忙等的同步互斥工具</p>
-</li>
-<li><p>一个信号量表示一种资源</p>
-</li>
-<li><p>当资源不可用时，进程将阻塞，直到另一进程释放资源时才被唤醒</p>
-</li>
-<li><p>信号量s只能被下面两个原语访问</p>
+<li><p>配套使用的三个协议</p>
 <ol>
-<li><code>semWait(s)</code>：本进程请求分配一个资源，多个该原语次序不能颠倒</li>
-<li><code>semSignal(s)</code>：本进程释放一个资源，多个该原语次序可任意</li>
-<li>上述操作必须成对出现</li>
-</ol>
-</li>
-<li><p>为每种资源设置一个信号量s，可用于n个进程的同步互斥；信号量的值表示可用资源个数</p>
-</li>
-<li><p>用于互斥时，s初值为1，取值为<code>1~-(n-1)</code></p>
-<ol>
-<li>s=1时：有1个临界资源可用，一个进程可进入临界区</li>
-<li>s=0时：临界资源已分配，一个进程已进入临界区</li>
-<li>s&lt;0时：临界区已被占用，|s|个阻塞进程正等待进入</li>
-</ol>
-</li>
-<li><p>用于同步时，s初值将&gt;=0</p>
-<ol>
-<li>s&gt;=0时：可用资源个数</li>
-<li>s&lt;0时：该资源的等待队列长度</li>
-</ol>
-</li>
-<li><p>代码定义</p>
-<ol>
-<li><p>信号量的定义</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">semaphore</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> count;       <span class="comment">//信号量的值，即可用资源个数</span></span><br><span class="line">	queueType <span class="built_in">queue</span>; <span class="comment">//因该信号量而阻塞的进程队列</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>申请分配资源s</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">semWait(semaphore s)</span><br><span class="line">&#123;</span><br><span class="line">	s.count--;</span><br><span class="line">	<span class="keyword">if</span>(s.count&lt;<span class="number">0</span>)&#123;</span><br><span class="line">		将当前进程放入s.<span class="built_in">queue</span>;</span><br><span class="line">		阻塞当前进程;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>释放资源s</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">semSignal(semaphore s)</span><br><span class="line">&#123;</span><br><span class="line">	s.count++;</span><br><span class="line">	<span class="keyword">if</span>(s.count&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">		从s.<span class="built_in">queue</span>中移除进程P;</span><br><span class="line">		将进程P插入到就绪队列;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>实现互斥：每个进程在进入临界区前，执行<code>semWait(s)</code>;退出临界区后，执行<code>semSignal(s)</code></p>
-</li>
+<li>地址解析协议ARP<ul>
+<li>将IP地址解析成MAC地址</li>
+<li>每个主机都设有一个ARP高速缓存</li>
 </ul>
 </li>
-<li><p>生产者/消费者问题</p>
+<li>网际控制报文协议ICMP<ul>
+<li>为了更有效地转发IP数据报和提高交付成功的机会</li>
+<li>应用举例：ping、tracert</li>
+</ul>
+</li>
+<li>网际组管理协议IGMP</li>
+</ol>
+</li>
+<li><p>中间设备</p>
+<ol>
+<li>物理层中继系统：转发器</li>
+<li>数据链路层中继系统：网桥或桥接器</li>
+<li>网络层中继系统：路由器</li>
+<li>网桥和路由器的混合物：桥路器</li>
+<li>网络层以上的中继系统：网关</li>
+</ol>
+</li>
+<li><p>IP地址：唯一标识符，32位，由互联网名字和数字分配机构进行分配</p>
+<ol>
+<li><p>IP地址的编址方法</p>
 <ul>
-<li>一组生产者进程产生数据，放到缓冲区</li>
-<li>一组消费者进程从缓冲区中取出数据使用<ol>
-<li>有限缓冲：假设缓冲池大小固定，包含k个缓冲区。生产者和消费者共用一个循环缓冲池</li>
-<li>无限缓冲：缓冲区数量无限制</li>
-</ol>
+<li><p>分类的IP地址</p>
+<ol>
+<li><p>由网络号和主机号组成：<code>IP地址::= { &lt;网络号&gt;, &lt;主机号&gt;}</code></p>
 </li>
-<li>有限缓冲的设置<ol>
-<li>缓冲池一次只能让一个进程访问（互斥）：设一信号量s，初值为1</li>
-<li>生产者需要空缓冲来发送数据（同步）：设一信号量empty，初值为sizeofbuffer</li>
-<li>消费者需要满缓冲来获取数据（同步）：设一信号量full，初值为0</li>
-</ol>
+<li><p>各类IP地址的网络号字段和主机号字段</p>
+<img src="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/各类IP地址的网络号字段和主机号字段.png">
 </li>
-</ul>
+<li><p>点分十进制计法</p>
 </li>
-<li><p>管程</p>
-<p>管程将共享对象以及能对它进行的所有操作集中在一个模块中，管程本身结构保证各操作的互斥执行</p>
+<li><p>IP地址的指派范围</p>
+<img src="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/IP地址的指派范围.png">
 </li>
-</ol>
-<hr>
-<h3 id="并发：死锁和饥饿"><a href="#并发：死锁和饥饿" class="headerlink" title="并发：死锁和饥饿"></a>并发：死锁和饥饿</h3><ol>
-<li>原理：当一组进程中的每个进程都在等待某个事件，而只有在这组进程中的其它阻塞进程才能触发该事件，则这组进程发生死锁</li>
-<li>原因：进程推进顺序不当、竞争资源</li>
-<li>若死锁，则资源分配图中必有环路</li>
-<li>死锁的四个必要条件（必须同时成立）<ul>
-<li>互斥</li>
-<li>占有且等待</li>
-<li>不可抢占</li>
-<li>循环等待</li>
-</ul>
+<li><p>一般不使用的特殊的IP地址</p>
+<img src="/2020/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/一般不使用的特殊的IP地址.png">
 </li>
-<li>死锁的三种处理方法<ul>
-<li>死锁预防：破坏四个必要条件之一</li>
-<li>死锁避免：不破坏必要条件，允许进程动态申请资源，但检查资源分配状态，以避免可能导致的死锁</li>
-<li>死锁检测和恢复：检查系统是否已死锁、哪些进程和资源涉及死锁，并撤销死锁进程</li>
-<li>忽略死锁：假设死锁不会发生</li>
-</ul>
+<li><p>同一局域网的IP地址网络号必须一样</p>
 </li>
-<li>进程启动拒绝<ul>
-<li>资源总量R：<code>R[j]=k</code>表示系统中第j类资源有k个</li>
-<li>可用资源V：<code>V[j]=k</code>表示未被分配的第j类资源现有k个</li>
-<li>最大需求矩阵C：<code>C[i,j]=k</code>表示进程i需要第j类资源最多为k个</li>
-<li>已分配矩阵A：<code>A[i,j]=k</code>表示进程i已分得第j类资源k个</li>
-</ul>
+<li><p>IP地址放在IP数据报的首部，而硬件地址则放在MAC帧的首部</p>
 </li>
 </ol>
-<hr>
-<h3 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h3><ol>
-<li>内存管理术语<ul>
-<li>页框（帧）：一个固定长度的内存块</li>
-<li>页：一个固定长度的数据块（程序代码或数据），平时存储在二级存储器，常用尺寸：4KB</li>
-<li>段：一个变长的数据块，平时存储在二级存储器</li>
+</li>
+<li><p>子网的划分：从主机号借用若干位作为子网号，而主机号相应减少若干位</p>
+<ul>
+<li><code>（IP地址） 与运算 （子网掩码） = 网络地址</code></li>
+<li>默认子网掩码</li>
 </ul>
 </li>
-<li>重定位：进程执行过程中，需要将要访问的程序地址转换为实际的内存物理地址<ul>
-<li>逻辑地址：程序中引用的地址，从0顺序编址</li>
-<li>物理地址：数据在内存中的单元地址</li>
+<li><p>构成超网（路由聚合）</p>
+</li>
 </ul>
 </li>
-<li>内存管理技术<ul>
-<li>分区（连续分配，为一个用户程序分配一个连续的内存空间）<ol>
-<li>固定分区：易产生区内内碎片，内存利用率低</li>
-<li>动态分区：易产生区间外碎片<ul>
-<li>可通过压缩解决外碎片</li>
-<li>分配策略<ol>
-<li>首次适配（First Fit）：空闲区按起始地址递增顺序排列（从链首开始查找）：低地址端遗留许多碎片，高地址端有大空闲区——最常用，内存分配最快，内存回收最佳</li>
-<li>下次适配（Next Fit）：空闲区按起始地址递增顺序排列（从上次扫描结束处继续查找）：平均查找时间缩短，空间利用比FF均衡</li>
-<li>最佳适配（Best Fit）：空闲区按分区大小递增顺序排列：链首部碎片多，查找费时，回收合并时复杂——查找最合适空闲区时最快，但碎片最多，压缩最频繁，性能最差</li>
-<li>最差适配（Worst Fit）：空闲区按分区大小递减顺序排列：小碎片较少，但最大的空闲区也不会很大</li>
+<li><p>最长前缀匹配</p>
+</li>
 </ol>
 </li>
 </ul>
 </li>
-<li>可通过压缩解决外碎片</li>
-</ol>
+<li><p>路由选择协议</p>
+<ul>
+<li>内部网关协议RIP：分布式的、基于距离向量（跳数）的路由选择协议（UDP）</li>
+<li>内部网关协议OSPF：开放最短路径优先</li>
+<li>外部网关协议BGP：不同自治系统的路由器之间交换路由信息的协议</li>
+</ul>
 </li>
-<li>分页<ol>
-<li>内存划分为大小相等的物理块（页框，帧）</li>
-<li>帧大小L，通常为4KB</li>
-<li><code>页号=int（地址/帧大小）</code>，<code>页内偏移=地址mod帧大小</code>。例如：32bit的逻辑地址A可表示为：页号p（20b），页内偏移d(12b)</li>
-<li>页表：记录进程中的每个页存放在哪一个内存帧，位于内存；每个进程都有一个页表</li>
-<li><code>物理地址=帧号*帧长+页内偏移量</code></li>
-</ol>
-</li>
-<li>分段<ol>
-<li>32bit逻辑地址：&lt;段号s，段内偏移量d&gt;</li>
-<li>段表：每个进程一个段表</li>
-<li><code>物理地址=段起址+段内偏移量</code></li>
+<li><p>IPv6：128位</p>
+<ul>
+<li>两种向IPv6过渡的策略<ol>
+<li>双协议栈</li>
+<li>隧道技术</li>
 </ol>
 </li>
 </ul>
 </li>
-<li>伙伴系统<ul>
-<li>Unix、Linux采用伙伴系统分配内存页框（帧）</li>
-<li>伙伴：两个相邻的帧块。每块大小必须相同</li>
+<li><p>虚拟专用网VPN：使用专用地址</p>
+<ul>
+<li>三个专用地址块：<ol>
+<li><strong>10.0.0.0</strong> <strong>到</strong> <strong>10.255.255.255</strong>（1个A类）</li>
+<li><strong>172.16.0.0</strong> <strong>到</strong> <strong>172.31.255.255</strong>（16个连续B类）</li>
+<li><strong>192.168.0.0</strong> <strong>到</strong> <strong>192.168.255.255</strong>（256个连续C类）</li>
+</ol>
+</li>
 </ul>
+</li>
+<li><p>网络地址转换NAT</p>
 </li>
 </ol>
 <hr>
-<h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><ol>
-<li>虚拟内存允许进程执行时只将部分程序放入内存，因此程序可以比物理内存大</li>
-<li>术语<ul>
-<li>虚拟内存：用辅助存储器（一般指磁盘）作为内存的补充</li>
-<li>虚拟地址：即逻辑地址</li>
-<li>虚拟地址空间：分配给某进程（程序）的虚拟地址范围</li>
-<li>实地址：即物理地址</li>
+<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><ol>
+<li>网络层是为主机之间提供逻辑通信，而传输层为应用进程之间提供端到端的逻辑通信</li>
+<li>用户数据报协议UDP<ul>
+<li>单位：UDP报文或用户数据报</li>
+<li>提供无连接服务</li>
+<li>不可靠传输，尽最大努力交付</li>
+<li>面向报文,一次发送一个完整的报文</li>
+<li>没有拥塞控制</li>
 </ul>
 </li>
-<li>进程对代码和数据的引用和访问有集簇倾向，所以虚拟内存方案可行</li>
-<li>虚拟页式管理中的页表：<code>帧号-P驻留位-引用字段-M修改位-磁盘地址</code></li>
-<li>倒排页表为内存的每一页框设置一个页表项</li>
-<li>快表TLB：将页表中进程运行最常用的部分放入TLB，TLB集成在CPU内部的MMU里面<ul>
-<li>若要访问的页号位于TLB，则从TLB中取出帧号</li>
-<li>否则，从内存中的页表取出帧号，且添加进TLB</li>
-<li>当TLB满时，淘汰旧表项，再写入新表项</li>
+<li>传输控制协议TCP<ul>
+<li>单位：TCP报文段</li>
+<li>提供面向连接服务</li>
+<li>可靠传输</li>
+<li>不提供广播或多播服务</li>
+<li>面向字节流（流：流入或流出进程的字节序列）</li>
 </ul>
 </li>
-<li>段页式：用户程序划分为段，段再划分为大小相等的页</li>
-<li>总结——各存储管理方法<ul>
-<li>固定分区：支持多道程序设计，算法简单，但内碎片多</li>
-<li>动态分区：无内碎片，但用于外碎片的压缩处理时间长</li>
-<li>简单页式：克服了碎片多和压缩处理时间长的缺点，但不支持虚拟内存</li>
-<li>虚存页式：支持虚拟存储，离散分配内存，无外碎片，但不能以自然的方式提供内存的共享和存取保护机制</li>
-<li>虚存段式：易于共享保护，内存碎片多，支持虚拟内存</li>
-<li>虚存段页式：易于共享保护，内存碎片少，支持虚拟内存</li>
-</ul>
-</li>
-<li>置换策略<ul>
-<li>最佳置换算法OPT：淘汰永不再使用或下次访问距当前时间最长的页面</li>
-<li>最近最少使用算法LRU：淘汰在最近一段时间内最久未使用的一页</li>
-<li>FIFO算法：淘汰驻留内存时间最久的一页</li>
-<li>简单时钟算法Clock</li>
-</ul>
-</li>
-<li><code>缺页率=不成功访问次数/总访问次数</code></li>
-<li>当系统并发度过高时，缺页频繁，用于调页的时间比进程实际运行的时间还多，CPU利用率急剧下降，此时发生了抖动</li>
+<li>端口号：识别进程<ul>
+<li>常用端口<ol>
+<li>RPC：111：UDP</li>
+<li><strong>DNS：53：UDP</strong></li>
+<li>TFTP：69：UDP</li>
+<li>SNMP：161：UDP</li>
+<li>SNMP(trap)：162：UDP</li>
+<li>SMTP：25：TCP</li>
+<li>FTP：21：TCP</li>
+<li>Telnet：23：TCP</li>
+<li>HTTP：80：TCP</li>
+<li>HTTPS：443：TCP</li>
 </ol>
-<hr>
-<h3 id="单处理器调度"><a href="#单处理器调度" class="headerlink" title="单处理器调度"></a>单处理器调度</h3><ol>
-<li>处理器调度类型<ul>
-<li>长程调度：新作业提交时，决定是否将其送入内存，成为一个进程。也称作业调度</li>
-<li>短程调度：决定将CPU分配给哪个就绪进程</li>
-<li>中程调度：决定把哪些进程在内存与磁盘间交换</li>
+</li>
 </ul>
 </li>
-<li>选择调度策略<ul>
-<li>先来先服务FCFS</li>
-<li>轮转RR：各进程按提交顺序排成就绪队列，然后依次占用处理器，运行某一时间片，时间片完则排入就绪队列尾</li>
-<li>最短进程优先SPN：调度CPU执行时间预期最短的进程，直至运行完或阻塞时，再重新调度</li>
-<li>最短剩余时间SRT：新进程到达时，若新进程的预计运行时间比当前进程的剩余运行时间更短，则抢占当前进程</li>
-<li>最高响应比优先算法：综合了FCFS和SPN算法</li>
-<li>反馈（多级反馈队列）</li>
+<li>套接字socket：（IP地址：端口号）</li>
+<li>可靠传输的工作原理<ul>
+<li>停止等待协议<ol>
+<li>每发送完一个分组就停止发送，等待对方的确认ACK。在收到确认后再发送下一个分组</li>
+<li>超时重传</li>
+<li>确认丢失</li>
+<li>确认迟到</li>
+<li>优点：简单</li>
+<li>缺点：信道利用率太低</li>
+<li>可采用流水线传输提高传输效率</li>
+</ol>
+</li>
+<li>连续ARQ协议（滑动窗口协议）<ol>
+<li>是TCP协议的精髓所在</li>
+<li>发送方维持的发送窗口：位于发送窗口内的分组都可连续发送出去，而不需要等待对方的确认</li>
+<li>发送方每收到一个确认，就把发送窗口向前滑动一个分组的位置</li>
+<li>累计确认</li>
+<li>回退N</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>TCP拥塞控制算法<ul>
+<li>慢开始</li>
+<li>拥塞避免</li>
+<li>快重传</li>
+<li>快恢复</li>
+</ul>
+</li>
+<li>TCP的连接建立<ul>
+<li>TCP建立连接的过程叫做握手</li>
+<li>握手需要在客户和服务器之间交换三个TCP报文段</li>
+<li><strong>过程</strong></li>
+</ul>
+</li>
+<li>TCP的连接释放<ul>
+<li>TCP释放连接的过程叫做挥手</li>
+<li>挥手需要在客户和服务器之间交换四个TCP报文段</li>
+<li><strong>过程</strong>（<a href="https://www.nowcoder.com/ta/review-network/review?tpId=33&amp;tqId=21194&amp;query=&amp;asc=true&amp;order=&amp;page=6）" target="_blank" rel="noopener">https://www.nowcoder.com/ta/review-network/review?tpId=33&amp;tqId=21194&amp;query=&amp;asc=true&amp;order=&amp;page=6）</a></li>
 </ul>
 </li>
 </ol>
 <hr>
-<h3 id="IO管理和磁盘调度"><a href="#IO管理和磁盘调度" class="headerlink" title="IO管理和磁盘调度"></a>IO管理和磁盘调度</h3><ol>
-<li>直接内存存取DMA：在内存和设备间直接进行块传送：I/O效率高</li>
-<li>缓冲：缓和CPU和I/O设备间速度不匹配矛盾，提高并行性</li>
-<li>磁盘调度<ul>
-<li>扇区是最小寻址单位和存取单位（但不是分配单位）</li>
-<li>磁盘访问时间<ol>
-<li><code>寻道时间=启动磁盘时间+横跨n条磁道时间</code>：对磁盘访问时间影响最大</li>
-<li><code>旋转延迟时间=将待访问扇区转到磁头下的时间</code></li>
-<li><code>传输时间=读写字节数/（旋转速度*每磁道字节数）</code></li>
-</ol>
-</li>
-<li>磁盘调度策略<ol>
-<li>先进先出FIFO：按请求的接收顺序服务</li>
-<li>先进后出LIFO：先处理最新提出的请求</li>
-<li>最短服务时间优先算法SSTF：优先选择距当前磁头位置最近的访问请求进行服务</li>
-<li>SCAN扫描算法：选择位于磁头移动方向前方且距磁头位置最近的访问请求进行服务。 当前方没有访问请求时，立即改变磁头移动方向 (LOOK)；或继续扫描到磁盘边界后再转向(SCAN)</li>
-<li>C-SCAN循环扫描算法：磁头从磁盘一端移到另一端，随着移动而不断处理请求。当磁头移到另一端 时，马上返回磁盘起始，返回时不处理请求</li>
-</ol>
-</li>
+<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><ol>
+<li>域名系统DNS（UDP协议）<ul>
+<li>分布式</li>
+<li>域名到IP地址的解析是由域名服务器完成的</li>
+<li>结构：<code>...三级域名.二级域名.顶级域名</code></li>
 </ul>
 </li>
-<li>RAID——独立磁盘冗余阵列<ul>
-<li>RAID用多个小容量磁盘代替单个大容量磁盘</li>
-<li>RAID 0：无冗余的并行访问</li>
-<li>RAID 1：可并行访问的镜像磁盘（复制每个磁盘）</li>
-<li>RAID 2：位汉明校验</li>
-<li>RAID 3：位交错奇偶校验</li>
-<li>RAID 4：块奇偶校验</li>
-<li>RAID 5：块分布奇偶校验</li>
-<li>RAID 6：P+Q双重冗余</li>
-</ul>
-</li>
+<li>文件传输协议FTP</li>
+<li>简单文件传送协议TFTP</li>
+<li>远程中断协议TELNET</li>
+<li>统一资源定位符URL：<code>&lt;协议&gt;://&lt;主机&gt;:&lt;端口&gt;/&lt;路径&gt;</code></li>
+<li>超文本传输协议HTTP：面向事务的应用层协议；是无状态的；本身是无连接，虽然它使用了面向连接的TCP向上提供的服务</li>
+<li>代理服务器（万维网高速缓存）</li>
+<li>Cookie表示在HTTP服务器和客户之间传递的状态信息</li>
+<li>超文本标记语言HTML：用于显示数据</li>
+<li>可扩展标记语言XML：用于传输数据，是对HTML的补充</li>
+<li>层叠样式表CSS</li>
+<li>邮件发送协议SMTP</li>
+<li>邮件读取协议POP3和IMAP</li>
+<li>动态主机配置协议DHCP</li>
+<li>简单网络管理协议SNMP</li>
 </ol>
 <hr>
-<h3 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h3><ol>
-<li>文件分配<ul>
-<li>连续分配</li>
-<li>链接分配</li>
-<li>索引分配</li>
+<h3 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h3><ol>
+<li>被动攻击<ul>
+<li>窃听，流量分析，截获</li>
 </ul>
 </li>
+<li>主动攻击<ul>
+<li>篡改</li>
+<li>恶意程序</li>
+<li>拒绝服务</li>
+</ul>
+</li>
+<li>分布式拒绝服务DDoS</li>
+<li>中间人攻击</li>
 </ol>
 
       
@@ -657,7 +739,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -726,7 +808,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -739,7 +821,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

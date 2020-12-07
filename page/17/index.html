@@ -23,14 +23,14 @@
   <meta name="description" content="Be RESTful">
 <meta property="og:type" content="website">
 <meta property="og:title" content="亚双义一真の博客">
-<meta property="og:url" content="https://yashuangyi.github.io/page/2/index.html">
+<meta property="og:url" content="https://yashuangyi.github.io/page/17/index.html">
 <meta property="og:site_name" content="亚双义一真の博客">
 <meta property="og:description" content="Be RESTful">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="yashuangyi">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://yashuangyi.github.io/page/2/">
+<link rel="canonical" href="https://yashuangyi.github.io/page/17/">
 
 
 <script id="page-configurations">
@@ -165,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/08/02/-2020-8-2/">
+    <link itemprop="mainEntityOfPage" href="https://yashuangyi.github.io/2020/03/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -179,7 +179,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/02/-2020-8-2/" class="post-title-link" itemprop="url">[随笔]2020-8-2</a>
+            <a href="/2020/03/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Git常用命令</a>
         </h1>
 
         <div class="post-meta">
@@ -188,17 +188,23 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-08-02 22:51:00 / 修改时间：22:53:28" itemprop="dateCreated datePublished" datetime="2020-08-02T22:51:00+08:00">2020-08-02</time>
+              <time title="创建时间：2020-03-19 12:50:00" itemprop="dateCreated datePublished" datetime="2020-03-19T12:50:00+08:00">2020-03-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-20 20:54:47" itemprop="dateModified" datetime="2020-03-20T20:54:47+08:00">2020-03-20</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                  <a href="/categories/%E7%AC%94%E8%AE%B0%E6%9D%82%E7%83%A9/" itemprop="url" rel="index"><span itemprop="name">笔记杂烩</span></a>
                 </span>
             </span>
 
@@ -213,18 +219,225 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="随笔-2020-8-2"><a href="#随笔-2020-8-2" class="headerlink" title="[随笔]2020-8-2"></a>[随笔]2020-8-2</h2><p>作者：亚双义一真</p>
+          <h2 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a>Git常用命令</h2><p>作者：亚双义、一真</p>
 <p>邮箱：<a href="mailto:chenzhiyuan1999@gmail.com">chenzhiyuan1999@gmail.com</a></p>
-<p>时间：2020-8-2</p>
+<p>时间：2020-2-19</p>
+<p>参考：<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>
 <hr>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>来微众实习也有将近一个月了，个人体验还是挺不错的，然而还是有些顾虑和担忧，干脆写次随笔记录下来吧</p>
+<h3 id="Git的基本命令"><a href="#Git的基本命令" class="headerlink" title="Git的基本命令"></a>Git的基本命令</h3><ol>
+<li><p>安装Git后的配置（自报家门）</p>
+<ul>
+<li><code>git config --global user.name &quot;Your Name&quot;</code></li>
+<li><code>git config --global user.email &quot;email@example.com&quot;</code></li>
+</ul>
+</li>
+<li><p>创建版本库</p>
+<ul>
+<li><code>git init</code></li>
+</ul>
+</li>
+<li><p>把文件添加到版本库</p>
+<ul>
+<li><code>git add &lt;file&gt;</code>  （把文件添加到仓库）</li>
+<li><code>git commit -m &quot;本次提交说明&quot;</code>  (把文件提交到仓库)</li>
+</ul>
+</li>
+<li><p>查看仓库当前状态</p>
+<ul>
+<li><code>git status</code>  (查看工作区，是否有文件被修改)</li>
+<li><code>git diff</code>  (查看修改内容)</li>
+</ul>
+</li>
+<li><p>查看提交日志</p>
+<ul>
+<li><code>git log --pretty=oneline</code></li>
+</ul>
+</li>
+<li><p>回退到某一个版本</p>
+<ul>
+<li><code>git reset --hard HEAD^</code>  (HEAD^表示上一个版本，HEAD~100表示上100个版本，也可以用commit id)</li>
+<li><code>git revert HEAD</code>  撤销更改并分享给别人</li>
+</ul>
+</li>
+<li><p>查看命令记录</p>
+<ul>
+<li><code>git reflog</code></li>
+</ul>
+</li>
+<li><p>撤销工作区的修改</p>
+<ul>
+<li><code>git checkout -- &lt;file&gt;</code></li>
+<li><code>git reset HEAD &lt;file&gt;</code>  （HEAD表示最新的版本）</li>
+</ul>
+</li>
+<li><p>删除文件</p>
+<ul>
+<li><p><code>rm &lt;file&gt;</code>  （删除本地工作区的文件）</p>
+</li>
+<li><p><code>git rm &lt;file&gt;</code>  （从版本库删除该文件）并且执行<code>git commit -m &quot;本次记录的说明&quot;</code></p>
+</li>
+<li><p><code>git checkout --&lt;file&gt;</code>  （当误删时，恢复文件）</p>
 <hr>
-<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>这周已经是第四周了，但自我感觉还是不达标，入职以来大部分时间都是在熟悉金融相关术语以及代码业务，不过好在导师和同事下周会带我做一个项目，我自己也是颇为期待。</p>
-<p>不得不说，这是我大学期间体验最好的一次实习，不仅仅是待遇方面，工作环境以及周围的伙伴都非常nice，我能感受到大家对我的关照，每次咨询问题都能得到详细耐心的解答，让我体验到了大公司对实习生的培养力度以及人文关怀。当然了，这也是我大学期间压力最大的一次实习，以往的实习大部分都是让我打杂、实现一些小功能或者跑跑腿，而这一次很庆幸也很感激，刚入职就能让我看微粒贷相关的业务代码，虽然对业务的细节处理还不熟悉，但对整体的逻辑和流程都有了大致的了解，相信随着下周的项目协助开发，我可以更熟悉风控开发的流程。以往实习都是盼着早点下班，而现在的实习却是希望时间能过得慢点，因为我在这里能确切地感受到自己与同事之间的差距，无论是业务实现、技术思维亦或是需求设计、与其他部门的沟通交流，我都有太多太多要向他们学习的了，也是在这里我才意识到：做开发不能只会开发，还要懂得需求的沟通及设计；做开发也不能只专注于技术，还要掌握业务的实现，毕竟技术服务于业务。</p>
-<p>或许这一个月我的技术还没太大增长，但我的知识广度却是与日俱进：单元测试的正确编写、金融相关的术语、我行使用的技术、灰度发布等概念。我觉得有了这些概念性的基础后，再编写业务代码会更便捷。</p>
-<p>其实今年的就业情况确实很严峻，各个大厂甚至在7月份就开始了秋招正式批，有不少小伙伴都决定裸辞专注于准备秋招了。我一开始也挺迷茫，毕竟一边实习一边准备秋招的话一方面压力很大，另一方面时间很难调度，再者就是就怕两个都兼顾结果两个都没做得很好，很庆幸的是导师非常理解我，他鼓励我先开始投部分秋招，保持一种可以随时接受面试的状态，而公司的转正也会尽力帮我争取——前提是我要表现得好。</p>
-<p>所以自己目前的打算就是在上班时间好好完成公司安排的任务、多去熟悉业务流程；在地铁上或者周末回公司复习面经、刷刷算法，然后一周投递两三家公司的秋招正式批。其实我个人觉得准备面试真的很提升实力，自己从4月份开始转Java，到现在也没有很长时间，然而最大的提升就是在6月份的3、4家面试，很深刻的体验就是每面完一场就回去复盘，结果都能让自己对Java开发以及各方面基础有更深更广的理解，所以说自己也是挺喜欢准备秋招然后面试看看效果的~</p>
-<p>最后分享一句歌词，来自Eason的《无条件》：“我有很多未达完美事情，我只懂得，再努力每天”。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="远程仓库的使用"><a href="#远程仓库的使用" class="headerlink" title="远程仓库的使用"></a>远程仓库的使用</h3><ol>
+<li><p>创建SSH Key</p>
+<ul>
+<li>在用户主目录下找到.ssh目录，在此目录下查看是否有<code>id_rsa</code>以及<code>id_rsa.pub</code>这俩文件，若有则跳过下一步：</li>
+<li><code>ssh-keygen -t -rsa -C &quot;youremail@example.com&quot;</code>  （创建SSH Key）</li>
+<li><code>id_rsa</code>是私钥，不可泄露；<code>id_rsa.pub</code>是公钥，将其内容复制粘贴到GitHub里的SSH Keys页面中</li>
+</ul>
+</li>
+<li><p>本地库关联远程仓库</p>
+<ul>
+<li><code>git remote add origin git@github.com:用户名/仓库名.git</code></li>
+</ul>
+</li>
+<li><p>把本地库所有内容推送到远程库</p>
+<ul>
+<li><code>git push -u origin &lt;当前分支名（默认master）&gt;</code>  （之后的推送可省略<code>-u</code>命令）</li>
+</ul>
+</li>
+<li><p>克隆远程库到本地库</p>
+<ul>
+<li><code>git clone git@github.com:用户名/仓库名.git</code>  （SSH协议）</li>
+</ul>
+</li>
+<li><p>查看远程库信息</p>
+<ul>
+<li><p><code>git remote</code></p>
+</li>
+<li><p><code>git remote -v</code>  查看详细信息</p>
+<hr>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><ol>
+<li><p>创建并切换分支</p>
+<ul>
+<li><code>git checkout -b &lt;分支名&gt;</code>  相当于<code>git branch &lt;分支名&gt;</code> 和  <code>git checkout &lt;分支名&gt;</code>两条命令</li>
+</ul>
+</li>
+<li><p>查看当前分支</p>
+<ul>
+<li><code>git branch</code></li>
+</ul>
+</li>
+<li><p>合并分支</p>
+<ul>
+<li><code>git merge &lt;待合并分支名&gt;</code>  合并指定分支到当前分支（可能会用<code>Fast forward</code>模式）</li>
+<li><code>git merge --no-ff &lt;待合并分支名&gt;</code>  禁用<code>Fast forward</code>的合并</li>
+</ul>
+</li>
+<li><p>删除分支</p>
+<ul>
+<li><code>git branch -d &lt;分支名&gt;</code></li>
+<li><code>git branch -D &lt;分支名&gt;</code>  强制删除（当该分支未被合并时）</li>
+</ul>
+</li>
+<li><p>切换分支</p>
+<ul>
+<li><code>git switch -c &lt;分支名&gt;</code>  创建并切换到该分支</li>
+<li><code>git switch &lt;分支名&gt;</code>  直接切换到已有的分支</li>
+</ul>
+</li>
+<li><p>强制修改分支位置</p>
+<ul>
+<li><code>git branch -f &lt;分支名&gt; &lt;提交名（例如HEAD^、HEAD~3）&gt;</code>  将指定分支强制指向指定提交</li>
+</ul>
+</li>
+<li><p>查看分支合并图</p>
+<ul>
+<li><code>git log --gragh</code>  </li>
+</ul>
+</li>
+<li><p>保存工作区</p>
+<ul>
+<li><code>git stash</code></li>
+</ul>
+</li>
+<li><p>查看保存的工作区</p>
+<ul>
+<li><code>git stash list</code></li>
+</ul>
+</li>
+<li><p>恢复工作区</p>
+<ul>
+<li><code>git stash apply</code>  恢复后不删除stash内容，要用<code>git stash drop</code>删除</li>
+<li><code>git stash pop</code>  恢复的同时删除stash内容</li>
+</ul>
+</li>
+<li><p>复制一个特定的提交到当前分支</p>
+<ul>
+<li><code>git cherry-pick &lt;提交编号&gt;</code></li>
+</ul>
+</li>
+<li><p>分支的管理规则</p>
+<ul>
+<li><code>master</code>分支是主分支，要时刻与远程库同步</li>
+<li><code>dev</code>分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步</li>
+<li><code>bug</code>分支只用于在本地修复bug，没必要推到远程</li>
+<li><code>feature</code>分支用于开发新功能</li>
+</ul>
+</li>
+<li><p>抓取最新提交</p>
+<ul>
+<li><code>git pull</code>  把最新的提交抓下来，以便在本地库合并然后解决冲突</li>
+<li><code>git fetch</code>  把最新的提交抓下来，不进行合并</li>
+</ul>
+</li>
+<li><p><code>rebase</code>操作</p>
+<ul>
+<li><code>git rebase</code>  将分叉的提交变成直线</li>
+</ul>
+</li>
+<li><p>HEAD</p>
+<ul>
+<li><p><code>HEAD</code>  是一个对当前检出记录的符合引用——也就是指向正在其基础上进行工作的提交记录（通常指向分支名）  </p>
+<hr>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h3><ol>
+<li><p>创建标签</p>
+<ul>
+<li><code>git tag &lt;标签名&gt;</code>  默认绑定HEAD</li>
+</ul>
+</li>
+<li><p>查看所有标签</p>
+<ul>
+<li><code>git tag</code></li>
+</ul>
+</li>
+<li><p>对某次提交打标签</p>
+<ul>
+<li><code>git tag &lt;标签名&gt; &lt;提交编号&gt;</code></li>
+<li><code>git tag -a &lt;标签名&gt; -m &lt;提交编号&gt;</code>  <code>-a</code>指定标签名，<code>-m</code>指定说明文字</li>
+</ul>
+</li>
+<li><p>查看标签信息</p>
+<ul>
+<li><code>git show &lt;标签名&gt;</code></li>
+</ul>
+</li>
+<li><p>删除标签</p>
+<ul>
+<li><code>git tag -d &lt;标签名&gt;</code></li>
+</ul>
+</li>
+<li><p>推送标签到远程</p>
+<ul>
+<li><p><code>git push origin &lt;标签名&gt;</code>  推送某个标签</p>
+</li>
+<li><p><code>git push origin --tags</code>  一次性推送全部尚未推送的标签</p>
+</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
@@ -244,7 +457,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span>
   </nav>
 
 
